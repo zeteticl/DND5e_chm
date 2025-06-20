@@ -1,0 +1,362 @@
+<!-- coding: gbk -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+</style>
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+
+</script>
+<style>
+@media print
+{
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: auto;
+}
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: hidden;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+</style>
+</head>
+
+<body>
+<DIV id=msg_1161861>
+<P><STRONG><SPAN style="FONT-SIZE: 18pt; FONT-FAMILY: ����">��ʿ��ְ<SPAN lang=EN-US> 
+Sorcerer Subclass</SPAN></SPAN></STRONG><BR>�ڵ� <SPAN 
+lang=EN-US>1</SPAN>������ʿ����������Դ���ԣ������Կ�������ѡ��һ����ְ������ѡ����ְʱ�������ѡ������ѡ���֮ħ��<SPAN 
+lang=EN-US>Lunar Magic</SPAN>��</P>
+<P><BR><STRONG><SPAN style="FONT-SIZE: 14pt; FONT-FAMILY: ����">��֮ħ��<SPAN 
+lang=EN-US> Lunar Magic</SPAN></SPAN></STRONG><BR>����������У������������˳�ݵģ�����ħ�������塣�ڿ����� 
+<SPAN class=SpellE><SPAN 
+lang=EN-US>Krynn</SPAN></SPAN>��ħ��֮���������е�����������������������<SPAN 
+lang=EN-US>Toril</SPAN>���磬Ů��������<SPAN class=SpellE><SPAN 
+lang=EN-US>Selne</SPAN></SPAN>������֮���������ڰ����ڰ�����<SPAN class=SpellE><SPAN 
+lang=EN-US>Eberron</SPAN></SPAN>���о�����Ԥ��<SPAN lang=EN-US>Draconic 
+Prophecy</SPAN>��ѧ�����ƽ���������ʮ��������ӯȱ�Ĺ������ܡ�<BR>�㣬��������ϵ�е�ĳ�ˣ�����¶���������������ļ���ħ��֮�£�ʹ���㱻��ע����֮ħ��������������Ȳ�����һ������ʴ����ʴ�йصĵ�³����ʽ���ֻ���һ�����ص���֮��Ƭ׹���������ߡ���������λ����ħ��������ʩ����ʿ����ʱ����������ʾ��������������ϵ���ο���֮ħ��������Ȼ��ѡ��������������ʩ����ʿ����ʱ��������ϵ�ļ��� 
+</P>
+<TABLE cellPadding=0 border=0>
+  
+  <TR>
+    <TD>
+      <P><SPAN class=bbcsize><B><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: ����">��֮ħ������<SPAN lang=EN-US> 
+      Manifestations of Lunar Magic</SPAN></SPAN></B></SPAN></P>
+      <TABLE cellPadding=0 border=0>
+        
+        <TR>
+          <TD>
+            <P><STRONG><SPAN lang=EN-US 
+            style="FONT-FAMILY: ����">d4</SPAN></STRONG><SPAN lang=EN-US> 
+            </SPAN></P></TD>
+          <TD>
+            <P><STRONG><SPAN style="FONT-FAMILY: ����">����</SPAN></STRONG> 
+        </P></TD></TR>
+        <TR>
+          <TD>
+            <P><SPAN lang=EN-US>1 </SPAN></P></TD>
+          <TD>
+            <P>�㷢�������������е�һ��������ɫ��ͬ��΢����â�� </P></TD></TR>
+        <TR>
+          <TD>
+            <P><SPAN lang=EN-US>2 </SPAN></P></TD>
+          <TD>
+            <P>���ͫ�׻�仯��̬�������ǵ�������һ��������ǰ��������ͬ�� </P></TD></TR>
+        <TR>
+          <TD>
+            <P><SPAN lang=EN-US>3 </SPAN></P></TD>
+          <TD>
+            <P>��������֮�������������ֻ������㡣 </P></TD></TR>
+        <TR>
+          <TD>
+            <P><SPAN lang=EN-US>4 </SPAN></P></TD>
+          <TD>
+            <P>���Ӱ�ӱ�Ե����΢�⣬����ͬ��ʴʱ�������� </P></TD></TR></TABLE>
+      <P><BR><SPAN class=bbcsize><SPAN style="FONT-FAMILY: ����">�»�<SPAN 
+      lang=EN-US> Moon Fire</SPAN></SPAN></SPAN><BR><EM><SPAN 
+      style="FONT-FAMILY: ����">��<SPAN 
+      lang=EN-US>1</SPAN>����֮ħ������</SPAN></EM><BR>����Ժ�������Ĺ�âΪ�����á���ϰ�÷��� <EM><SPAN 
+      style="FONT-FAMILY: ����">ʥ����<SPAN lang=EN-US>Sacred 
+      Flame</SPAN></SPAN></EM>���˷�������������ʿ��֪Ϸ�������ڡ�����ʩ�Ŵ˷���ʱ��������糣ѡ��һ��������ΪĿ�꣬����ѡ�������໥֮��ľ�����<SPAN 
+      lang=EN-US>5</SPAN>�����ڵ�������ΪĿ�ꡣ<SPAN lang=EN-US><BR><BR></SPAN><SPAN 
+      class=bbcsize><SPAN style="FONT-FAMILY: ����">��֮����<SPAN lang=EN-US> Lunar 
+      Embodiment</SPAN></SPAN></SPAN><BR><EM><SPAN 
+      style="FONT-FAMILY: ����">��<SPAN 
+      lang=EN-US>1</SPAN>����֮ħ������</SPAN></EM><BR>���㵽�ﱾְҵ�ض��ȼ�ʱ����ϰ���·���֮����������г��Ķ���ķ�������Щ�����������������ʿ������������������ʿ��֪���������ڡ� 
+      </P>
+      <TABLE cellPadding=0 border=0>
+        
+        <TR>
+          <TD>
+            <P><SPAN class=bbcsize><B><SPAN 
+            style="FONT-SIZE: 10pt; FONT-FAMILY: ����">��֮����<SPAN lang=EN-US> Lunar 
+            Spells</SPAN></SPAN></B></SPAN></P>
+            <TABLE cellPadding=0 border=0>
+              
+              <TR>
+                <TD>
+                  <P><STRONG><SPAN style="FONT-FAMILY: ����">��ʿ�ȼ�</SPAN></STRONG> 
+                  </P></TD>
+                <TD>
+                  <P><STRONG><SPAN style="FONT-FAMILY: ����">���·���</SPAN></STRONG> 
+                  </P></TD>
+                <TD>
+                  <P><STRONG><SPAN style="FONT-FAMILY: ����">˷�·���</SPAN></STRONG> 
+                  </P></TD>
+                <TD>
+                  <P><STRONG><SPAN style="FONT-FAMILY: ����">���·���</SPAN></STRONG> 
+                  </P></TD></TR>
+              <TR>
+                <TD>
+                  <P><SPAN lang=EN-US>1st </SPAN></P></TD>
+                <TD>
+                  <P><EM><SPAN style="FONT-FAMILY: ����">����</SPAN></EM> </P></TD>
+                <TD>
+                  <P><EM><SPAN style="FONT-FAMILY: ����">��г����</SPAN></EM> </P></TD>
+                <TD>
+                  <P><EM><SPAN style="FONT-FAMILY: ����">�ӻ���</SPAN></EM> 
+</P></TD></TR>
+              <TR>
+                <TD>
+                  <P><SPAN lang=EN-US>3rd </SPAN></P></TD>
+                <TD>
+                  <P><EM><SPAN style="FONT-FAMILY: ����">�»�֮��</SPAN></EM> </P></TD>
+                <TD>
+                  <P><EM><SPAN style="FONT-FAMILY: ����">�ڰ���</SPAN></EM> </P></TD>
+                <TD>
+                  <P><EM><SPAN style="FONT-FAMILY: ����">Ŀä<SPAN 
+                  lang=EN-US>/</SPAN>������</SPAN></EM> </P></TD></TR>
+              <TR>
+                <TD>
+                  <P><SPAN lang=EN-US>5th </SPAN></P></TD>
+                <TD>
+                  <P><EM><SPAN style="FONT-FAMILY: ����">�������</SPAN></EM> </P></TD>
+                <TD>
+                  <P><EM><SPAN style="FONT-FAMILY: ����">����</SPAN></EM> </P></TD>
+                <TD>
+                  <P><EM><SPAN style="FONT-FAMILY: ����">��Ӱ��</SPAN></EM> 
+</P></TD></TR>
+              <TR>
+                <TD>
+                  <P><SPAN lang=EN-US>7th </SPAN></P></TD>
+                <TD>
+                  <P><EM><SPAN style="FONT-FAMILY: ����">�ж�����</SPAN></EM> </P></TD>
+                <TD>
+                  <P><EM><SPAN style="FONT-FAMILY: ����">�����ڴ���</SPAN></EM> </P></TD>
+                <TD>
+                  <P><EM><SPAN style="FONT-FAMILY: ����">�þ�</SPAN></EM> </P></TD></TR>
+              <TR>
+                <TD>
+                  <P><SPAN lang=EN-US>9th </SPAN></P></TD>
+                <TD>
+                  <P><EM><SPAN style="FONT-FAMILY: ����">Ⱥ��������</SPAN></EM> </P></TD>
+                <TD>
+                  <P><EM><SPAN style="FONT-FAMILY: ����">������</SPAN></EM> </P></TD>
+                <TD>
+                  <P><EM><SPAN style="FONT-FAMILY: ����">������</SPAN></EM> 
+              </P></TD></TR></TABLE>
+            <P><BR>ÿ������ɳ���ʱ�������ѡ�����ħ�����ֳ���һ�����ࣺ���� <SPAN lang=EN-US>Full 
+            Moon</SPAN>��˷��<SPAN lang=EN-US>New Moon</SPAN>��������<SPAN 
+            lang=EN-US>Crescent 
+            Moon</SPAN>��������ض����������֮������������������������Щ�������Ա������ķ���λ��ʩ��һ�Ρ�һ�����Դ˷�ʩ����һ�����������޷��ڽ��г���ǰ�ٴν��д���Ϊ��<SPAN 
+            lang=EN-US><BR><BR></SPAN><SPAN class=bbcsize><SPAN 
+            style="FONT-FAMILY: ����">��֮����<SPAN lang=EN-US> Lunar 
+            Boons</SPAN></SPAN></SPAN><BR><EM><SPAN 
+            style="FONT-FAMILY: ����">��<SPAN 
+            lang=EN-US>6</SPAN>����֮ħ������</SPAN></EM><BR>����Ӱ������ĳ�ħ����ÿ�����඼����������ħ��ѧ�ɵķ����� 
+            <SPAN lang=EN-US><BR><BR></SPAN><STRONG><SPAN 
+            style="FONT-FAMILY: ����">���¡�</SPAN></STRONG>�������䷨����<BR><STRONG><SPAN 
+            style="FONT-FAMILY: ����">˷�¡�</SPAN></STRONG>���������鷨��<BR><STRONG><SPAN 
+            style="FONT-FAMILY: ����">���¡�</SPAN></STRONG>Ԥ����仯����<SPAN 
+            lang=EN-US><BR><BR></SPAN>�������֮��������еķ����������������������ħ��ѧ�ɵķ���ʹ�ó�ħ��ʱ������Խ����ĵ������㽵��<SPAN 
+            lang=EN-US>1</SPAN>�㣨���<SPAN 
+            lang=EN-US>0</SPAN>�㣩������Դ˽��ͳ�ħ��������Ĵ�����ͬ�����������ֵ���һ��ڳ��ݺ�ָ��������ĵ�ʹ�ô�����<SPAN 
+            lang=EN-US><BR><BR></SPAN><SPAN class=bbcsize><SPAN 
+            style="FONT-FAMILY: ����">����Բȱ<SPAN lang=EN-US> Waxing And 
+            Waning</SPAN></SPAN></SPAN><BR><EM><SPAN 
+            style="FONT-FAMILY: ����">��<SPAN 
+            lang=EN-US>6</SPAN>����֮ħ������</SPAN></EM><BR>����Ը��õؿ�������֮ħ�������ࡣ��һ��������������������� 
+            <SPAN lang=EN-US>1</SPAN>�����������������ת��Ϊ��һ�ֲ�ͬ�����ࡣ<SPAN 
+            lang=EN-US><BR><BR></SPAN><SPAN class=bbcsize><SPAN 
+            style="FONT-FAMILY: ����">��֮����<SPAN lang=EN-US> Lunar 
+            Empowerment</SPAN></SPAN></SPAN><BR><EM><SPAN 
+            style="FONT-FAMILY: ����">��<SPAN 
+            lang=EN-US>14</SPAN>����֮ħ������</SPAN></EM><BR>�����������������Ĵ��ڱ����ÿ����ѡ��һ��Ӱ����ħ��������ʱ����Ҳ�������ѡ�������������棺 
+            <BR><STRONG><SPAN 
+            style="FONT-FAMILY: ����">���£�</SPAN></STRONG>��ɢ�����뾶<SPAN 
+            lang=EN-US>10</SPAN>�ߵ��������պͶ���<SPAN 
+            lang=EN-US>10</SPAN>�ߵ�΢����ա����⣬�����ѡ������ﴦ����ɢ������������֮��ʱ���ڻ���춨�о������ơ�<BR><STRONG><SPAN 
+            style="FONT-FAMILY: ����">˷�£�</SPAN></STRONG>������ݣ����䣩�춨�о������ơ����⣬������΢����ջ��Ǻڰ���ʱ��������еĹ����춨�������ơ�<BR><STRONG><SPAN 
+            style="FONT-FAMILY: ����">���£�</SPAN></STRONG>����а�ʴ�͹�ҫ�˺��Ŀ��ԡ�<SPAN 
+            lang=EN-US><BR><BR></SPAN><SPAN class=bbcsize><SPAN 
+            style="FONT-FAMILY: ����">��֮����<SPAN lang=EN-US> Lunar 
+            Phenomenon</SPAN></SPAN></SPAN><BR><EM><SPAN 
+            style="FONT-FAMILY: ����">��<SPAN 
+            lang=EN-US>18</SPAN>����֮ħ������</SPAN></EM><BR>�������ħ����ӿ��������һ�����������������ʹ���㵱ǰ����������������������ߣ���������Բȱ����ת������ĸ���������һ���֣����������ʹ���������������������� 
+            <BR><STRONG><SPAN 
+            style="FONT-FAMILY: ����">���£�</SPAN></STRONG>������ǿ�ҵ��¹⡣ÿ����ѡ��ģ�����<SPAN 
+            lang=EN-US>30</SPAN>���ڵ��������ͨ��һ��<SPAN lang=EN-US>DC</SPAN>Ϊ�㷨������<SPAN 
+            lang=EN-US>DC</SPAN>�����ʻ��⣬��������Ŀä������һ�غϽ��������⣬��ѡ��������е�һ�����������ظ�<SPAN 
+            lang=EN-US>3d8</SPAN>����ֵ��<BR><STRONG><SPAN 
+            style="FONT-FAMILY: ����">˷�£�</SPAN></STRONG>��˲�������ѹ���Եĺڰ���ÿ����ѡ��ģ�����<SPAN 
+            lang=EN-US>30</SPAN>���ڵ��������ͨ��һ��<SPAN lang=EN-US>DC</SPAN>Ϊ�㷨������<SPAN 
+            lang=EN-US>DC</SPAN>����ݻ��⣬�����ܵ�<SPAN 
+            lang=EN-US>3d10</SPAN>��ʴ�˺��������ٶȽ�Ϊ<SPAN 
+            lang=EN-US>0</SPAN>������һ�غϽ��������⣬���Ϊ���Σ�ֱ������һ�غϽ���������й�������ʩ�ŷ�����<BR><STRONG><SPAN 
+            style="FONT-FAMILY: ����">���£�</SPAN></STRONG>�㴩���ڹ��밵֮�䡣�����ħ���Եش�������<SPAN 
+            lang=EN-US>60</SPAN>���ڿɼ���δ��ռ��λ�á����⣬ֱ������һ�غϿ�ʼ�����������˺��Ŀ��ԡ�<BR>һ����ʹ��������ĸ������������������� 
+            <SPAN lang=EN-US>5</SPAN>���������ٴ�ʹ�ã�����ֱ������ɳ���Ϊֹ�޷��ٴ�ʹ�á� 
+        </P></TD></TR></TABLE></TD></TR></TABLE></DIV>
+
+</body>
+</html>

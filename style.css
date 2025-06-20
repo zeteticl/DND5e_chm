@@ -1,12 +1,12 @@
-/*整体配置*/
+/*整體配置*/
 html,body {
 	font-family: Arial, Helvetica, sans-serif;
 }
-/*标题颜色*/
+/*標題顏色*/
 h1,h2,h3{
 	color:#800000;
 }
-/*列表聚拢*/
+/*列表聚攏*/
 UL {
 	margin-top: -16px;
 	margin-bottom: -16px;
@@ -15,39 +15,39 @@ OL {
 	margin-top: -16px;
 	margin-bottom: -16px;
 }
-/*下划线→术语格式*/
+/*下劃線→術語格式*/
 U{
 	color: #008000;
 	font-weight: bold;
 	text-decoration: none;
 }
-/*下划线+斜体→法术格式*/
+/*下劃線+斜體→法術格式*/
 U EM,U I{
 	color: #704CD9;
 	font-style: italic;
 	font-weight: bold;
 
 }
-/*斜体+下划线→魔法物品格式*/
+/*斜體+下劃線→魔法物品格式*/
 EM U,I U{
 	color: #0000ff;
 	font-style: normal;
 	font-weight: bold;
 
 }
-/*粗体+下划线→怪物格式*/
+/*粗體+下劃線→怪物格式*/
 B U,U B,STRONG U,U STRONG{
 	color: #ee3300;
 	font-style: normal;
 	font-weight: bold
 }
-/*法术页使用h4*/
+/*法術頁使用h4*/
 h4 {
     color: #704cd9;
     margin-bottom: -20px;
 	font-size: 140%;
 }
-/*怪物页使用h5*/
+/*怪物頁使用h5*/
 div h5{
 	color: #800000;
 	font-weight: bold;
@@ -55,7 +55,7 @@ div h5{
 	margin-top: 0px;
 	margin-bottom: 5px;
 }
-/*道具页使用h6*/
+/*道具頁使用h6*/
 h6 {
 	color: #800000;
     margin-bottom: -20px;
@@ -73,7 +73,7 @@ div.center{
 	MARGIN-RIGHT: 8%;
 	BACKGROUND-COLOR: #ebd6c1;
 }
-/*备用数据卡框*/
+/*備用數據卡框*/
 div.stat-block{
 	margin-left: 22px;
 	width: 537px;
@@ -83,7 +83,7 @@ div.stat-block{
 	font-size: 100%;;
 	margin-bottom:20px;
 }
-/*实例文本框*/
+/*實例文字框*/
 div.example{
 	font-family: "fangsong","仿宋",Arial, Helvetica, sans-serif;
 	WIDTH: 100%; 
@@ -95,7 +95,7 @@ div.example{
 	PADDING-RIGHT: 10px; 
 	MARGIN-RIGHT: 5%
 }
-/*实例右框*/
+/*實例右框*/
 div.ex-right{
 	BORDER: #656565 2px solid; 
 	WIDTH: 250px;
@@ -104,7 +104,7 @@ div.ex-right{
 	BACKGROUND-COLOR: #ebd6c1; 
 	MARGIN-RIGHT: -10px
 }
-/*小纸条框*/
+/*小紙條框*/
 div.paper{
 	BORDER: #000000 1px solid; 
 	font-family: "fangsong","仿宋",Arial, Helvetica, sans-serif;
@@ -116,13 +116,13 @@ div.paper{
 	MARGIN-RIGHT: 50px;
 	BACKGROUND-COLOR: #f3f6f9
 }
-/*签名*/
+/*簽名*/
 img.xge{
 	HEIGHT: 40px;
 	WIDTH: 40px;
 	MARGIN-RIGHT: 20px
 }
-/*基础表格*/
+/*基礎表格*/
 table.basic{
 	width: auto;
 	border-collapse: collapse;

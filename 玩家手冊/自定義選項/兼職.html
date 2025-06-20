@@ -1,0 +1,2581 @@
+<!-- coding: gbk --><html>
+
+<head>
+<title>��ְ</title>
+
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Word.Document>
+
+
+
+<style>
+</style>
+
+</head>
+
+<body lang=ZH-CN style="TEXT-JUSTIFY-TRIM:
+ punctuation; WORD-WRAP: break-word; tab-interval: 21.0pt"><div class=WordSection2>
+
+<p class=MsoNormal style="MARGIN:
+ 2pt 0cm"><STRONG><span style='FONT-SIZE: 22pt; FONT-FAMILY:
+ ����; COLOR: maroon; mso-ascii-font-family: "Times New Roman"; mso-hansi-font-family: "Times New Roman"'>��ְ</span><span
+ lang=EN-US style="FONT-SIZE: 22pt; COLOR: maroon">Multiclassing</span></STRONG></p>
+
+<p class=MsoNormal style="MARGIN:
+ 2pt 0cm"><span lang=EN-US style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span
+ style="mso-spacerun: yes">    </span></span><span
+
+ style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��ְ������������Բ�ͬ��ְҵ�����ȼ�����ְ�Ľ�ɫ����ͬʱӵ�в�ְͬҵ����������ʵ�ֱ�׼ְҵ���޷���ȫ���ֵĽ�ɫ���</span><span
+ lang=EN-US style="FONT-SIZE: 16pt"><br>
+</span><span lang=EN-US style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span
+ style="mso-spacerun: yes">    </span></span><span
+
+ style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">���ü�ְ�����������ڽ�ɫ����ʱ��ѡ������ְҵ����������������Ŀǰְҵ�ĺ����������ݡ���ʱ����Ľ�ɫ�ȼ�Ϊ�������ְҵ�ȼ����ܺ͡����磬һ��������ʦ������սʿ�Ľ�ɫ������Ϊһ��</span><span
+ lang=EN-US style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>5</span><span
+
+ style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">����ɫ��</span><span lang=EN-US style="FONT-SIZE: 16pt"><br>
+</span><span lang=EN-US style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span
+ style="mso-spacerun: yes">    </span></span><span
+
+ style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">���ŵȼ�������������ܻ���ԭְҵΪ����ֻ���μ���������ְҵ���ֻ�������ܻ���ȫת�Ͷ�����֮ǰ��ְҵ�������������Կ�չ����������������ְҵ�������ͬ����רְ��ɫ�����൱������ר������ȡ�����ԡ�</span><span
+ lang=EN-US style="FONT-SIZE: 16pt"><br>
+<br style="mso-special-character: line-break">
+<br style="mso-special-character: line-break">
+</span><span lang=EN-US style='FONT-SIZE:
+ 16pt; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'></span></p>
+
+<h4 style="MARGIN:
+ 2pt 0cm"><span style="FONT-SIZE:
+ 10.5pt; FONT-FAMILY: ����; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-themecolor: text1">��ְ����</span><span
+ lang=EN-US
+ style ='FONT-SIZE: 10.5pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-family: "Times New Roman"; mso-themecolor: text1'>Multiclassing Example</span></h4>
+
+<p class=10 style="TEXT-ALIGN:
+
+ justify; TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm 0.55pt 0cm 0cm; LINE-HEIGHT: 13pt; mso-line-height-rule: exactly"><span lang=EN-US style='FONT-SIZE:
+
+ 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'><span style="mso-spacerun: yes">    </span></span><span
+ style
+
+='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt'>����������һ��</span><span lang=EN-US style='FONT-SIZE:
+ 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'>4</span><span
+ style
+
+='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt'>��սʿ�������Ľ�ɫ����㹻�����</span><span lang=EN-US style='FONT-SIZE:
+
+ 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'>5</span><span style='FONT-SIZE:
+ 11pt;
+ FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt'>���ľ���ֵʱ�����׾��������Ľ�ɫ��ְһ������ְҵ�����Ǽ�����չ��սʿˮƽ�����׵�սʿ�Ѿ���������ε���һ������൱��һ��ʱ�䣬�����Ѿ��ڵ��صĵ����л����Դ��ֵ���������һЩ��������˸��׾��������ɫ��ְһЩ�ε��ߵȼ���������ɫ��Ϊһ��</span><span
+ lang=EN-US
+ style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'>4</span><span style='FONT-SIZE:
+ 11pt;
+ FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt'>��սʿ��</span><span
+ lang=EN-US
+ style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'>1</span><span style='FONT-SIZE:
+ 11pt;
+ FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt'>���ε��ߣ�д��սʿ</span><span
+ lang=EN-US
+ style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'>4</span><span style='FONT-SIZE:
+ 11pt;
+ FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt'>/�ε���</span><span
+ lang=EN-US
+ style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'>1</span><span style='FONT-SIZE:
+ 11pt;
+ FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt'>����</span><span
+ lang=EN-US
+ style='FONT-SIZE: 16pt; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'><br>
+</span><span lang=EN-US style='FONT-SIZE:
+ 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"'><span
+ style="mso-spacerun: yes">    </span></span><span
+ style
+
+='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt'>�����׵Ľ�ɫ��õ��㹻���</span><span lang=EN-US style='FONT-SIZE:
+
+ 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'>6</span><span style='FONT-SIZE:
+ 11pt;
+ FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt'>���ľ���ֵʱ��������ѡ��������һ��սʿ�ȼ�����Ϊսʿ</span><span
+ lang=EN-US
+ style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'>5</span><span style='FONT-SIZE:
+ 11pt;
+ FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt'>/�ε���</span><span
+ lang=EN-US
+ style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'>1</span><span style='FONT-SIZE:
+ 11pt;
+ FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt'>��������������һ���ε��ߵȼ�����Ϊսʿ</span><span
+ lang=EN-US
+ style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'>4</span><span style='FONT-SIZE:
+ 11pt;
+ FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt'>/�ε���</span><span
+ lang=EN-US
+ style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'>2</span><span style='FONT-SIZE:
+ 11pt;
+ FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt'>�������ߣ���Ҳ�����ð��ʱ���һ����������ѧʶ�ĵ伮������������ȥ��ְ�����ַ�ϵְҵ��Ҳ���ǳ�Ϊսʿ</span><span
+ lang=EN-US
+ style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'>4</span><span style='FONT-SIZE:
+ 11pt;
+ FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt'>/�ε���</span><span
+ lang=EN-US
+ style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'>1</span><span style='FONT-SIZE:
+ 11pt;
+ FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt'>/��ʦ</span><span
+ lang=EN-US
+ style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'>1</span><span style='FONT-SIZE:
+ 11pt;
+ FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt'>����</span><span
+ lang=EN-US
+ style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'></span></p>
+
+<p class=MsoNormal style="MARGIN:
+ 2pt 0cm"><span lang=EN-US style='FONT-SIZE:
+ 16pt; mso-fareast-font-family: "STHeiti light"; mso-bidi-font-size: 10.0pt'></span> </p>
+
+<div style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #b79c61 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm">
+
+<div style="BORDER-TOP: medium none;
+ BORDER-RIGHT: medium none; BORDER-BOTTOM: #b79c61 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div">
+
+<p class=MsoNormal style="BORDER-TOP:
+
+
+ medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PAGE-BREAK-AFTER: avoid; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 2pt 0cm; PADDING-RIGHT: 0cm; mso-pagination: lines-together; mso-line-height-alt: 0pt; mso-border-bottom-alt: solid #B79C61 1.0pt; mso-out1ine-1evel: 3; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><b><span
+
+ style   ='FONT-SIZE: 16pt; FONT-FAMILY: ����; COLOR: maroon; mso-ascii-font-family: "Times New Roman"; mso-hansi-font-family: "Times New Roman"; mso-bidi-font-size: 18.0pt'>�Ⱦ�����</span></b><b><span
+ lang=EN-US style 
+='FONT-SIZE: 16pt; FONT-FAMILY: "Times New Roman",serif; COLOR: maroon; mso-fareast-font-family: ����; mso-bidi-font-size: 18.0pt'>Prerequisites</span></b></p>
+
+</div>
+
+</div>
+
+<p class=MsoNormal style="MARGIN:
+ 2pt 0cm 12pt"><span lang=EN-US style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span
+ style="mso-spacerun: yes">    </span></span><span
+
+ style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">�����ְҵǰ�������ͬʱ��������ְҵ����ְҵ������ֵҪ�󡣡���ְ�Ⱦ�������������ϸ�����˸�ְҵ������ֵ�Ⱦ����������磬������ְ��³����Ұ���ˣ�������ֵ�͸�ֵ֪����ͬ����</span><span
+ lang=EN-US style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>13</span><span
+
+ style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">����Ϊһ��û�о�����ְҵȫ��ѵ���ļ�ְ�ߣ������Ը�ְҵӵ���츳������ѧϰ���ܣ����Ҳ����Ҫ����б�ƽ��ֵ���ߵĶ�Ӧ������ֵ�����⣬��ֻ�ܻ�����״�ѡ��ְҵʱ����ʼװ����</span><span
+ lang=EN-US style="FONT-SIZE: 11pt"></span></p>
+
+<h4 style="MARGIN:
+ 2pt 0cm"><span style="FONT-SIZE:
+ 10.5pt; FONT-FAMILY: ����; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-themecolor: text1">��ְ�Ⱦ�����</span><span
+ lang=EN-US
+ style ='FONT-SIZE: 10.5pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-family: "Times New Roman"; mso-themecolor: text1'>Multiclassing Prerequisites</span></h4>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+ style="WIDTH:
+ 100%; BORDER-COLLAPSE: collapse; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184">
+ <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes"  >
+  <td width="41%" style="HEIGHT: 11.6pt; WIDTH: 41.22%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><b
+  style="mso-bidi-font-weight: normal" 
+     ><span style="FONT-SIZE:
+  11pt; FONT-FAMILY: ����" 
+     >ְҵ<span lang=EN-US></span></span></b></p>
+  </td>
+  <td width="58%" style="HEIGHT: 11.6pt; WIDTH: 58.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><b
+  style="mso-bidi-font-weight: normal" 
+     ><span style="FONT-SIZE:
+  11pt; FONT-FAMILY: ����" 
+     >�������ֵ<span lang=EN-US></span></span></b></p>
+  </td>
+ </tr>
+ <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 1">
+  <td width="41%" style="HEIGHT: 11.6pt; WIDTH: 41.22%;  BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><span
+   
+  style
+  ='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+     >Ұ����</span><span lang=EN-US
+  
+  style ='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     ></span></p>
+  </td>
+  <td width="58%" style="HEIGHT: 11.6pt; WIDTH: 58.78%;  BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><span
+   
+  style
+  ='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+     >����</span><span lang=EN-US
+  
+  style ='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-fareast-font-family: "STHeiti light"; mso-color-alt: windowtext' 
+     >13</span><span
+  lang=EN-US style='FONT-SIZE:
+  11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     ></span></p>
+  </td>
+ </tr>
+ <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 2">
+  <td width="41%" style="HEIGHT: 11.6pt; WIDTH: 41.22%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><span
+   
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+     >����ʫ��</span><span
+  lang=EN-US style='FONT-SIZE:
+  11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     ></span></p>
+  </td>
+  <td width="58%" style="HEIGHT: 11.6pt; WIDTH: 58.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><span
+   
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+     >����</span><span
+  lang=EN-US style='FONT-SIZE:
+  11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     >13</span></p>
+  </td>
+ </tr>
+ <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 3">
+  <td width="41%" style="HEIGHT: 11.6pt; WIDTH: 41.22%;  BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><span
+   
+  style
+  ='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+     >��ʦ</span><span lang=EN-US
+  
+  style ='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     ></span></p>
+  </td>
+  <td width="58%" style="HEIGHT: 11.6pt; WIDTH: 58.78%;  BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><span
+   
+  style
+  ='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+     >��֪</span><span lang=EN-US
+  
+  style ='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-fareast-font-family: "STHeiti light"; mso-color-alt: windowtext' 
+     >13</span><span
+  lang=EN-US style='FONT-SIZE:
+  11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     ></span></p>
+  </td>
+ </tr>
+ <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 4">
+  <td width="41%" style="HEIGHT: 11.6pt; WIDTH: 41.22%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><span
+   
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+     >��³��</span><span
+  lang=EN-US style='FONT-SIZE:
+  11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     ></span></p>
+  </td>
+  <td width="58%" style="HEIGHT: 11.6pt; WIDTH: 58.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><span
+   
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+     >��֪</span><span
+  lang=EN-US style='FONT-SIZE:
+  11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     >13</span></p>
+  </td>
+ </tr>
+ <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 5">
+  <td width="41%" style="HEIGHT: 11.6pt; WIDTH: 41.22%;  BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><span
+   
+  style
+  ='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+     >սʿ</span><span lang=EN-US
+  
+  style ='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     ></span></p>
+  </td>
+  <td width="58%" style="HEIGHT: 11.6pt; WIDTH: 58.78%;  BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><span
+   
+  style
+  ='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+     >����</span><span lang=EN-US
+  
+  style ='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-fareast-font-family: "STHeiti light"; mso-color-alt: windowtext' 
+     >13</span><span
+   
+  style
+  ='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+     >�����</span><span lang=EN-US
+  
+  style ='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-fareast-font-family: "STHeiti light"; mso-color-alt: windowtext' 
+     >13</span><span
+  lang=EN-US style='FONT-SIZE:
+  11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     ></span></p>
+  </td>
+ </tr>
+ <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 6">
+  <td width="41%" style="HEIGHT: 11.6pt; WIDTH: 41.22%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><span
+   
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+     >��ɮ</span><span
+  lang=EN-US style='FONT-SIZE:
+  11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     ></span></p>
+  </td>
+  <td width="58%" style="HEIGHT: 11.6pt; WIDTH: 58.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><span
+   
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+     >���</span><span
+  lang=EN-US style='FONT-SIZE:
+  11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     >13</span><span style='FONT-SIZE:
+  11pt; FONT-FAMILY:
+  "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+     >����֪</span><span lang=EN-US
+  
+  style ='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     >13</span></p>
+  </td>
+ </tr>
+ <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 7">
+  <td width="41%" style="HEIGHT: 11.6pt; WIDTH: 41.22%;  BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><span
+   
+  style
+  ='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+     >ʥ��ʿ</span><span lang=EN-US
+  
+  style ='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     ></span></p>
+  </td>
+  <td width="58%" style="HEIGHT: 11.6pt; WIDTH: 58.78%;  BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><span
+   
+  style
+  ='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+     >����</span><span lang=EN-US
+  
+  style ='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-fareast-font-family: "STHeiti light"; mso-color-alt: windowtext' 
+     >13</span><span
+   
+  style
+  ='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+     >������</span><span lang=EN-US
+  
+  style ='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-fareast-font-family: "STHeiti light"; mso-color-alt: windowtext' 
+     >13</span><span
+  lang=EN-US style='FONT-SIZE:
+  11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     ></span></p>
+  </td>
+ </tr>
+ <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 8">
+  <td width="41%" style="HEIGHT: 11.6pt; WIDTH: 41.22%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><span
+   
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+     >����</span><span
+  lang=EN-US style='FONT-SIZE:
+  11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     ></span></p>
+  </td>
+  <td width="58%" style="HEIGHT: 11.6pt; WIDTH: 58.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"    >
+  <p class=10 style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+     ><span
+   
+  style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+     >���</span><span
+  lang=EN-US style='FONT-SIZE:
+  11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     >13</span><span style='FONT-SIZE:
+  11pt; FONT-FAMILY:
+  "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+     >����֪</span><span lang=EN-US
+  
+  style ='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+     >13</span></p>
+  </td>
+ </tr>
+ <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 9">
+    <td                                                                       style="HEIGHT: 11.6pt; WIDTH: 41.22%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="41%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+      >�ε���</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+    <td                                                                       style="HEIGHT: 11.6pt; WIDTH: 58.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="58%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+      >���</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-fareast-font-family: "STHeiti light"; mso-color-alt: windowtext' 
+      >13</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+ </tr>
+  <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 10">
+    <td                                                                 style="HEIGHT: 11.6pt; WIDTH: 41.22%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="41%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >��ʿ</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+    <td                                                                 style="HEIGHT: 11.6pt; WIDTH: 58.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="58%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >����</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      >13</span></p></td></tr>
+  <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 11">
+    <td                                                                       style="HEIGHT: 11.6pt; WIDTH: 41.22%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="41%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+      >а��ʦ</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+    <td                                                                       style="HEIGHT: 11.6pt; WIDTH: 58.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="58%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+      >����</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-fareast-font-family: "STHeiti light"; mso-color-alt: windowtext' 
+      >13</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td></tr>
+  <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 12; mso-yfti-lastrow: yes"   >
+    <td                                                                 style="HEIGHT: 11.6pt; WIDTH: 41.22%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="41%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >��ʦ</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+    <td                                                                 style="HEIGHT: 11.6pt; WIDTH: 58.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="58%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >����</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      >13</span></p></td></tr>
+</table>
+<p class=MsoNormal style="MARGIN: 2pt 0cm"><span lang=EN-US 
+style="FONT-SIZE: 16pt"></span> </p>
+<div 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #b79c61 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm">
+<div 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #b79c61 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div">
+<p class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PAGE-BREAK-AFTER: avoid; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 2pt 0cm; PADDING-RIGHT: 0cm; mso-pagination: lines-together; mso-line-height-alt: 0pt; mso-border-bottom-alt: solid #B79C61 1.0pt; mso-out1ine-1evel: 3; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><b><span 
+style='FONT-SIZE: 16pt; FONT-FAMILY: ����; COLOR: maroon; mso-ascii-font-family: "Times New Roman"; mso-hansi-font-family: "Times New Roman"; mso-bidi-font-size: 18.0pt'>����ֵ</span></b><b><span lang=EN-US 
+style='FONT-SIZE: 16pt; FONT-FAMILY: "Times New Roman",serif; COLOR: maroon; mso-fareast-font-family: ����; mso-bidi-font-size: 18.0pt'>Experience Points</span></b></p></div></div>
+<p class=MsoNormal style="MARGIN: 2pt 0cm"><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��������ľ���ֵ��Զ�����ɫ���ܵȼ�Ϊ�������м��㣬�����������е�ĳһ��ְҵ�ȼ�����ˣ����������ʦ</span><span 
+lang=EN-US style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>6</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">/սʿ</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>1</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">������������㹻������</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>8</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">���ľ���ֵ������������</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>2</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��սʿ���ߵ�</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>7</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">����ʦ��</span><span lang=EN-US style="FONT-SIZE: 16pt"><br><br 
+style="mso-special-character: line-break"><br 
+style="mso-special-character: line-break"></span></p>
+<div 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #b79c61 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm">
+<div 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #b79c61 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div">
+<p class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PAGE-BREAK-AFTER: avoid; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 2pt 0cm; PADDING-RIGHT: 0cm; mso-pagination: lines-together; mso-line-height-alt: 0pt; mso-border-bottom-alt: solid #B79C61 1.0pt; mso-out1ine-1evel: 3; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><b><span 
+style='FONT-SIZE: 16pt; FONT-FAMILY: ����; COLOR: maroon; mso-ascii-font-family: "Times New Roman"; mso-hansi-font-family: "Times New Roman"; mso-bidi-font-size: 18.0pt'>����ֵ��������</span></b><b><span lang=EN-US 
+style='FONT-SIZE: 16pt; FONT-FAMILY: "Times New Roman",serif; COLOR: maroon; mso-fareast-font-family: ����; mso-bidi-font-size: 18.0pt'>Hit Points and Hit Dice</span></b></p></div></div>
+<p class=MsoNormal style="MARGIN: 2pt 0cm"><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��ֻ������Ϊ</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>1</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">����ɫʱ���ܻ����Ӧְҵ�ġ���һ��������ֵ�������ÿ���������㶼ֻ�������ְҵ����ְ���ְ���ġ�������������ֵ����</span><span 
+lang=EN-US style="FONT-SIZE: 16pt"><br></span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">������ְҵ����Ӧ��������������һ�������Ŀ����������ء�������ǵ�����һ�����Ǿ��Ǽ򵥵���ӡ�����սʿ��ʥ��ʿ����</span><span 
+lang=EN-US style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>d10</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">������һ��ʥ��ʿ</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>5</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">/սʿ</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>5</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>10d10</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">����������������ְҵ���㲻ͬ��������������Ҫ�����Ƿֿ����㡣���磬ʥ��ʿ</span><span 
+lang=EN-US style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>5</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">/��ʦ</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>5</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">������</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>d10</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">������������</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>d8</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��������</span><span lang=EN-US style="FONT-SIZE: 16pt"><br><br 
+style="mso-special-character: line-break"><br 
+style="mso-special-character: line-break"></span></p>
+<div 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #b79c61 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm">
+<div 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #b79c61 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div">
+<p class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PAGE-BREAK-AFTER: avoid; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 2pt 0cm; PADDING-RIGHT: 0cm; mso-pagination: lines-together; mso-line-height-alt: 0pt; mso-border-bottom-alt: solid #B79C61 1.0pt; mso-out1ine-1evel: 3; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><b><span 
+style='FONT-SIZE: 16pt; FONT-FAMILY: ����; COLOR: maroon; mso-ascii-font-family: "Times New Roman"; mso-hansi-font-family: "Times New Roman"; mso-bidi-font-size: 18.0pt'>������ֵ</span></b><b><span lang=EN-US 
+style='FONT-SIZE: 16pt; FONT-FAMILY: "Times New Roman",serif; COLOR: maroon; mso-fareast-font-family: ����; mso-bidi-font-size: 18.0pt'>Proficiency Bonus</span></b></p></div></div>
+<p class=MsoNormal style="MARGIN: 2pt 0cm"><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">���������ֵ��Զ�����ɫ���ܵȼ�Ϊ�������м��㣬�����������е�ĳһ��ְҵ�ȼ������磬һ��սʿ</span><span 
+lang=EN-US style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>3</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">/�ε���</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>2</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">����</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>5</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">����ɫ��������ֵ��Ҳ����</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>+3</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��</span><span lang=EN-US style="FONT-SIZE: 16pt"><br><br 
+style="mso-special-character: line-break"><br 
+style="mso-special-character: line-break"></span></p>
+<div 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #b79c61 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm">
+<div 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #b79c61 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div">
+<p class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PAGE-BREAK-AFTER: avoid; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 2pt 0cm; PADDING-RIGHT: 0cm; mso-pagination: lines-together; mso-line-height-alt: 0pt; mso-border-bottom-alt: solid #B79C61 1.0pt; mso-out1ine-1evel: 3; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><b><span 
+style='FONT-SIZE: 16pt; FONT-FAMILY: ����; COLOR: maroon; mso-ascii-font-family: "Times New Roman"; mso-hansi-font-family: "Times New Roman"; mso-bidi-font-size: 18.0pt'>������</span></b><b><span lang=EN-US 
+style='FONT-SIZE: 16pt; FONT-FAMILY: "Times New Roman",serif; COLOR: maroon; mso-fareast-font-family: ����; mso-bidi-font-size: 18.0pt'>Proficiencies</span></b></p></div></div>
+<p class=MsoNormal style="MARGIN: 2pt 0cm"><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">����һ���µļ�ְְҵʱ����ֻ�ܻ�ø�ְҵ�Ĳ�����������񡰼�ְ�������ʾ��</span><span 
+lang=EN-US style="FONT-SIZE: 16pt"><br><br style="mso-special-character: line-break"><br style="mso-special-character: line-break"></span></p>
+<h4 style="MARGIN: 2pt 0cm"><span 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: ����; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-themecolor: text1">��ְ������</span><span lang=EN-US 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-family: "Times New Roman"; mso-themecolor: text1'>Multiclassing Proficiencies</span></h4>
+<table class=MsoNormalTable 
+style="WIDTH: 100%; BORDER-COLLAPSE: collapse; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184" 
+cellSpacing=0 cellPadding=0 width="100%" border=0>
+  
+  <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes"   >
+    <td                                                                    style="HEIGHT: 11.6pt; WIDTH: 19.22%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="19%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><b style="mso-bidi-font-weight: normal" 
+      ><span style="FONT-SIZE: 11pt; FONT-FAMILY: ����" 
+      >ְҵ<span lang=EN-US 
+      ></span></span></b></p></td>
+    <td                                                                    style="HEIGHT: 11.6pt; WIDTH: 80.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="80%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><b style="mso-bidi-font-weight: normal" 
+      ><span style="FONT-SIZE: 11pt; FONT-FAMILY: ����" 
+      >���������<span lang=EN-US 
+      ></span></span></b></p></td></tr>
+  <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 1">
+    <td                                                                          style="HEIGHT: 11.6pt; WIDTH: 19.22%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="19%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+      >Ұ����</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+    <td                                                                          style="HEIGHT: 11.6pt; WIDTH: 80.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="80%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+      >���ơ�������������������</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td></tr>
+  <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 2">
+    <td                                                                    style="HEIGHT: 11.6pt; WIDTH: 19.22%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="19%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >����ʫ��</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+    <td                                                                    style="HEIGHT: 11.6pt; WIDTH: 80.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="80%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >��ס�һ����ѡ���ܡ�һ����ѡ����</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td></tr>
+  <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 3">
+    <td                                                                          style="HEIGHT: 11.6pt; WIDTH: 19.22%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="19%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+      >��ʦ</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+    <td                                                                          style="HEIGHT: 11.6pt; WIDTH: 80.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="80%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+      >��ס��мס�����</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td></tr>
+  <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 4">
+    <td                                                                    style="HEIGHT: 11.6pt; WIDTH: 19.22%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="19%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >��³��</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+    <td                                                                    style="HEIGHT: 11.6pt; WIDTH: 80.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="80%">
+      <p class=10 
+      style="TEXT-ALIGN: justify; TEXT-JUSTIFY: inter-ideograph; MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >��ס��мס����ƣ���³����ʹ�����ʻ��׻���ƣ�</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td></tr>
+  <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 5">
+    <td                                                                          style="HEIGHT: 11.6pt; WIDTH: 19.22%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="19%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+      >սʿ</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+    <td                                                                          style="HEIGHT: 11.6pt; WIDTH: 80.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="80%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+      >��ס��мס����ơ�������������������</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td></tr>
+  <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 6">
+    <td                                                                    style="HEIGHT: 11.6pt; WIDTH: 19.22%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="19%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >��ɮ</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+    <td                                                                    style="HEIGHT: 11.6pt; WIDTH: 80.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="80%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >�����������̽�</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td></tr>
+  <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 7">
+    <td                                                                          style="HEIGHT: 11.6pt; WIDTH: 19.22%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="19%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+      >ʥ��ʿ</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+    <td                                                                          style="HEIGHT: 11.6pt; WIDTH: 80.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="80%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+      >��ס��мס����ơ�������������������</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td></tr>
+  <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 8">
+    <td                                                                    style="HEIGHT: 11.6pt; WIDTH: 19.22%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="19%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >����</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+    <td                                                                    style="HEIGHT: 11.6pt; WIDTH: 80.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="80%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >��ס��мס����ơ���������������������</span><span lang=EN-US 
+      style='FONT-SIZE: 16pt; mso-fareast-font-family: "STHeiti light"' 
+      ><br></span><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >��ְҵ������������ѡ����һ</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td></tr>
+  <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 9">
+    <td                                                                          style="HEIGHT: 11.6pt; WIDTH: 19.22%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="19%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+      >�ε���</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+    <td                                                                          style="HEIGHT: 11.6pt; WIDTH: 80.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="80%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+      >��ס���ְҵ������������ѡ����һ���������</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td></tr>
+  <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 10">
+    <td                                                                    style="HEIGHT: 11.6pt; WIDTH: 19.22%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="19%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >��ʿ</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+    <td                                                                    style="HEIGHT: 11.6pt; WIDTH: 80.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="80%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >��</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td></tr>
+  <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 11">
+    <td                                                                          style="HEIGHT: 11.6pt; WIDTH: 19.22%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="19%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+      >а��ʦ</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+    <td                                                                          style="HEIGHT: 11.6pt; WIDTH: 80.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="80%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-color-alt: windowtext' 
+      >��ס���������</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td></tr>
+  <tr style="HEIGHT: 11.6pt; mso-yfti-irow: 12; mso-yfti-lastrow: yes"   >
+    <td                                                                    style="HEIGHT: 11.6pt; WIDTH: 19.22%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="19%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >��ʦ</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td>
+    <td                                                                    style="HEIGHT: 11.6pt; WIDTH: 80.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     vAlign=top width="80%">
+      <p class=10 
+      style="MARGIN: 0cm; LINE-HEIGHT: 12pt; mso-line-height-rule: exactly" 
+      ><span 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "STHeiti light"; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri' 
+      >��</span><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-fareast-font-family: "STHeiti light"' 
+      ></span></p></td></tr></table>
+<p class=MsoNormal style="MARGIN: 2pt 0cm"><span lang=EN-US 
+style="FONT-SIZE: 16pt"></span> </p>
+<div 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #b79c61 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm">
+<div 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: #b79c61 1pt solid; PADDING-BOTTOM: 1pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; PADDING-RIGHT: 0cm; mso-element: para-border-div">
+<p class=MsoNormal 
+style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PAGE-BREAK-AFTER: avoid; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: medium none; MARGIN: 2pt 0cm; PADDING-RIGHT: 0cm; mso-pagination: lines-together; mso-line-height-alt: 0pt; mso-border-bottom-alt: solid #B79C61 1.0pt; mso-out1ine-1evel: 3; mso-padding-alt: 0cm 0cm 1.0pt 0cm"><b><span 
+style='FONT-SIZE: 16pt; FONT-FAMILY: ����; COLOR: maroon; mso-ascii-font-family: "Times New Roman"; mso-hansi-font-family: "Times New Roman"; mso-bidi-font-size: 18.0pt'>ְҵ����</span></b><b><span lang=EN-US 
+style='FONT-SIZE: 16pt; FONT-FAMILY: "Times New Roman",serif; COLOR: maroon; mso-fareast-font-family: ����; mso-bidi-font-size: 18.0pt'>Class Features</span></b></p></div></div>
+<p class=MsoNormal style="MARGIN: 2pt 0cm"><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��������ĳһְҵ�ȼ�ʱ�����ø�ְҵ����Ӧ�ȼ���ְҵ���ԡ������㲢���ܻ�ø�ְҵ����ʼװ������ĳЩְҵ�����ڼ�ְʱ�����Ŷ���Ĺ������磺��������</span><span 
+lang=EN-US style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>Channel Divinity</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">�����⹥��</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>Extra 
+Attack</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">���޼׷���</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>Unarmored Defense</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">���Լ�ʩ��</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>Spellcasting</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��</span><span lang=EN-US style="FONT-SIZE: 16pt"><br><br 
+style="mso-special-character: line-break"><br 
+style="mso-special-character: line-break"></span></p>
+<h4 style="MARGIN: 2pt 0cm"><span 
+style='FONT-SIZE: 11pt; FONT-FAMILY: ����; COLOR: maroon; mso-ascii-font-family: "Times New Roman"; mso-hansi-font-family: "Times New Roman"'>��������</span><span lang=EN-US 
+style="FONT-SIZE: 11pt; COLOR: maroon">Channel 
+Divinity</span></h4>
+<p class=MsoNormal style="MARGIN: 2pt 0cm"><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">������Ѿ����������������ԣ���������һְҵ�ȼ�������ְҵ���������ȼ�ͬ������������������ʱ������ֻ��øõȼ�����������ʹ�÷�ʽ�������ö����ʹ�ô�����ֻ���ڴﵽָ���������ʹ�ô����ĵȼ�ʱ������ܻ�ö����ʹ�ô��������磬���������ʦ</span><span 
+lang=EN-US style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>6</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">/ʥ��ʿ</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>4</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">�����������Ϣ֮��ʹ������������������Ϊ��ʦְҵ�Ѿ��ﵽ���������εĵȼ���ÿ��ʹ�ø�����ʱ������Դ�����ְҵ����������ЧӦ��ѡ����һ��</span><span 
+lang=EN-US style="FONT-SIZE: 16pt"><br><br style="mso-special-character: line-break"><br style="mso-special-character: line-break"></span></p>
+<h4 style="MARGIN: 2pt 0cm"><span 
+style='FONT-SIZE: 11pt; FONT-FAMILY: ����; COLOR: maroon; mso-ascii-font-family: "Times New Roman"; mso-hansi-font-family: "Times New Roman"'>���⹥��</span><span lang=EN-US 
+style="FONT-SIZE: 11pt; COLOR: maroon">Extra 
+Attack</span></h4>
+<p class=MsoNormal style="MARGIN: 2pt 0cm"><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">����Ӷ���ְҵ��ö��⹥������ʱ�������Ե�Ч�������ܵ��ӡ����㲻���Դ˹����������Σ���������˵������սʿ�Ķ��⹥�������е�˵���������⣬������ж��⹥��ʱ��а��ʦ��ħ�����������ħ�С�Ҳ������������Ĺ���������</span><span 
+lang=EN-US style="FONT-SIZE: 16pt"><br 
+style="mso-special-character: line-break"><br 
+style="mso-special-character: line-break"></span></p>
+<h4 style="MARGIN: 2pt 0cm"><span 
+style='FONT-SIZE: 11pt; FONT-FAMILY: ����; COLOR: maroon; mso-ascii-font-family: "Times New Roman"; mso-hansi-font-family: "Times New Roman"'>�޼׷���</span><span lang=EN-US 
+style="FONT-SIZE: 11pt; COLOR: maroon">Unarmored 
+Defense</span></h4>
+<p class=MsoNormal style="MARGIN: 2pt 0cm"><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">������Ѿ����޼׷������ԣ����޷���������ְҵ����ʱ�ٴλ���޼׷������ԡ�</span><span lang=EN-US 
+style="FONT-SIZE: 16pt"><br><br 
+style="mso-special-character: line-break"><br 
+style="mso-special-character: line-break"></span></p>
+<h4 style="MARGIN: 2pt 0cm"><span 
+style='FONT-SIZE: 11pt; FONT-FAMILY: ����; COLOR: maroon; mso-ascii-font-family: "Times New Roman"; mso-hansi-font-family: "Times New Roman"'>ʩ��</span><span lang=EN-US 
+style="FONT-SIZE: 11pt; COLOR: maroon">Spellcasting</span></h4>
+<p class=MsoNormal style="MARGIN: 2pt 0cm"><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��ʩ���������в��ֻ����������ʩ��ְҵ���ܵȼ������в��ֻ��������ʩ��ְҵ�ĵȼ�������Ӷ���ְҵ���ʩ������ʱ����ʹ�����¹��������ֻ��ĳһ��ְְҵ�л��ʩ�����ԣ���ֻ����Ӹ�ְҵ����ع���</span><span 
+lang=EN-US style="FONT-SIZE: 16pt"><br></span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><b><i><span 
+style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��֪��������׼������</span></i></b><b><i><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif; mso-fareast-font-family: ����'>Spells Known and Prepared</span></i></b><span 
+style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria; mso-bidi-font-style: italic; mso-bidi-font-weight: bold">��</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">�����Ϊ���ÿ����ְְҵ�ֱ��ƶ���֪�����б��׼�������б������ͬ��Ϊ��ְҵ��רְ��ɫһ�������磬��Ϊһ������</span><span 
+lang=EN-US style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>4/</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��ʦ</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>3</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">�Ľ�ɫ������������ȼ�ϰ������</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>1</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">������������ͬʱ������Ϊ��</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>3</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">����ʦϰ��������ʦϷ�����ҷ���������ʮ����ʦ���������а���������</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>2</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">����ʦ����������ﵽ��</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>3</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">����ʦʱ��ã��������������Ϊ</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>16</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��������Դӷ�����׼��������ʦ������</span><span lang=EN-US 
+style="FONT-SIZE: 16pt"><br></span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��ÿһ����֪��������׼��������ֻ�������Ӧ��ְҵ�����������ֻ�����ض�ְҵ��ʩ������ʩչ��Ӧ�ķ��������⣬�ض��ķ���Ҳֻ��Ӧ�����ض�ְҵ�ķ���ʩչ��</span><span 
+lang=EN-US style="FONT-SIZE: 16pt"><br></span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">������ĳ��Ϸ����ߵȼ����������������������ĳ̶Ȼ�����Ľ�ɫ�ȼ�����ĳ�ض�ְҵ�ĵȼ���</span><span 
+lang=EN-US style="FONT-SIZE: 16pt"><br></span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><b><i><span 
+style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">����λ</span></i></b><b><i><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif; mso-fareast-font-family: ����'>Spell Slots</span></i></b><span 
+style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria; mso-bidi-font-style: italic; mso-bidi-font-weight: bold">��</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">����õķ���λ���������ʩ��ְҵ�ȼ������������ʫ�ˡ���ʦ����³������ʿ����ʦ�ȼ����������ʥ��ʿ�������ȼ���һ�루����ȡ������������а·���ʿ�����ʦ�����ԣ��������սʿ���ε��ߵȼ�������֮һ������ȡ��������Ϊ�㵱ǰ��ʩ���ȼ�����Ӧʩ���ȼ��ķ���λ�����ɼ���񡰼�ְʩ���ߡ���</span><span 
+lang=EN-US style="FONT-SIZE: 16pt"><br></span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">������ְ�˸�����ʩ��ְҵ��������������б�����б�����֪�������׼���������߻��׵ķ���λ������ʹ�㲢û��ϰ�øû��׵ķ��������Կ���ʹ����Щ����λʩչ�ͻ��׷�����������ĳЩ����������ʩ��ʱ��ǿ��ЧӦ�����編��<i 
+style="mso-bidi-font-style: normal">ȼ��֮��</i></span><i 
+style="mso-bidi-font-style: normal"><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>burning hands</span></i><i 
+style="mso-bidi-font-style: normal"><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��</span></i><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">����Ҳ��������������´����Щǿ��ЧӦ��</span><span lang=EN-US 
+style="FONT-SIZE: 16pt"><br></span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">���磬��������ǰ������������</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>4/</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��ʦ</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>3</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">�������ٽ��㷨��λʱ����Ϊһ��</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>5</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��ʩ���ߣ���ӵ����ö</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>1</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">������λ����ö</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>2</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">������λ���Լ���ö</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>3</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">������λ��Ȼ���㲢û���κ���������֪������Ҳû���κ�</span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'>2</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">����֪�����������������������Щ����λʩչ����֪��������������������������Щ������Ǳ����Ч��</span><span 
+lang=EN-US style="FONT-SIZE: 16pt"><br></span><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif'><span 
+style="mso-spacerun: yes">    
+</span></span><b><i><span 
+style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">��Լħ��</span></i></b><b><i><span lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "Cambria",serif; mso-fareast-font-family: ����'>Pact Magic</span></i></b><span 
+style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria; mso-bidi-font-style: italic; mso-bidi-font-weight: bold">��</span><span 
+style="FONT-SIZE: 11pt; mso-ascii-font-family: Cambria; mso-hansi-font-family: Cambria">ͬʱ��ӵ��ʩ�����Ժ���Լħ������ʱ�����������Լħ���ķ���λʩչʩ��������֪����׼���ķ�������Ҳ������ʩ�����Եķ���λʩչ����֪��а��ʦ������</span><span 
+lang=EN-US style="FONT-SIZE: 11pt"></span></p>
+<p class=MsoNormal style="MARGIN: 2pt 0cm"><span lang=EN-US 
+style="FONT-SIZE: 16pt"></span> </p>
+<p class=MsoNormal style="MARGIN: 2pt 0cm"><span lang=EN-US 
+style="FONT-SIZE: 16pt"></span> </p>
+<p class=MsoNormal style="MARGIN: 2pt 0cm"><span lang=EN-US 
+style="FONT-SIZE: 16pt"></span> </p>
+<h4 style="MARGIN: 2pt 0cm"><span 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: ����; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-themecolor: text1">��ְʩ���ߣ���Ӧʩ���ȼ�ӵ�еķ���λ</span><span lang=EN-US 
+style='FONT-SIZE: 10.5pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-family: "Times New Roman"; mso-themecolor: text1'><br>Multiclass Spellcaster: Spell 
+Slots per Spell Level</span></h4>
+<div align=center>
+<table class=MsoNormalTable 
+style="WIDTH: 100%; BORDER-COLLAPSE: collapse; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184" 
+cellSpacing=0 cellPadding=0 width="100%" border=0>
+  
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes"   >
+    <td                                                                 style="HEIGHT: 1pt; WIDTH: 12.6%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 9pt; mso-line-height-rule: exactly" 
+      align=center><b style="mso-bidi-font-weight: normal" 
+      ><span style="FONT-SIZE: 11pt; FONT-FAMILY: ����" 
+      >�ȼ�<span lang=EN-US 
+      ></span></span></b></p></td>
+    <td                                                                 style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 9pt; mso-line-height-rule: exactly" 
+      align=center><b style="mso-bidi-font-weight: normal" 
+      ><span lang=EN-US 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >1</span></b><b style="mso-bidi-font-weight: normal" 
+      ><span 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >��<span lang=EN-US 
+      ></span></span></b></p></td>
+    <td                                                                 style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 9pt; mso-line-height-rule: exactly" 
+      align=center><b style="mso-bidi-font-weight: normal" 
+      ><span lang=EN-US 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >2</span></b><b style="mso-bidi-font-weight: normal" 
+      ><span 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >��<span lang=EN-US 
+      ></span></span></b></p></td>
+    <td                                                                 style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 9pt; mso-line-height-rule: exactly" 
+      align=center><b style="mso-bidi-font-weight: normal" 
+      ><span lang=EN-US 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >3</span></b><b style="mso-bidi-font-weight: normal" 
+      ><span 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >��<span lang=EN-US 
+      ></span></span></b></p></td>
+    <td                                                                 style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 9pt; mso-line-height-rule: exactly" 
+      align=center><b style="mso-bidi-font-weight: normal" 
+      ><span lang=EN-US 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >4</span></b><b style="mso-bidi-font-weight: normal" 
+      ><span 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >��<span lang=EN-US 
+      ></span></span></b></p></td>
+    <td                                                                 style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 9pt; mso-line-height-rule: exactly" 
+      align=center><b style="mso-bidi-font-weight: normal" 
+      ><span lang=EN-US 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >5</span></b><b style="mso-bidi-font-weight: normal" 
+      ><span 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >��<span lang=EN-US 
+      ></span></span></b></p></td>
+    <td                                                                 style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 9pt; mso-line-height-rule: exactly" 
+      align=center><b style="mso-bidi-font-weight: normal" 
+      ><span lang=EN-US 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >6</span></b><b style="mso-bidi-font-weight: normal" 
+      ><span 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >��<span lang=EN-US 
+      ></span></span></b></p></td>
+    <td                                                                 style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 9pt; mso-line-height-rule: exactly" 
+      align=center><b style="mso-bidi-font-weight: normal" 
+      ><span lang=EN-US 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >7</span></b><b style="mso-bidi-font-weight: normal" 
+      ><span 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >��<span lang=EN-US 
+      ></span></span></b></p></td>
+    <td                                                                 style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 9pt; mso-line-height-rule: exactly" 
+      align=center><b style="mso-bidi-font-weight: normal" 
+      ><span lang=EN-US 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >8</SPAN></B><b style="mso-bidi-font-weight: normal" 
+      ><span 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >��<span lang=EN-US 
+      ></SPAN></SPAN></B></p></td>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 9pt; mso-line-height-rule: exactly" 
+      align=center><b style="mso-bidi-font-weight: normal" 
+      ><span lang=EN-US 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >9</SPAN></B><b style="mso-bidi-font-weight: normal" 
+      ><span 
+      style="FONT-SIZE: 11pt; FONT-FAMILY: ����; mso-bidi-font-size: 10.0pt" 
+      >��<span lang=EN-US 
+      ></SPAN></SPAN></B></P></TD></tr>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 1">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >1st</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >2</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 2">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >2nd</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 3">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3rd</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >4</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >2</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 4">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >4th</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >4</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 5">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >5th</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >4</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >2</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 6">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >6th</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >4</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 7">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >7th</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >4</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >1</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 8">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >8th</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >4</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >2</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 9">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >9th</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >4</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >1</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 10">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >10th</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >4</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >2</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 11">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >11th</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >4</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >2</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >1</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 12">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >12th</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >4</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >2</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >1</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 13">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >13th</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >4</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >2</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >1</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >1</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 14">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >14th</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >4</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >2</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >1</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >1</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 15">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >15th</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >4</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >2</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >1</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >1</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >1</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; COLOR: black; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 16">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >16th</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >4</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >2</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >1</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >1</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >1</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span 
+      style="FONT-SIZE: 11pt; mso-ascii-font-family: Calibri; mso-hansi-font-family: Calibri; mso-bidi-font-family: Calibri" 
+      >��</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 17">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >17th</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >4</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >2</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >1</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >1</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >1</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >1</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 18">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >18th</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >4</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >1</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >1</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >1</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >1</SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 19">
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >19th</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >4</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >3</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >2</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >1</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >1</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; BACKGROUND: #e0e5c2; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; COLOR: black; mso-bidi-font-size: 10.0pt; mso-color-alt: windowtext' 
+      >1</SPAN><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif; mso-bidi-font-size: 10.0pt' 
+      ></SPAN></P></TD></TR>
+  <tr style="HEIGHT: 1pt; mso-yfti-irow: 20; mso-yfti-lastrow: yes"   >
+    <td     style="HEIGHT: 1pt; WIDTH: 12.6%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="12%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >20th</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >4</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.74%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >3</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >2</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >2</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.78%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >1</SPAN></P></TD>
+    <td     style="HEIGHT: 1pt; WIDTH: 9.26%; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt"     width="9%">
+      <p class=10 
+      style="TEXT-ALIGN: center; MARGIN: 0cm; LINE-HEIGHT: 10pt; mso-line-height-rule: exactly" 
+      align=center><span lang=EN-US 
+      style='FONT-SIZE: 11pt; FONT-FAMILY: "Calibri",sans-serif' 
+      >1</SPAN></P></TD></TR></table></div></div></body>
+
+</html>

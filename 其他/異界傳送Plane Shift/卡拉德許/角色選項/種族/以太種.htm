@@ -1,0 +1,396 @@
+<!-- coding: gbk -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+
+</script>
+<style>
+@media print
+{
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: auto;
+}
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: hidden;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="../../��������.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../../../../template2/btn_prev_n.gif" border="0"></a><A href="����.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../../../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation">Help &gt; 
+������Դ &gt; ��紫��Plane Shift &gt; <A href="../../��������.htm">��������</A> &gt; ��ɫѡ�� &gt; ���� &gt; </div>
+	<div id="winchm_template_title">��̫��</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content"><div class=WordSection1><div style='mso-element:para-border-div;border:none;border-bottom:solid windowtext 1.0pt;
+mso-border-bottom-alt:solid windowtext .75pt;padding:0cm 0cm 1.0pt 0cm'><p class=MsoNormal style='border:none;mso-border-bottom-alt:solid windowtext .75pt;
+padding:0cm;mso-padding-alt:0cm 0cm 1.0pt 0cm'><span class=GramE><b><span
+style='font-size:20.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial;color:#7F6000;mso-themecolor:accent4;mso-themeshade:
+128;mso-style-textfill-fill-color:#7F6000;mso-style-textfill-fill-themecolor:
+accent4;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+lumm=50000'>��̫��</span></b></span><span class=SpellE><b><span lang=EN-US
+style='font-size:20.0pt;font-family:"Arial",sans-serif;color:#7F6000;
+mso-themecolor:accent4;mso-themeshade:128;mso-style-textfill-fill-color:#7F6000;
+mso-style-textfill-fill-themecolor:accent4;mso-style-textfill-fill-alpha:100.0%;
+mso-style-textfill-fill-colortransforms:lumm=50000'>Aaetherborn</span></b></span><b><span
+lang=EN-US style='font-size:20.0pt;font-family:"Arial",sans-serif;color:#7F6000;
+mso-themecolor:accent4;mso-themeshade:128;mso-style-textfill-fill-color:#7F6000;
+mso-style-textfill-fill-themecolor:accent4;mso-style-textfill-fill-alpha:100.0%;
+mso-style-textfill-fill-colortransforms:lumm=50000'></span></b></p>
+
+</div>
+
+<p class=MsoNormal><i><span style='font-size:11.0pt;mso-ascii-font-family:Arial;
+mso-hansi-font-family:Arial;mso-bidi-font-family:Arial;color:#7F7F7F;
+mso-themecolor:background1;mso-themeshade:128;mso-style-textfill-fill-color:
+#7F7F7F;mso-style-textfill-fill-themecolor:background1;mso-style-textfill-fill-alpha:
+100.0%;mso-style-textfill-fill-colortransforms:lumm=50000'>����<span class=GramE>��</span>�������֣�һ����ڰ׹�����</span></i><i><span
+lang=EN-US style='font-size:11.0pt;font-family:"Arial",sans-serif;color:#7F7F7F;
+mso-themecolor:background1;mso-themeshade:128;mso-style-textfill-fill-color:
+#7F7F7F;mso-style-textfill-fill-themecolor:background1;mso-style-textfill-fill-alpha:
+100.0%;mso-style-textfill-fill-colortransforms:lumm=50000'></span></i></p>
+
+<p class=MsoNormal><i><span lang=EN-US style='font-size:11.0pt;font-family:
+"Arial",sans-serif;color:#7F7F7F;mso-themecolor:background1;mso-themeshade:
+128;mso-style-textfill-fill-color:#7F7F7F;mso-style-textfill-fill-themecolor:
+background1;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+lumm=50000'> </span></i></p>
+
+<p class=MsoNormal style='text-indent:22.0pt;mso-char-indent-count:2.0'><span
+style='font-size:11.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial'>�����������ѹ�����̶̼��꣬��ôÿһ��˲�䶼Ӧ��ϸϸƷζ��������䡣�����<span
+class=GramE>��̫��</span>��������ѧ����������ֻ�ܻ������¡��������꣬����Ҳֻ���������ʱ�䡣���������У���<span
+class=GramE>��</span>���־�����ȹ������������������ֵ�Ʒζ��ǧ����𣬵�������ӵ����һ��ǿ�ҵ�Ը�������������ؾ����Լ����޵�ʱ�⡣</span><span
+lang=EN-US style='font-size:11.0pt;font-family:"Arial",sans-serif'></span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt;mso-char-indent-count:2.0'><span
+class=GramE><span style='font-size:11.0pt;mso-ascii-font-family:Arial;
+mso-hansi-font-family:Arial;mso-bidi-font-family:Arial'>��̫������̫</span></span><span
+style='font-size:11.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial'>������������Ȼ�����ĸ���Ʒ�����ǵ��������ʶ�ƺ������������ص��໥���ö���</span><span
+lang=EN-US style='font-size:11.0pt;font-family:"Arial",sans-serif'></span><span
+style='font-size:11.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial'>����<span class=GramE>������̫����</span>�лӷ��������ʣ����������ɲ�����һ���̵����������衣Ȼ��ÿ��<span
+class=GramE>��̫��</span>���Ƕ����ʻ�ĸ��壬����������������������֡����Ƕ����������˽Ⲣ�����룬Ҳ����<span
+class=GramE>����̫��Ը��</span>�˷��Լ����ݵ�������ά���ѧ���о��Լ������ġ�</span><span lang=EN-US
+style='font-size:11.0pt;font-family:"Arial",sans-serif'></span></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;mso-char-indent-count:2.0'><span
+lang=EN-US style='font-family:"Arial",sans-serif'> </span></p>
+
+<p class=MsoNormal><span class=GramE><b><span style='mso-ascii-font-family:
+Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:Arial;color:#7F6000;
+mso-themecolor:accent4;mso-themeshade:128;mso-style-textfill-fill-color:#7F6000;
+mso-style-textfill-fill-themecolor:accent4;mso-style-textfill-fill-alpha:100.0%;
+mso-style-textfill-fill-colortransforms:lumm=50000'>��̫��</span></b></span><b><span
+style='mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:
+Arial;color:#7F6000;mso-themecolor:accent4;mso-themeshade:128;mso-style-textfill-fill-color:
+#7F6000;mso-style-textfill-fill-themecolor:accent4;mso-style-textfill-fill-alpha:
+100.0%;mso-style-textfill-fill-colortransforms:lumm=50000'>���Ա�</span></b><b><span
+lang=EN-US style='font-family:"Arial",sans-serif;color:#7F6000;mso-themecolor:
+accent4;mso-themeshade:128;mso-style-textfill-fill-color:#7F6000;mso-style-textfill-fill-themecolor:
+accent4;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+lumm=50000'> <span class=SpellE>Aetherborn</span> and Gender</span></b></p>
+
+<p class=MsoNormal style='text-indent:22.0pt;mso-char-indent-count:2.0'><span
+class=GramE><span style='font-size:11.0pt;mso-ascii-font-family:Arial;
+mso-hansi-font-family:Arial;mso-bidi-font-family:Arial'>��̫��</span></span><span
+style='font-size:11.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial'>��<span class=GramE>����̫����</span>���̲����ĸ���Ʒ����һ�����ص����������壬�����߱����������ϵ�������졣���ǲ���Ҫ�ԺȺ�˯�ߣ�����Ҫ���ܺ��</span><span
+lang=EN-US style='font-size:11.0pt;font-family:"Arial",sans-serif'></span><span
+style='font-size:11.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial'>��û������֮���������������Ů�����Է����޷��������������ϡ��󲿷�<span
+class=GramE>��̫��</span>��Ը�����ø�����</span><span lang=EN-US style='font-size:11.0pt;
+font-family:"Arial",sans-serif'>��</span><span style='font-size:11.0pt;
+mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:
+Arial'>����</span><span lang=EN-US style='font-size:11.0pt;font-family:"Arial",sans-serif'>��</span><span
+style='font-size:11.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial'>�ƺ��Լ��������Ͳ�����ֱ�ǿ���Ա�����⡣Ҳ�в���<span class=GramE>��̫��</span>Ϊ�Լ��趨���Ա������Ը������</span><span
+lang=EN-US style='font-size:11.0pt;font-family:"Arial",sans-serif'>��</span><span
+style='font-size:11.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial'>��</span><span lang=EN-US style='font-size:11.0pt;
+font-family:"Arial",sans-serif'>��</span><span style='font-size:11.0pt;
+mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:
+Arial'>��</span><span lang=EN-US style='font-size:11.0pt;font-family:"Arial",sans-serif'>��</span><span
+style='font-size:11.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial'>��</span><span lang=EN-US style='font-size:11.0pt;
+font-family:"Arial",sans-serif'>��</span><span style='font-size:11.0pt;
+mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:
+Arial'>��ơ�</span><span lang=EN-US style='font-size:11.0pt;font-family:"Arial",sans-serif'></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:11.0pt;font-family:"Arial",sans-serif'> </span></p>
+
+<p class=MsoNormal><span class=GramE><b><span style='mso-ascii-font-family:
+Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:Arial;color:#7F6000;
+mso-themecolor:accent4;mso-themeshade:128;mso-style-textfill-fill-color:#7F6000;
+mso-style-textfill-fill-themecolor:accent4;mso-style-textfill-fill-alpha:100.0%;
+mso-style-textfill-fill-colortransforms:lumm=50000'>��̫��</span></b></span><b><span
+style='mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:
+Arial;color:#7F6000;mso-themecolor:accent4;mso-themeshade:128;mso-style-textfill-fill-color:
+#7F6000;mso-style-textfill-fill-themecolor:accent4;mso-style-textfill-fill-alpha:
+100.0%;mso-style-textfill-fill-colortransforms:lumm=50000'>����������</span></b><b><span
+lang=EN-US style='font-family:"Arial",sans-serif;color:#7F6000;mso-themecolor:
+accent4;mso-themeshade:128;mso-style-textfill-fill-color:#7F6000;mso-style-textfill-fill-themecolor:
+accent4;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+lumm=50000'> <span class=SpellE>Aetherborn</span> Politics </span></b></p>
+
+<p class=MsoNormal style='text-indent:24.0pt;mso-char-indent-count:2.0'><span
+class=GramE>��̫��</span>��ִ��Ժ�Ĺ�ϵ���Ը��ӡ�<span class=GramE>��̫��</span>һ��������Լ�����Ĵ��ں�����������ִ��<span
+class=GramE>Ժ����������̫</span>�������������ϣ��ȷ����һ��ҵ�����ܹ�����˳��ʵʩ����һ���棬������<span class=GramE>��̫���ܹ�</span>����ִ��Ժ�����߳������η����ƶȣ��������Ƕ���<span
+class=GramE>��</span>������Ҳ����һ��ͬ�顣Ȼ��˵���ף��������������������<span class=GramE>��̫��</span>��������������ֺʹ̼��ջ����ǽ�ɡ�</p>
+
+<p class=MsoNormal><span lang=EN-US> </span></p>
+
+<p class=MsoNormal><span class=GramE><b><span style='mso-ascii-font-family:
+Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:Arial;color:#7F6000;
+mso-themecolor:accent4;mso-themeshade:128;mso-style-textfill-fill-color:#7F6000;
+mso-style-textfill-fill-themecolor:accent4;mso-style-textfill-fill-alpha:100.0%;
+mso-style-textfill-fill-colortransforms:lumm=50000'>��̫��</span></b></span><b><span
+style='mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:
+Arial;color:#7F6000;mso-themecolor:accent4;mso-themeshade:128;mso-style-textfill-fill-color:
+#7F6000;mso-style-textfill-fill-themecolor:accent4;mso-style-textfill-fill-alpha:
+100.0%;mso-style-textfill-fill-colortransforms:lumm=50000'>����</span></b><b><span
+lang=EN-US style='font-family:"Arial",sans-serif;color:#7F6000;mso-themecolor:
+accent4;mso-themeshade:128;mso-style-textfill-fill-color:#7F6000;mso-style-textfill-fill-themecolor:
+accent4;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+lumm=50000'> <span class=SpellE>Aetherborn</span> Traits </span></b></p>
+
+<p class=MsoNormal>���<span class=GramE>��̫��</span>��ɫ�����������Զ�ӵ���������ʡ�<span
+lang=EN-US></span></p>
+
+<p class=MsoNormal>����ֵ�ӳ�<span lang=EN-US>Ability Score Increase</span>�������������<span
+lang=EN-US>2</span>������ѡ��������������ֵ����<span lang=EN-US>1</span>��<span lang=EN-US></span></p>
+
+<p class=MsoNormal><b>����<span lang=EN-US> Age</span></b>��<span class=GramE>��̫��</span>һ������Ϊ���ˣ�����<span
+class=GramE>��</span>�����ꡣ<span lang=EN-US></span></p>
+
+<p class=MsoNormal><b>��Ӫ<span lang=EN-US> Alignment</span></b>��<span
+class=GramE>��̫��</span>һ�������֡���˽������ʹ����������Ϊ��������������Ϊа��������<span class=GramE>��̫��Ҳ��</span>�Ὣ��󲿷��������ͽ�Ǯ��Ͷ�뵽�ɶԺͽ����ϣ���а���<span
+class=GramE>��̫��</span>��ͨ������·��������๴����<span lang=EN-US></span></p>
+
+<p class=MsoNormal><b>����<span lang=EN-US> Size</span></b>��<span class=GramE>��̫��</span>ͨ��������������ͬ��Ϊ<span
+lang=EN-US>5</span>��<span lang=EN-US>6</span>�߸ߡ�����ͨ�����ؽ��ᣬ����<span lang=EN-US>100</span>������<span
+lang=EN-US></span>�������ػ����������Ӷ�����<span lang=EN-US></span>��������������ʻ�����ɢ����<span
+class=GramE>̫</span>�㡣�������Ϊ�еȡ�</p>
+
+<p class=MsoNormal><b>�ٶ�<span lang=EN-US> Speed</span></b>����Ļ��������ٶ�Ϊ<span
+lang=EN-US> 30 </span>�ߡ�<span lang=EN-US> </span></p>
+
+<p class=MsoNormal><b>�ڰ��Ӿ�<span lang=EN-US> Darkvision</span></b>����Ӧ�˺�ҹ�����ںڰ���΢����ӵ��������Ӿ�����΢�⻷���������<span
+lang=EN-US>60</span>�߷�Χ�ڽ���Ϊ��ͬ�����⻷�����ںڰ������е�ͬ����Χ����Ϊ��ͬ��΢�⻷�����ںڰ������޷������ɫ��ֻ�ܿ����лҶȵĺڰ׻��檔<span
+lang=EN-US></span></p>
+
+<p class=MsoNormal><span class=GramE><b>������̫</b></span><b><span lang=EN-US>
+Born of Aether</span></b>����<span class=GramE>�԰�ʴ�˺�</span>���п��ԡ�<span lang=EN-US></span></p>
+
+<p class=MsoNormal><b>�׶�<span lang=EN-US> Menacing</span></b>���������ż��ܵ������<span
+lang=EN-US> </span></p>
+
+<p class=MsoNormal><b>����<span lang=EN-US> Languages</span></b>������˵������<span
+class=GramE>дͨ����</span>������������ѡ������ԡ�</p>
+
+<p class=MsoNormal><span lang=EN-US> </span></p>
+
+<p class=MsoNormal><span class=GramE><b><span style='mso-ascii-font-family:
+Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:Arial;color:#7F6000;
+mso-themecolor:accent4;mso-themeshade:128;mso-style-textfill-fill-color:#7F6000;
+mso-style-textfill-fill-themecolor:accent4;mso-style-textfill-fill-alpha:100.0%;
+mso-style-textfill-fill-colortransforms:lumm=50000'>��̫��</span></b></span><b><span
+style='mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:
+Arial;color:#7F6000;mso-themecolor:accent4;mso-themeshade:128;mso-style-textfill-fill-color:
+#7F6000;mso-style-textfill-fill-themecolor:accent4;mso-style-textfill-fill-alpha:
+100.0%;mso-style-textfill-fill-colortransforms:lumm=50000'>����</span></b><b><span
+lang=EN-US style='font-family:"Arial",sans-serif;color:#7F6000;mso-themecolor:
+accent4;mso-themeshade:128;mso-style-textfill-fill-color:#7F6000;mso-style-textfill-fill-themecolor:
+accent4;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+lumm=50000'> Gift of the <span class=SpellE>Aetherborn</span> </span></b></p>
+
+<p class=MsoNormal>�ھ����������ӳ�������ĳλ��֪��<span class=GramE>��̫��</span>��������һ����������������<span
+class=GramE>��</span>������ת��֮��<span lang=EN-US></span>ͨ����ȡ�������������ݼ�����˺����ֺ������ŵ�<span
+class=GramE>��</span>��֮��������<span class=GramE>��̫��</span>ϰ�ò���������Ȼ��ӵ����һ<span
+lang=EN-US>��</span>����<span lang=EN-US>��</span>��<span class=GramE>��̫��</span>�������ѣ����˿ڱ��ͼ�Ϊ���޵�<span
+class=GramE>��̫��</span>�������޼���<span lang=EN-US></span></p>
+
+<p class=MsoNormal>����<span class=GramE>��̫���ܹ�</span>���繯ȡ�������������ݼ������ͬ�����Ӹ�������´���Ȼ������ӵ�д˵����ʵ�<span
+class=GramE>��̫��ֻ��</span>ָ������������ȡ��������������Ϊ���ӳ�������<span lang=EN-US></span></p>
+
+<p class=MsoNormal>�Դ����������Ϊ���ֵ�<span class=GramE>��̫�ֶ���</span>��������̣���ʱ���֣������󡱺�<span
+lang=EN-US>��</span>����<span lang=EN-US>��</span>֮��û��ʲô����Ȼ������<span class=GramE>��̫��</span>ȴ�����õ�<span
+lang=EN-US>��</span>����<span lang=EN-US>��</span>���ֵ����У���Ϊһ���ó�����������Ƕ�����ݼ���ļ��ʽ�������ǰ�������е��κ�����������������ѹ�����ּ��ʣ�����<span
+class=GramE>��̫��</span>��������������ʹ�࣬�����Ը�����ٶ�˥�ࡣ<span lang=EN-US></span></p>
+
+<p class=MsoNormal>���ݵ��³�����ѡ��<span class=GramE>��̫��</span>��ɫ�����о������һа�����ʡ��ķ�������һ���������ڷ���������һ������ħ����Ʒ���μ����ĵ���ǰ<span
+lang=EN-US>��</span>����������װ��<span lang=EN-US>��</span>һ�ڣ������ù�����Ҫ���ֺ�����ҩ�������<span
+class=GramE>������̫</span>���Ӷ����о���ʵʩ���ֱ仯�Ĺ��̺ķѸ����Ǯ��<span lang=EN-US></span></p>
+
+<p class=MsoNormal>ӵ�и����ʵ�<span class=GramE>��̫��</span>����á���ȡ����<span lang=EN-US>Drain
+Life��</span>��������һ�����������������<span lang=EN-US>1d6</span><span class=GramE>�İ�ʴ�˺�</span>���һָ�<span
+class=GramE>����̫��</span>��ͬ������������ֵ��Ȼ�������<span class=GramE>����̫������</span><span
+lang=EN-US>7</span>��δ����ɸ��˺���������ֵ���޽�ÿ�ܼ���<span lang=EN-US>1d6</span>����״̬������<span
+class=GramE>����̫��ʹ�ø�����</span>�����<span class=GramE>һ</span>�γ��ݣ������ֵ���ܱ��Ƴ���</p></div></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2019. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+
+</html>

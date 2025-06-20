@@ -1,4 +1,4 @@
-/*仅限2024版本数据卡使用*/
+/*僅限2024版本數據卡使用*/
 html,body { 
 	font-family: Arial, Helvetica, sans-serif;
 }
@@ -62,35 +62,35 @@ td.c3{
 td.c4{
 	BACKGROUND-COLOR: #cbc6c6
 }
-/*标题颜色*/
+/*標題顏色*/
 h1,h2,h3{
 	color:#800000;
 }
-/*下划线→术语格式*/
+/*下劃線→術語格式*/
 U{
 	color: #008000;
 	font-weight: bold;
 	text-decoration: none;
 }
-/*下划线+斜体→法术格式*/
+/*下劃線+斜體→法術格式*/
 U EM,U I{
 	color: #704CD9;
 	font-style: italic;
 	font-weight: bold;
 }
-/*斜体+下划线→魔法物品格式*/
+/*斜體+下劃線→魔法物品格式*/
 EM U,I U{
 	color: #0000ff;
 	font-style: normal;
 	font-weight: bold;
 }
-/*粗体+下划线→怪物格式*/
+/*粗體+下劃線→怪物格式*/
 B U,U B,STRONG U,U STRONG{
 	color: #ee3300;
 	font-style: normal;
 	font-weight: bold
 }
-/*小纸条*/
+/*小紙條*/
 div.little-paper {       
 	padding: 15px;
 	border:3px double #9E6859;
@@ -104,7 +104,7 @@ div.little-paper P{
 	margin-top: 7px;
 	margin-bottom: 7px;
 }
-/*栖息地与宝藏*/
+/*棲息地與寶藏*/
 div.HT {
 	padding: 5px;
 	border-top:3px solid #D1BC90;
@@ -113,7 +113,7 @@ div.HT {
 	width: 500px;
 	font-size: 100%;
 }
-/*基础表格*/
+/*基礎表格*/
 table.basic{
 	width: auto;
 	border-collapse: collapse;
