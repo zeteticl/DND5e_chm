@@ -1,0 +1,294 @@
+﻿<!-- coding: gbk -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+</style>
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+
+</script>
+<style>
+@media print
+{
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: auto;
+}
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: hidden;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A title="Previous topic" href="寶石追獵者.html" ><IMG id=winchm_template_prev border=0 alt ="Previous topic" src="../../template2/btn_prev_n.gif" ></A><A title="Next topic" href="寶庫擬身怪.html" ><IMG id=winchm_template_next border=0 alt ="Next topic" src="../../template2/btn_next_n.gif" ></A></div>
+	<div id="winchm_template_navigation">Help &gt; 
+費資本的巨龍寶庫 &gt; 怪物圖鑑 &gt; </div>
+	<div id="winchm_template_title">幽靈龍</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content"><div class=WordSection1><p><span style="FONT-FAMILY: DengXian"   >你必須得知道，非凡的<span
+ class=GramE>菲茲班是</span>絕對不怕鬼的。恰恰相反，我對它們的存在深感悲傷。也許、可能、大概是有一點點雞皮疙瘩。</span></p>
+  <p align=right style="TEXT-ALIGN: right"><span class=GramE><span
+ style="FONT-FAMILY: DengXian">—菲茲</span></span><span
+ style="FONT-FAMILY: DengXian">班</span></p>
+  <p><span class=bbccolor><span
+ style="FONT-FAMILY: DengXian; COLOR: brown"><span style="FONT-FAMILY: SimSun"><FONT color=#000000>龍對寶庫的依戀足以將其靈魂繫結，令其可以在死後依然存在。這樣一條幽靈龍常常因為對一件無價之寶的依戀而存在，在寶庫中作祟。<BR>幽靈龍是原版龍的半透明和虛體版本。儘管它的吐息武器像是一團幽靈火、幽靈閃電或幽靈酸液，但它攜帶著非凡的詛咒。吐息中的幽影迷霧會喚來現實中的噩夢。</FONT></span>  </span></span></p>
+  <p><span class=bbccolor><b><span
+ style="FONT-FAMILY: DengXian; COLOR: brown">幽靈龍 Ghost Dragon</span></b></span></p>
+  <p><span style="FONT-FAMILY: SimSun">巨型亡靈，任意陣營</span></p>
+  <p><span style="FONT-FAMILY: SimSun">護甲等級：</span><span
+ lang=EN-AU>10</span></p>
+  <p><span style="FONT-FAMILY: SimSun">生命值：</span><span
+ lang=EN-AU>324</span><span style="FONT-FAMILY: SimSun">（</span><span lang=EN-AU >24d12 + 168</span><span
+ style="FONT-FAMILY: SimSun">）</span></p>
+  <p><span style="FONT-FAMILY: SimSun">速度：</span><span lang=EN-AU>40</span><span
+ style="FONT-FAMILY: SimSun">尺，飛行</span><span
+ lang=EN-AU>80</span><span style="FONT-FAMILY: SimSun">尺（懸浮）</span></p>
+  <p><span
+ style="FONT-FAMILY: DengXian">力量</span><span
+ lang=EN-AU>      </span><span
+ style="FONT-FAMILY: DengXian">敏捷</span><span
+ lang=EN-AU>      </span><span
+ style="FONT-FAMILY: DengXian">體質</span><span
+ lang=EN-AU>      </span><span
+ style="FONT-FAMILY: DengXian">智力</span><span
+ lang=EN-AU>      </span><span
+ style="FONT-FAMILY: DengXian">感知</span><span
+ lang=EN-AU>      </span><span
+ style="FONT-FAMILY: DengXian">魅力</span></p>
+  <p><span
+ lang=EN-AU>20 (+5)  10 (+0)  25 (+7)  16 (+3)  15
+    (+2)  19 (+4)</span></p>
+  <p><span style="FONT-FAMILY: SimSun">豁免：體質</span><span
+ lang=EN-AU>+13</span><span style="FONT-FAMILY: SimSun">，感知</span><span lang=EN-AU>+8</span><span
+ style="FONT-FAMILY: SimSun">，魅力</span><span
+ lang=EN-AU>+10</span></p>
+  <p><span style="FONT-FAMILY: SimSun">技能：察覺</span><span
+ lang=EN-AU>+14</span><span style="FONT-FAMILY: SimSun">，隱匿</span><span lang=EN-AU>+12</span></p>
+  <p><span style="FONT-FAMILY: SimSun">傷害抗性：鈍擊，穿刺，揮砍</span></p>
+  <p><span style="FONT-FAMILY: SimSun">傷害免疫：強酸，冰凍，暗蝕，毒素</span></p>
+  <p><span style="FONT-FAMILY: SimSun">狀態免疫：魅惑，力竭，恐慌，擒抱，麻痹，石化，中毒，倒地，束縛</span></p>
+  <p><span style="FONT-FAMILY: SimSun">感官：盲視</span><span
+ lang=EN-AU>60</span><span style="FONT-FAMILY: SimSun">尺，黑暗視覺</span><span
+ lang=EN-AU>120</span><span style="FONT-FAMILY: SimSun">尺</span></p>
+  <p><span style="FONT-FAMILY: SimSun">語言：通用語，龍語</span> <span
+ style="FONT-FAMILY: SimSun">，心靈感應</span><span
+ lang=EN-AU>120</span><span style="FONT-FAMILY: SimSun">尺</span></p>
+  <p><span style="FONT-FAMILY: SimSun">挑戰等級：</span><span
+ lang=EN-AU>17</span><span style="FONT-FAMILY: SimSun">（</span><span lang=EN-AU >18,000 XP</span><span
+ style="FONT-FAMILY: SimSun">）</span><span
+ lang=EN-AU>              </span><span style="FONT-FAMILY: SimSun">熟練加值</span><span
+ lang=EN-AU> +6</span></p>
+  <p><b><span style="FONT-FAMILY: SimSun">虛體移動</span></b><b><span
+ lang=EN-AU>Incorporeal Movement. </span></b><span class=GramE><span
+ style="FONT-FAMILY: SimSun">幽靈龍可以</span></span><span
+ style="FONT-FAMILY: SimSun">如同穿過困難地形一樣穿過其他生物和物件。如果它在自己的回合結束時仍處在物件內部則受到</span><span
+ lang=EN-AU>5 (1d10) </span><span style="FONT-FAMILY: SimSun">的力場傷害。</span></p>
+  <p><b><span style="FONT-FAMILY: SimSun">傳奇抗性</span></b><b><span
+ lang=EN-AU>Legendary Resistance (3/</span></b><b><span style="FONT-FAMILY:
+ SimSun">日</span></b><b><span
+ lang=EN-AU>). </span></b><span class=GramE><span style="FONT-FAMILY:
+ SimSun">幽靈龍</span></span><span
+ style="FONT-FAMILY: SimSun">在豁免檢定失敗時，可以將結果改為成功。</span></p>
+  <p><b><span style="FONT-FAMILY: SimSun">非凡本質</span></b><b><span
+ lang=EN-AU>Unusual Nature.</span></b><span lang=EN-AU > </span><span class=GramE><span
+ style="FONT-FAMILY: SimSun">幽靈龍</span></span><span
+ style="FONT-FAMILY: SimSun">不需要空氣、飲食或睡眠。</span></p>
+  <p><strong><span style="FONT-SIZE:
+ 10pt; FONT-FAMILY: DengXian; COLOR: brown">動作</span></strong><strong><span
+ lang=EN-US style="FONT-SIZE: 10pt; COLOR: brown">Actions</span></strong></p>
+  <p><b><span style="FONT-FAMILY: SimSun">多重攻擊</span></b><span
+ class=SpellE><b><span lang=EN-AU>Multiattack</span></b></span><b><span lang=EN-AU>. </span></b><span
+ class=GramE><span style="FONT-FAMILY: SimSun">幽靈龍</span></span><span
+ style="FONT-FAMILY: SimSun">進行一次啃咬攻擊和<span
+ class=GramE>兩次爪擊攻擊</span>。</span></p>
+  <p><b><span style="FONT-FAMILY: SimSun">啃咬</span></b><b><span lang=EN-AU>Bite. </span></b><span style="FONT-FAMILY: SimSun">近戰武器攻擊：命中</span><span
+ lang=EN-AU>+11</span><span style="FONT-FAMILY: SimSun">，觸及</span><span lang=EN-AU>10</span><span
+ style="FONT-FAMILY: SimSun">尺，單一目標。命中：</span><span
+ lang=EN-AU>32 (6d8 + 5) </span><span style="FONT-FAMILY: SimSun">的寒冷傷害，並且目標速度減半，直到其下一回合結束。</span></p>
+  <p><span class=GramE><b><span style="FONT-FAMILY:
+ SimSun">爪擊</span></b></span><b><span
+ lang=EN-AU>Claw. </span></b><span style="FONT-FAMILY: SimSun">近戰武器攻擊：命中</span><span
+ lang=EN-AU>+11</span><span style="FONT-FAMILY: SimSun">，觸及</span><span lang=EN-AU>5</span><span
+ style="FONT-FAMILY: SimSun">尺，單一目標。命中：</span><span
+ lang=EN-AU>14 (2d8 + 5) </span><span class=GramE><span style="FONT-FAMILY:
+ SimSun">的暗蝕傷害</span></span><span
+ style="FONT-FAMILY: SimSun">。</span></p>
+  <p><span class=GramE><b><span style="FONT-FAMILY:
+ SimSun">恐懼吐息</span></b></span><b><span
+ lang=EN-AU>Terrifying Breath (</span></b><b><span style="FONT-FAMILY:
+ SimSun">充能</span></b><b><span
+ lang=EN-AU>6) . </span></b><span class=GramE><span style="FONT-FAMILY:
+ SimSun">幽靈龍</span></span><span
+ style="FONT-FAMILY: SimSun">呼出朦朧迷霧，覆蓋半徑</span><span
+ lang=EN-AU>90</span><span style="FONT-FAMILY: SimSun">尺的錐狀範圍。錐<span
+ class=GramE>狀範圍</span>內的每個生物都必須進行一個</span><span
+ lang=EN-AU>DC21</span><span style="FONT-FAMILY: SimSun">的體質豁免，豁免失敗者將受到</span><span
+ lang=EN-AU>40 (9d8) </span><span style="FONT-FAMILY: SimSun">的寒冷傷害，並且陷入持續</span><span
+ lang=EN-AU>1</span><span style="FONT-FAMILY: SimSun">分鐘的恐慌狀態。豁免成功者傷害減半並且不會陷入恐慌狀態。</span></p>
+  <p><span lang=EN-AU>       </span><span
+ style="FONT-FAMILY: SimSun">當生物因<span
+ class=GramE>幽靈龍</span>陷入恐慌狀態時，同樣視為陷入麻痹狀態。恐慌的生物可以其每個回合結束時再次進行該豁免，豁免成功時效應結束。</span></p>
+  <p><span lang=EN-AU>       </span><span
+ style="FONT-FAMILY: SimSun">如果生物豁免成功或效應結束，則其在</span><span
+ lang=EN-AU>24</span><span style="FONT-FAMILY: SimSun">小時內免疫<span
+ class=GramE>幽靈龍的恐懼吐息</span>。</span></p></div></div>	
+	<div id="winchm_template_footer">Copyright ? 2019. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

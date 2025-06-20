@@ -1,0 +1,373 @@
+﻿<!-- coding: gbk -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+</style>
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+
+</script>
+<style>
+@media print
+{
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: auto;
+}
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: hidden;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="../../UA/種族專長.html" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../../template2/btn_prev_n.gif" border="0"></a><A href="玩家選項/種族/人類.html" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation">Help &gt; 
+其他資源 &gt; 異界傳送Plane Shift &gt; 阿芒凱 &gt; </div>
+	<div id="winchm_template_title">世界概況</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<DIV class=WordSection1 style="LAYOUT-GRID:  15.6pt none">
+<H1 style="TEXT-INDENT: 44.15pt; mso-char-indent-count: 2.0"><SPAN 
+style='FONT-FAMILY: 細明體; mso-ascii-font-family: "Times New Roman"; mso-hansi-font-family: "Times New Roman"'>介紹</SPAN><SPAN 
+lang=EN-US>
+</SPAN></H1>
+<P class=MsoNormal 
+style="TEXT-INDENT: 21pt; mso-pagination: none; mso-char-indent-count: 2.0"><SPAN 
+style="FONT-SIZE: 10.5pt">整個「時空轉移」系列的開始都是因為贊<SPAN 
+class=GramE>迪</SPAN>卡。很難想像真的會有這樣一個魔法位面比一開始就是爲了「冒險世界」而寫就的<SPAN 
+class=GramE>世設更</SPAN>適合<SPAN 
+lang=EN-US>DND</SPAN>冒險。你可以非常自然的將《萬智牌：贊迪卡藝術設定集》與《時空轉移：贊迪卡》組合在一起<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="TEXT-INDENT: 21pt; mso-pagination: none; mso-char-indent-count: 2.0"><SPAN 
+lang=EN-US style="FONT-SIZE: 10.5pt"><o:p> </o:p></SPAN></P>
+<P class=MsoNormal 
+style="TEXT-INDENT: 21pt; mso-pagination: none; mso-char-indent-count: 2.0"><SPAN 
+style="FONT-SIZE: 10.5pt">緊接著是<SPAN 
+class=GramE>依夏蘭</SPAN>，由於某種奇妙的巧合它和冒險模組《斯特拉特的詛咒》幾乎同時出版。接著在《時空轉移：卡拉德許》我偏離了一點核心<SPAN 
+lang=EN-US>DND</SPAN>的傳統，提出了一個<SPAN class=GramE>相當</SPAN>快捷和自由的將<SPAN 
+lang=EN-US>DND</SPAN>傳統施法體系轉換為以以太動力為基礎<SPAN class=GramE>卡拉德許發明</SPAN>的體系。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="TEXT-INDENT: 21pt; mso-pagination: none; mso-char-indent-count: 2.0"><SPAN 
+lang=EN-US style="FONT-SIZE: 10.5pt"><o:p> </o:p></SPAN></P>
+<P class=MsoNormal 
+style="TEXT-INDENT: 21pt; mso-pagination: none; mso-char-indent-count: 2.0"><SPAN 
+style="FONT-SIZE: 10.5pt">現在，我們來到了阿芒凱，這是一個受古埃及啓發而寫就的沙漠位面，它是由邪惡的巨龍鵬<SPAN 
+class=GramE>洛</SPAN>克統治，有一個受不死生物侵擾的小型避風港。這些全都不是經典的<SPAN 
+lang=EN-US>DND</SPAN>設定。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="TEXT-INDENT: 21pt; mso-pagination: none; mso-char-indent-count: 2.0"><SPAN 
+lang=EN-US style="FONT-SIZE: 10.5pt"><o:p> </o:p></SPAN></P>
+<P class=MsoNormal 
+style="TEXT-INDENT: 21pt; mso-pagination: none; mso-char-indent-count: 2.0"><SPAN 
+style="FONT-SIZE: 10.5pt">五神<SPAN 
+class=GramE>的祀煉為</SPAN>在阿芒凱展開的戰役提供了一個框架。一組同一代的<SPAN 
+class=GramE>祀徒可能</SPAN>會一起經歷這些試煉，而這些試煉本身就可能構成一個中短團。爲了充實這段經歷，角色們可以代表阿芒凱的神明<SPAN 
+class=GramE>或是維齊爾</SPAN>（也就是祭祀）執行任務：保衛避世簾，加入神明在沙漠中的狩獵探險等等。而試煉會<SPAN 
+class=GramE>在維齊爾</SPAN>的加入后變得更為嚴苛，他們通常不會參與同其他<SPAN 
+class=GramE>祀徒一起參與祀練除非</SPAN>他們自願參與。此外，如果所有人都選擇逃避困難，<SPAN 
+class=GramE>那麼祀煉的</SPAN>難度也會大大提升。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="TEXT-INDENT: 21pt; mso-pagination: none; mso-char-indent-count: 2.0"><SPAN 
+lang=EN-US style="FONT-SIZE: 10.5pt"><o:p> </o:p></SPAN></P>
+<P class=MsoNormal 
+style="TEXT-INDENT: 21pt; mso-pagination: none; mso-char-indent-count: 2.0"><SPAN 
+style="FONT-SIZE: 10.5pt">也許設計阿芒凱戰役的最好思路是將<SPAN 
+class=GramE>五個祀煉分開</SPAN>而非一起進行。<SPAN 
+class=GramE>祀煉可以</SPAN>為遊戲提供結構和戲劇感，但角色之間以及角色們與世界其他地方的聯繫才是故事的實質所在。你可以將戰役安排在一段特定的時間裡，即，從<SPAN 
+class=GramE>祀煉開始</SPAN>前，到玩家的角色<SPAN class=GramE>們經歷</SPAN>了一次祀煉，<SPAN 
+class=GramE>而祀煉</SPAN>本身可以作為整個故事的高潮。你可以用團結的<SPAN class=GramE>祀煉和</SPAN>野心的<SPAN 
+class=GramE>祀煉作為</SPAN>整場遊戲的框架，來探討集體主義和個人主義的問題（最開始的角色將根據自己的條件接受知識和力量的祀煉）。<SPAN 
+class=GramE>亦或</SPAN>者你可以完全放棄祀煉，轉而將遊戲的重點放在試圖<SPAN 
+class=GramE>擾亂拿塔蒙傳統</SPAN>秩序<SPAN class=GramE>的逆徒們</SPAN>身上。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="TEXT-INDENT: 21pt; mso-pagination: none; mso-char-indent-count: 2.0"><SPAN 
+lang=EN-US style="FONT-SIZE: 10.5pt"><o:p> </o:p></SPAN></P>
+<P class=MsoNormal 
+style="TEXT-INDENT: 21pt; mso-pagination: none; mso-char-indent-count: 2.0"><SPAN 
+style="FONT-SIZE: 10.5pt">一如往常《萬智牌：阿芒凱藝術設定集》包含了有關位面資訊的重要情報。通過本書《時空轉移：阿芒凱》，你可以輕鬆構建一次冒險，而它最符合<SPAN 
+lang=EN-US>DND5</SPAN>版規則，即使沒有這本書，你也可以在網上找到關於阿芒凱的傳說<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="TEXT-INDENT: 21pt; mso-pagination: none; mso-char-indent-count: 2.0"><SPAN 
+lang=EN-US style="FONT-SIZE: 10.5pt"><o:p> </o:p></SPAN></P>
+<P class=MsoNormal 
+style="TEXT-INDENT: 21pt; mso-pagination: none; mso-char-indent-count: 2.0"><SPAN 
+style="FONT-SIZE: 10.5pt">且愿吾人皆成豪英<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoBodyText 
+style="TEXT-ALIGN: right; MARGIN: 0.8pt 86.6pt 0pt 0cm; TEXT-INDENT: 24pt; mso-char-indent-count: 2.0" 
+align=right><SPAN lang=EN-US>James Wyatt<o:p></o:p></SPAN></P></DIV><SPAN 
+lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "Times New Roman",serif; mso-fareast-font-family: "Times New Roman"; mso-font-kerning: 1.0pt; mso-fareast-language: EN-US; mso-bidi-language: EN-US; mso-ansi-language: EN-US'><BR 
+style="PAGE-BREAK-BEFORE: always; mso-break-type: section-break" 
+clear=all></SPAN>
+<DIV class=WordSection2>
+<H1 style="TEXT-INDENT: 44.15pt; mso-char-indent-count: 2.0"><SPAN 
+style='FONT-FAMILY: 細明體; mso-ascii-font-family: "Times New Roman"; mso-hansi-font-family: "Times New Roman"'>世界簡述</SPAN><SPAN 
+lang=EN-US><o:p></o:p></SPAN></H1>
+<P 
+class=MsoNormal>金光閃閃、高聳入雲的紀念碑矗立在烈陽炙烤的沙漠中，為單調遼闊的地平線增添變化。眾生敬仰、擁有獸首人身的神明與民同在，不但時刻體恤民眾，<SPAN 
+class=GramE>更保護</SPAN>他們不受沙漠中邪物的侵擾。波瀾壯闊、<SPAN 
+class=GramE>蘊育</SPAN>新生的河流澤惠大地，為萬物帶來無限生機。內心愉悅、充滿希望的人們在宏偉的殿堂中為各自仁慈的神明獻上祭品，祈求自己的精神需求能得到滿足。他們深知，眼下的今生<SPAN 
+class=GramE>雖然</SPAN>著實精彩<SPAN class=GramE>只是</SPAN>一切的開始，是法老神允諾的完美來世的序曲。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<P 
+style="MARGIN-TOP: 12pt; TEXT-INDENT: 10.5pt; mso-pagination: widow-orphan; mso-char-indent-count: 1.0"><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 細明體; FONT-WEIGHT: normal; COLOR: windowtext; mso-bidi-font-family: 細明體; mso-bidi-font-weight: bold">阿芒凱是一個兩極分化嚴重的時空。一側是蔥鬱的河流山谷，而另一側則是烈日灼燒的沙漠。城外遭<SPAN 
+class=GramE>詛</SPAN>乾枯的木乃伊遍佈沙漠，而在榮光閃耀的城市內，經過精心防腐處理的木乃伊照料生者的生活起居。人們萬事無缺外有魔法屏障<SPAN 
+class=GramE>抵擋著</SPAN>沙漠吹來的熱浪，同時保護他們<SPAN 
+class=GramE>不受漂浪木乃伊</SPAN>的侵擾；他們內在終生專注訓練，為達到完美磨練身心。每個人都在熱切地期盼那一時刻的到來，屆時他們便能在戰場上獻出自己的生命。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="MARGIN-TOP: 12pt; TEXT-INDENT: 10.5pt; mso-pagination: widow-orphan; mso-char-indent-count: 1.0"><SPAN 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: 細明體; FONT-WEIGHT: normal; COLOR: windowtext; mso-bidi-font-family: 細明體; mso-bidi-font-weight: bold">從表面上來看，阿芒凱似乎是一個能夠體驗到精彩生活的時空，但是在光鮮亮麗的表面之下，暗藏著各種不安與危險。據說充滿智慧又寬厚仁慈的法老神忙於為豪<SPAN 
+class=GramE>英準備</SPAN>輝煌來世，而他的真面目卻是邪惡的巨龍鵬<SPAN 
+class=GramE>洛</SPAN>客尼可波拉斯，這是一個邪惡的巨龍旅法師，他的陰謀遠遠不止這個位面，所有<SPAN 
+class=GramE>祀煉和</SPAN>考驗，所有<SPAN 
+class=GramE>作出</SPAN>的努力一切這些都是爲了使阿芒凱的人民做好準備，使其轉化為尼可波拉斯指揮下的不死生物大軍。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<H2><SPAN 
+style="FONT-FAMILY: 黑體; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">表象的背後</SPAN><SPAN 
+lang=EN-US><o:p></o:p></SPAN></H2>
+<P class=MsoNormal>這個位面的任何居民都不知道，阿芒凱的整個社會都被尼可波拉斯所操控，他掌<SPAN 
+class=GramE>控著</SPAN>世界、眾神與此位面的魔力。波拉斯之所以選擇這個位面是因為這裡存在一種被稱為拉佐<SPAN 
+class=GramE>特</SPAN>石的魔法物質，它可以以一種微妙且強大的方式與法術和魔法相互作用。此外，他還在這裡發現了一個虔誠的，階級分明的文明，他可以相當輕鬆的顛覆這個世界並將其納入爪中，另其作為自己陰謀的助力。他立自己為法老神，<SPAN 
+class=GramE>掌控了諸神</SPAN>並讓他們效忠於自己，除掉了一切敢於和自己作對的人。之後，將世界變爲了一個工廠，<SPAN 
+style="FONT-SIZE: 10.5pt">一個生產以拉佐<SPAN 
+class=GramE>特</SPAN>石防腐的、完美木乃伊戰士的工廠。適應了這個位面的特殊魔力，波拉斯找到了一種儲存生者戰鬥技術的方法。他從<SPAN 
+class=GramE>死靈戰士</SPAN>身上挑選了他最渴望的五個方面的特性，並圍繞著一系列旨在磨練和完善這些特性的考驗建立了阿芒凱社會。在他們的一生中，世上的人們相信他們<SPAN 
+class=GramE>離承諾</SPAN>的來世越來越近，而最後，他們將在最終<SPAN 
+class=GramE>祀煉中</SPAN>死去，這將是一場沒有幸存者的浩大戰鬥。但是，他們並沒有在來世獲得一席之地，而是被使用拉佐<SPAN 
+class=GramE>特</SPAN>石防腐，並存放在波拉斯的大墓地，用以充實他的不死軍團。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<H2><SPAN class=GramE><SPAN 
+style="FONT-FAMILY: 黑體; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">漂浪詛咒</SPAN></SPAN><SPAN 
+lang=EN-US><o:p></o:p></SPAN></H2>
+<P class=MsoNormal>波拉斯通過扭曲阿芒凱的魔法產生了一種被<SPAN 
+class=GramE>稱為漂浪詛咒</SPAN>的現象。這種自然發生的魔法詛咒使得本位面死去的生物會在短暫的時間后復活為被無盡的飢餓和對生者不可抗拒的攻擊慾望所驅使的不死生物。<SPAN 
+class=GramE>漂浪詛咒</SPAN>所創造的乾枯木乃伊統治著本位面的沙漠荒原，不斷威脅著僅存的一點生<SPAN 
+style="FONT-SIZE: 10.5pt">命。阿芒凱人並不怕攻擊的威脅，他們懼怕的是所有活著的人會有一天死在這個詛咒之下。如果<SPAN 
+class=GramE>死於漂浪詛咒</SPAN>，那麼就不得不面對充滿著無盡痛苦的可怕來世。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal><SPAN 
+style="FONT-SIZE: 10.5pt">法老神尼可波拉斯給予阿芒凱人民的是一種更好的選擇，而不是永恒的漂浪：一個光榮快樂的來世。他們所需要做的就是證明他們值得如此。因此，<SPAN 
+class=GramE>漂浪詛咒</SPAN>的威脅是人們接受法老神所要求<SPAN class=GramE>獻身祀煉的</SPAN>強烈原因。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<H2><SPAN 
+style="FONT-FAMILY: 黑體; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">投身祀煉</SPAN><SPAN 
+lang=EN-US><o:p></o:p></SPAN></H2>
+<P 
+class=MsoNormal>阿芒凱的居民，無論是凡人還是神明，都相信法老神在離開五位神去準備來世的時候，這五位神會是人民的管理者。當他離開的時候，法老<SPAN 
+class=GramE>神希望</SPAN>人民獻出他的生命以證明他們配得上這個獎賞，如果來世是完美的，那麼進入來世的人也必須是完美的。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<P class=MsoNormal>眾神是來世之路的守護者，法老<SPAN 
+class=GramE>神建立</SPAN>了這條路來凈化那些選擇了這條道途並<SPAN class=GramE>接受祀煉的</SPAN>人們。每一位<SPAN 
+class=GramE>神監督五個祀煉</SPAN>之一，使其幫助並教導準備面對<SPAN 
+class=GramE>祀煉的祀徒培養</SPAN>凡人五個特性中的一個。<SPAN lang=EN-US><o:p></o:p></SPAN></P>
+<H3>團結 真<SPAN class=GramE>信神歐科塔</SPAN><SPAN lang=EN-US><o:p></o:p></SPAN></H3>
+<P class=MsoNormal><SPAN class=GramE>貓首的</SPAN>團結之神，教導有價值的人應該理解和尊重法老<SPAN 
+class=GramE>神認為</SPAN>有價值的所有人。因為在來世，所有人都將擁有共同的目的和行動並因此團結在一起。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<H3>知識 心智神刻法<SPAN class=GramE>涅</SPAN><SPAN lang=EN-US><o:p></o:p></SPAN></H3>
+<P class=MsoNormal><SPAN 
+class=GramE>鷺首的</SPAN>知識之神，教導人們應當培養靈活的頭腦，一個足以感知超乎想像奇蹟的人將可以在來世得到無與倫比的力量。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<H3>力量 <SPAN class=GramE>無畏神羅納</SPAN>斯<SPAN lang=EN-US><o:p></o:p></SPAN></H3>
+<P class=MsoNormal><SPAN class=GramE>蛇首的</SPAN>力量之神，教導人們應當<SPAN 
+class=GramE>磨鍊</SPAN>強壯的身體，這樣才能在無盡的生命中永垂不朽。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<H3>野心 榮光神<SPAN class=GramE>芭</SPAN>圖<SPAN lang=EN-US><o:p></o:p></SPAN></H3>
+<P class=MsoNormal><SPAN 
+class=GramE>鱷</SPAN>首的野心之神，教導人們有價值的人應當爲了偉大而奮鬥，因為至高無上的人將會在來世得到回報。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<H3>熱忱 狂熱<SPAN class=GramE>神哈佐</SPAN>蕾<SPAN lang=EN-US><o:p></o:p></SPAN></H3>
+<P class=MsoNormal><SPAN class=GramE>豺首人身</SPAN>的熱忱之神，教導有價值的人應當以無所顧忌的熱忱奔赴來<SPAN 
+style="FONT-SIZE: 10.5pt">世。他們將不屈不撓地站起來，克服一切障礙，在法老神身邊贏得一席之地。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormal><SPAN lang=EN-US 
+style="FONT-SIZE: 10.5pt"><o:p> </o:p></SPAN></P>
+<P class=MsoNormal><SPAN style="FONT-SIZE: 10.5pt">通過其中一項<SPAN 
+class=GramE>祀煉的祀徒</SPAN>將被授予一個紋章<SPAN lang=EN-US></SPAN>一個他們將帶到來世的魔法標誌。<SPAN 
+class=GramE>祀煉的</SPAN>高潮是熱忱的祀煉，這是一場至死方休的戰鬥。在這最後一場戰鬥中犧牲是有價值的證明，光榮的死亡將為<SPAN 
+class=GramE>祀徒贏得</SPAN>來世的一席之地，死者的屍體將被裝載到駁船上，然後通過來世之門。但這遠遠不是結束。它標誌<SPAN 
+class=GramE>著祀徒存在</SPAN>中最奇妙部分的開始。在最後的<SPAN 
+class=GramE>祀煉中</SPAN>，每個人都期待著死亡，希望能在一個親密的朋友手中找到自己光榮的結局，這樣，他們就能在一起，與法老<SPAN 
+class=GramE>神一起</SPAN>永生。永遠。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<H2><SPAN class=GramE><SPAN 
+style="FONT-FAMILY: 黑體; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">拿塔蒙的</SPAN></SPAN><SPAN 
+style="FONT-FAMILY: 黑體; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">居民</SPAN><SPAN 
+lang=EN-US><o:p></o:p></SPAN></H2>
+<P class=MsoNormal>阿芒凱的公民在很小的時候就開始了對接受五<SPAN 
+class=GramE>神祀煉</SPAN>的訓練。五歲的孩子會受邀成為他們第一階段精神發展的助手。一年一度的儀式是這些年輕人的成年禮，標誌著他們走向來世之旅的開始。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<P class=MsoNormal>在完成了他們的訓練和方尖碑的建造（方尖碑在團結<SPAN 
+class=GramE>祀煉期間</SPAN>有大作用）之後，一群<SPAN 
+class=GramE>祀徒終於</SPAN>準備好站在五神面前進行評估儀式。那些被認為有價值的人被要求作為神法老的提升者繼續他們的來世之旅。其他人則被某些神選中，選擇另一條通往來世的道路，成為為神服務<SPAN 
+class=GramE>的維齊爾</SPAN>。但是有些人站在兩個太陽的光芒里，這些人會被認為沒有價值，缺乏進入來世所必需的美德。尤其是那些懷疑法老神的教誨或阿芒凱傳統生活方式<SPAN 
+class=GramE>的祀徒們</SPAN>將被<SPAN class=GramE>從祀群中</SPAN>挑選出來，流放到城邦之外。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></P>
+<P class=MsoNormal>你的角色背景可以反映評估儀式的結果。<SPAN lang=EN-US><o:p></o:p></SPAN></P>
+<P class=MsoNormal><SPAN 
+lang=EN-US><o:p> </o:p></SPAN></P></DIV></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2019. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

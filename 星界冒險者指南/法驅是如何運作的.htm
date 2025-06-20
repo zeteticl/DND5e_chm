@@ -1,0 +1,470 @@
+﻿<!-- coding: gbk -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>法驅是如何運作的</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+@media print
+{
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+
+</script>
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+
+</script>
+<style>
+@media print
+{
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: auto;
+}
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: hidden;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A title="Previous topic" href="魔法船_星界冒險.htm" ><IMG id=winchm_template_prev border=0 alt ="Previous topic" src="../template2/btn_prev_n.gif" ></A><A title="Next topic" href="魔法船_星光位面.htm" ><IMG id=winchm_template_next border=0 alt ="Next topic" src="../template2/btn_next_n.gif" ></A></div>
+	<div id="winchm_template_navigation">Help &gt; 
+<A href="魔法船_簡介.htm">星界冒險者指南</A> &gt; <A href="魔法船_星界冒險.htm">星界冒險</A> &gt; </div>
+	<div id="winchm_template_title">法驅是如何運作的</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content"><div id="winchm_template_container"><div id="winchm_template_content"><H3>法驅是如何運作的 How Spelljamming Works
+<HR color=#d1a347>
+</H3>
+<P>法驅是使用法驅魔舵（在本章後面描述）來推動和操縱艦船的行為。掌舵的人被稱為法驅者。 </P>
+<H3>速度 Speed
+<HR color=#d1a347>
+ </H3>
+<P>在太空中巡航時，一艘魔法船可以在 24 小時內航行 1 
+億英里。在這個速度下，法驅魔舵會自行進行微小的航向修正，以避免與隕石、其他太空殘渣或居住在太空的生物發生碰撞。這些微小的航向修正有時會導致輕微的太空病，不習慣太空旅行的人經常要遭受這種無害的痛苦。<BR>當一艘魔法船靠近大到足以擁有自己的氣囊和重力平面的事物（見下文「氣囊」和「重力平面」）例如另一艘艦船、鯨馱驪（參見《布布的星界怪獸展》）、小行星或行星時，它會自動減慢其飛行速度（本章稍後會討論）。障礙和艦船之間的確切距離由 
+DM 決定，但任何導致艦船減速的障礙通常都接近到了對甲板上的生物可見的距離。在以飛行速度移動時，一艘魔法船通常與一艘大小相近的航海艦船具有同樣的機動性。</P>
+<H3>感覺 Sensations 
+<HR color=#d1a347>   
+</H3>
+<P>使用魔舵來移動一艘船會讓法驅者產生一種類似於移動麻痹肢體的感覺一種針刺般的感覺，但並沒有類似的疼痛感。當艦船靠近太空中的某個大型物體時，隨著艦船減速，法驅者通常是第一個發現它的人。經驗豐富的法驅者通常可以在能夠看見障礙本體的一段時間之前就感覺到是什麼導致了艦船的減速。例如，撞上一顆小行星的感覺與撞上一艘太空帆船或一群鯨馱驪的「感覺」是完全不同的。</P>
+<H3>法驅者決鬥 Spelljammer Duels 
+<HR color=#d1a347>   
+</H3>
+<P>
+  一艘艦船可以有不止一個魔舵，但同一時間只能使用一個魔舵來控制這艘艦船。如果一位法驅者試圖通過使用第二個魔舵來控制一艘艦船，一場舵手決鬥就會開始。通過讓每位法驅者都進行一次體質檢定來解決這個衝突；如果結果打平，就讓他們重新擲骰。檢定結果較低的法驅者輸掉決鬥並獲得 
+1d4 級的力竭；此外，他們與魔舵的同調會立即結束，並且他們在所有力竭等級消除前，不能再次與任何魔舵同調。</P>
+<H3>氣囊 Air Envelopes
+<HR color=#d1a347>   
+</H3>
+<P>
+<IMG alt="" src="images/氣囊和重力平面.png" width="80%" ></P>
+<P>圖2.1: 
+氣囊和重力平面<BR>當一個生物或物體離開行星大氣層並進入荒宇時，會在其周圍形成一層可呼吸空氣的氣囊，並持續到內部的空氣耗盡。</P>
+<H4>生物的氣囊 Air Envelopes of Creatures   
+</H4>
+<P>圍繞一個生物形成的氣囊呈以該生物為中心的立方體形狀。生物的體型決定了立方體的尺寸，如「生物氣囊」表所示。</P>
+<P><STRONG>生物的氣囊</STRONG>   
+</P>
+<P> 
+
+<TABLE style="WIDTH: 100%; BORDER-COLLAPSE: collapse" 
+borderColor=#000000 cellSpacing=0 cellPadding=2 width="100%" border=0>
+  
+  <TR>
+    <TD width=100> <STRONG>生物的體型</STRONG></TD>
+    <TD> <STRONG>氣囊</STRONG> </TD></TR>
+  <TR>
+    <TD width=100 bgColor=#ecf6f8> 微型</TD>
+    <TD bgColor=#ecf6f8> 2.5  尺立方體</TD></TR>
+  <TR>
+    <TD width=100> 小型或中型</TD>
+    <TD> 5 尺立方體</TD></TR>
+  <TR>
+    <TD width=100 bgColor=#ecf6f8> 大型</TD>
+    <TD bgColor=#ecf6f8> 10 尺立方體</TD></TR>
+  <TR>
+    <TD width=100> 巨型</TD>
+    <TD> 15 尺立方體</TD></TR>
+  <TR>
+    <TD width=100 bgColor=#ecf6f8> 超巨型</TD>
+    <TD bgColor=#ecf6f8> 20 
+尺立方體</TD></TR></TABLE>   
+</P>
+<P> <BR>需要呼吸的生物將在 1 
+分鐘內耗盡他自身氣囊中的空氣。這難以支撐其前往任何地方，因此大多數生物都會乘坐具有更大氣囊的魔法船穿越荒宇。</P>
+<H4>物體的氣囊 Air Envelopes of   
+Objects</H4>
+<P>圍繞物體形成的氣囊從其表面向外延伸的距離等於其形狀的最長尺寸。例如，一個直徑為 5,000 
+英里的球形行星有一個直徑為 15,000 英里的氣囊，行星位於其中心。氣囊不一定是球形的；例如，一塊 1 尺乘 2 尺乘 3 尺的木頭會被一個 3 尺乘 6 
+尺乘 9 尺、大致呈矩形的氣囊包裹。<BR>魔法船周圍的氣囊通常呈卵形。圖 2.1 顯示了圍繞一艘龍骨長度為 180 
+尺的鸚鵡螺的氣囊。它從船體出發，向各個方向延伸了180 
+尺。<BR>宜居行星或衛星周圍的氣囊稱為大氣層。大氣層是一種特殊的氣囊，它會不斷地自我補充。生物或物體可以通過進入行星或衛星的大氣層來更新其氣囊（見下文「重合的氣囊」一節）。</P>
+<P>
+<TABLE style="WIDTH: 100%; BORDER-COLLAPSE: collapse" borderColor=#000000 
+cellSpacing=0 cellPadding=20 width="100%" bgColor=#c1e7ed border=0>
+  
+  <TR>
+    <TD width=800>
+      <H3 bgcolor="#C1E7ED" width="500">邊欄：荒宇中的火焰 Fire in Wildspace </H3>
+      <P align=left>雖然在荒宇的真空中不能存在非魔法火，但魔法火（例如由火球術產生的火）確實會在真空中燃燒。然而，魔法性的火焰不會導致物體燃燒，因為沒有空氣可以助燃。 
+</P></TD></TR></TABLE>   
+</P>
+<H3>空氣質量 Air Quality
+<HR color=#d1a347>   
+</H3>
+<P>生物或艦船周圍的氣囊可能是新鮮的、污穢的或致命的。隨著時間的推移，空氣的品質會逐漸劣化。 <BR><STRONG>新鮮空氣 Fresh 
+air</STRONG> 
+是完全可以呼吸的。正常情況下，艦船的氣囊會在 120 天內保持新鮮。如果一艘艦船承載的生物超過了標準船員荷載，它們會更快地耗盡新鮮空氣的儲備。 <BR><STRONG>污穢空氣 Foul air</STRONG>   是骯髒且稀薄的。它很潮濕，聞起來很臭。任何呼吸污穢空氣的生物都會<BR>陷入中毒狀態，直到它再次呼吸新鮮空氣。一艘不超過船員荷載標準的艦船上的空氣從第 121 天起由新鮮變為污穢，而污穢的空氣在 120 天后變得致命。 <BR><STRONG>致命空氣 Deadly air</STRONG> 
+是完全無法呼吸的。任何試圖呼吸致命空氣的生物都會開始窒息（參見玩家手冊中的窒息規則）。</P>
+<H3>重合的氣囊 Overlapping Air   
+Envelopes</H3>
+<P>  
+<HR color=#d1a347>
+
+<P></P>
+<P>當兩個主體彼此足夠接近時，它們的氣囊會融合，較小主體周圍的空氣質量會發生變化以匹配較大主體的空氣質量。當二者遠離彼此時，二者都會回收並保留自己的氣囊。<BR>例如，如果一艘帶有污穢空氣氣囊的蜻蛉艦進入空氣質量為新鮮的行星大氣層，則兩個氣囊會融合，蜻蛉艦的空氣質量從污濁變為新鮮。如果那艘蜻蛉艦隨後將其新鮮空氣氣囊與一艘廢船周圍的致命空氣氣囊融合，則蜻蛉的空氣質量將從新鮮變為致命。</P>
+<H3>重力平面 Gravity Planes
+<HR color=#d1a347>   
+</H3>
+<P>一切事物實際上都是依靠重力來牽引自己的氣囊。這也是生物可以站在宇航船上而不會從甲板上掉下來的原因。<BR>在荒宇和星界，重力是一種順從的力，它的作用方向似乎總是（對DM和玩家來說）「最方便的方向」。對於行星或衛星大小的物體，重力將一切都拉向天體的中心，這意味著生物可以直立在地表的任何地方，而物體則會朝著地表垂直墜落。<BR>對於較小的物體，如宇宙船，重力不是從一個點輻射出來的，而是從一個平面輻射出來的這個平面水平地穿過物體，並向外延伸至物體的氣囊表面。一個物體的重力平面是雙向的：一個生物可以直立在船體底部從艦船上其他地方來看是倒懸的並且可以像在頂層甲板上行走一樣輕鬆地四處移動。作為示例，圖 
+2.1 
+顯示了鸚鵡螺的重力平面的位置，並指出了其重力作用的方向。<BR>重力平面的一個不尋常的特性是，從艦船邊緣下墜的物體最終會在重力平面來回擺動。它朝一個方向下降，直到它穿過平面，然後再次反轉方向回到平面，一直持續到某個因素使它停止。</P>
+<H3>重疊的重力平面 Overlapping Gravity Planes
+<HR color=#d1a347>   
+</H3>
+<P>當重力平面相交，例如當兩艘艦船以不同的角度在近距離擦身而過時，這兩艘艦船的重力平面都會保持不變，直到兩艘艦船相互接觸（這通常發生在它們相撞或其中一艘降落在另一艘上面時）。如果發生這種情況，剩餘生命值更多的艦船的重力平面（無論艦船的實際尺寸如何）就會覆蓋並壓制另一艘艦船的重力平面，並在兩艘船保持接觸期間一直持續，後者的「上下」也會與前者趨同。<BR>當一艘艦船降落在一顆行星（或其他巨大的物體）上時，艦船的重力平面被壓制。如果一艘艦船在艦船重力平面的腹側（而不是其背側）有一個或多個甲板，則必須在艦船著陸前採取預防措施，以防任何事物在艦船的重力平面被抑制時墜落。</P>
+<H3> 漂流 Drifting
+<HR color=#d1a347>   
+</H3>
+<P>當一艘魔法船在太空中移動時，處於其氣囊當中的生物和物體會被其重力平面的力量所牽引並隨之移動。<BR>然而，漂浮在艦船氣囊中的未固定生物或物體是失重的，並以每分鐘 
+10 
+尺的速度漂向氣囊的邊緣。例如，一個處於昏迷狀態的水手或從一艘魔法船的甲板上掉下來的板條箱將開始沿著其重力平面從艦船上漂向艦船氣囊的邊緣。當它離開氣囊時，水手或板條箱將會在艦船駛離時被留在原地。</P>
+<H3> 墜落 Falling
+<HR color=#d1a347>   
+</H3>
+<P>當一個漂浮的生物進入另一個更大的主體的氣囊時，它會立即受到更大主體的重力（例如行星的重力）或重力平面（例如一艘魔法船的重力平面）的影響。該生物從它進入氣囊的地方落到該主體的表面或重力平面以較近者為準。如果該生物在墜落結束時撞擊固體，則墜落造成的傷害正常計算。一個從重力平面上墜落的生物或物體不會受到墜落傷害，但會開始在重力平面的兩側來回擺動，如上所述。</P></div></div></div>	
+	<div id="winchm_template_footer">Copyright  2019. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

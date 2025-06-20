@@ -1,0 +1,275 @@
+﻿<!-- coding: gbk -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+</style>
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+
+</script>
+<style>
+@media print
+{
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: auto;
+}
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: hidden;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A title="Previous topic" href="../斯翠海文：混沌研習/魔法物品.html" ><IMG id=winchm_template_prev border=0 alt ="Previous topic" src="../template2/btn_prev_n.gif" ></A><A title="Next topic" href="種族/阿蘭寇拉鷹人.html" ><IMG id=winchm_template_next border=0 alt ="Next topic" src="../template2/btn_next_n.gif" ></A></div>
+	<div id="winchm_template_navigation">Help &gt; 
+魔鄧肯出品：多元宇宙的怪物 &gt; </div>
+	<div id="winchm_template_title">種族</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content"><p><strong><span style="FONT-SIZE:
+ 14pt; FONT-FAMILY: 細明體">第一章：奇幻種族<span lang=EN-US> Fantastical Races</span></span></strong><span
+ lang=EN-US><br>
+      <br>
+      </span>譯者的話：<em><span style="FONT-FAMILY: 細明體">本貼為<span
+ lang=EN-US>MotM</span>第一章部分初譯內容，此版本僅為譯者一家之言。本人能力有限，譯文並非能完全體現英文原本的含義與韻味。一切譯名以<span
+ lang=EN-US>1.7.1</span>版的<span lang=EN-US>D&amp;D 5e</span>三寶書和民間通用譯名為準，部分譯名參考自以前各擴展中玩家種族的譯文。因為本書內容為對之前出版的諸多玩家種族的修改和整合，所以本譯文對與三寶書不統一的翻譯用詞進行整合，並按個人喜好加以調整。若未能完全沿用舊譯文，對諸位譯者們致以歉意。同時感謝每一位曾參與過龍與地下城<span
+ lang=EN-US>5e</span>翻譯工作的民間譯者，謝謝你們！</span></em><i><span lang=EN-US><br>
+      <br>
+      </span><em><span style="FONT-FAMILY: 細明體">阿蘭寇拉鷹人<span
+ lang=EN-US>Aarakocra </span>到 狗頭人<span lang=EN-US>Kobold </span>描述的譯者為<span
+ lang=EN-US> Farevell</span>。</span></em><br>
+      <em><span style="FONT-FAMILY: 細明體">化獸者<span
+ lang=EN-US>Shifter </span>數據的譯者為<span lang=EN-US>Amethyst Dragonlord</span>。</span></em><span
+ lang=EN-US><br>
+      <em><span style="FONT-FAMILY: 細明體"> </span></em></span><em><span
+ style="FONT-FAMILY: 細明體">蜥蜴人<span lang=EN-US>Lizardfolk </span>到
+      原體蛇人<span lang=EN-US>Yuan-ti </span>的描述，與斑貓人<span lang=EN-US>Tabaxi</span>到原體蛇人<span
+ lang=EN-US>Yuan-ti</span>數據的譯者為柴郡貓眼。</span></em><br>
+      <em><span style="FONT-FAMILY: 細明體">以上譯文經過本人些許修改以保持統一，感謝幫助翻譯的每一位譯者！</span></em><br>
+      </i><span lang=EN-US><br>
+      <br>
+      <br>
+      </span>本章彙集了來自龍與地下城的多元宇宙之中的奇幻種族，併爲玩家角色們提供了以下種族，作為玩家手冊中可選擇種族的補充。<span
+ lang=EN-US><br>
+      <br>
+      </span>阿蘭寇拉鷹人<span lang=EN-US>Aarakocra, </span>阿斯莫<span lang=EN-US>Aasimar, </span>熊地精<span
+ lang=EN-US>Bugbear, </span>人馬<span lang=EN-US>Centaur, </span>幻身靈<span
+ lang=EN-US>Changeling, </span>地底侏儒<span lang=EN-US>Deep Gnome, </span>灰矮人<span
+ lang=EN-US>Duergar, </span>雅靈<span lang=EN-US>Eladrin, </span>仙靈<span
+ lang=EN-US>Fairy, <br>
+      </span>費爾伯格人<span lang=EN-US>Firbolg, </span>氣元素裔<span lang=EN-US>Genasi: Air, </span>土元素裔<span
+ lang=EN-US>Genasi: Earth, </span>火元素裔<span lang=EN-US>Genasi: Fire, </span>水元素裔<span
+ lang=EN-US>Genasi: Water, </span>吉斯洋基人<span lang=EN-US>Githyanki, </span>吉斯澤萊人<span
+ lang=EN-US>Githzerai, </span>地精<span lang=EN-US>Goblin, </span>歌利亞<span
+ lang=EN-US>Goliath, <br>
+      </span>兔人<span lang=EN-US>Harengon, </span>大地精<span lang=EN-US>Hobgoblin, </span>天狗<span
+ lang=EN-US>Kenku, </span>狗頭人<span lang=EN-US>Kobold, </span>蜥蜴人<span
+ lang=EN-US>Lizardfolk, </span>牛頭人<span lang=EN-US>Minotaur, </span>獸人<span
+ lang=EN-US>Orc, </span>半羊人<span lang=EN-US>Satyr, </span>海精靈<span lang=EN-US>Sea
+      Elf, <br>
+      </span>影靈<span lang=EN-US>Shadar-kai, </span>化獸者<span lang=EN-US>Shifter, </span>斑貓人<span
+ lang=EN-US>Tabaxi, </span>龜人<span lang=EN-US>Tortle, </span>梭螺魚人<span
+ lang=EN-US>Triton, </span>原體蛇人<span lang=EN-US>Yun-ti.<br>
+      <br>
+      </span>這裡的許多種族都是基於《怪物圖鑑》和這本書籍中的怪物作為基礎的。和你的<span lang=EN-US>DM</span>諮詢，確認這裡的選擇是否適合你的戰役。<span
+ lang=EN-US><br>
+      <br>
+      </span>如果你使用了一個本章的種族，首先請閱讀<span lang=EN-US>「</span>建立你的角色<span lang=EN-US>」</span>部分。<span
+ lang=EN-US><br>
+      <br>
+      <br>
+      </span><span class=bbcsize><b><span style="FONT-FAMILY: 細明體">建立你的角色<span lang=EN-US> Creating Your Character</span></span></b></span><span
+ lang=EN-US><br>
+      <br>
+      </span>在<span lang=EN-US>1</span>級時，決定你的角色是人類還是其他奇幻種族中的一員。如果你選擇幻想種族，如本節的仙靈或兔人，在角色建立時參照以下的額外規則。如果你選擇了本章中的一個幻象種族，在創造角色時遵循以下的規則。<span
+ lang=EN-US><br>
+      <br>
+      </span><strong><span style="FONT-SIZE: 10pt; FONT-FAMILY: 細明體">屬性值加成<span lang=EN-US>Ability Score Increase</span></span></strong><br>
+當決定你屬性值加成時，將一項屬性加       <span lang=EN-US>2</span>，然後將另一項不同的屬性加<span lang=EN-US>1.</span>或者選擇三項不同的屬性各自加<span
+ lang=EN-US>1</span>。無論你如何決定角色的屬性，骰點還是購點都必須遵循這一規則。<span lang=EN-US>「</span>快速建卡<span
+ lang=EN-US>」</span>一節會指導你的角色選擇增加何種屬性。你可以採用這些指導也可以將其無視。無論你增加哪項屬性，這些加成無法讓屬性超過<span
+ lang=EN-US>20</span>。<span lang=EN-US><br>
+      <br>
+      </span><span class=bbcsize><b><span style="FONT-SIZE:
+ 10pt; FONT-FAMILY: 細明體">語言<span lang=EN-US>Languages</span></span></b></span><br>
+你的角色能夠說、讀和寫通用語和另一種你和       <span lang=EN-US>DM</span>認為適合角色的語言。《玩家手冊》提供了一項可供選擇的泛用語言列表。<span
+ lang=EN-US>DM</span>戰役爲了戰役而自由地修改該列表。<span lang=EN-US><br>
+      <br>
+      </span><span class=bbcsize><b><span
+ style="FONT-SIZE: 10pt; FONT-FAMILY: 細明體">生物種類<span
+ lang=EN-US>Creature Type</span></span></b></span><br>
+所有       <span lang=EN-US>D&amp;D</span>中的生物，包括所有玩家角色，都在規則上有一個特別的關鍵詞，用來鑑別其所屬的生物種類。絕大部分玩家角色都屬於類人生物。這裡列出的種族選項說明了你的角色的生物種類是什麼。<span
+ lang=EN-US><br>
+             </span>以下是遊戲內的生物種類按字母表順序排列的列表：異怪<span lang=EN-US> Aberration</span>、野獸<span lang=EN-US> Beast</span>、天界生物<span lang=EN-US> Celestial</span>、構裝生物<span lang=EN-US> Construct</span>、龍類<span lang=EN-US> Dragon</span>、元素生物<span lang=EN-US> Elemental</span>、精類<span lang=EN-US> Fey</span>、邪魔 <span lang=EN-US>Fiend</span>、巨人<span lang=EN-US> Giant</span>、類人生物<span
+ lang=EN-US> Humanoid</span>、怪獸<span lang=EN-US> Monstrosity</span>、泥怪<span
+ lang=EN-US> Ooze</span>、植物<span lang=EN-US> Plant</span>、不死<span lang=EN-US> Undead</span>。這些生物種類本身並不擁有規則，但一些遊戲規則會以不同的方式影響到特定種類的生物。例如，療傷術法術對不死和構裝生物無效。<span
+ lang=EN-US><br>
+      <br>
+      </span><span class=bbcsize><b><span style="FONT-SIZE:
+ 10pt; FONT-FAMILY: 細明體">壽命<span lang=EN-US>Life Span</span></span></b></span><br>
+在龍與地下城多元宇宙中，一個玩家角色的壽命通常約為一個世紀，前提是該角色沒有在冒險中遭遇不測。例如矮人們和精靈這些種族的成員，通常可以活上幾個世紀。如果本書中某個種族的成員普遍能活超過一個世紀，則會在該種族的描述中提到。       <span
+ lang=EN-US><br>
+      <br>
+      </span><span class=bbcsize><b><span style="FONT-SIZE:
+ 10pt; FONT-FAMILY: 細明體">身高與體重<span lang=EN-US> Height and Weight</span></span></b></span><br>
+不論種族，典型玩家角色的身高和體重範圍與我們現實世界裡人類的相同。如果你想隨機地決定你的角色的身高和體重，參照《玩家手冊》的隨機身高體重       <span
+ lang=EN-US>Random Height and Weight</span>表，並選擇最能代表你所想像的角色的一列進行投擲。</p></div>	
+	<div id="winchm_template_footer">Copyright  2019. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

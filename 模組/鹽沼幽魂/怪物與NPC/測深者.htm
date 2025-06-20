@@ -1,0 +1,557 @@
+﻿<!-- coding: gbk --><html>
+
+<head>
+<title>測深者</title>
+
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Word.Document>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:細明體;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+@font-face
+	{font-family:黑體;
+	panose-1:2 1 6 9 6 1 1 1 1 1;
+	mso-font-alt:SimHei;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-2147482945 953122042 22 0 262145 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-469750017 -1073732485 9 0 511 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
+@font-face
+	{font-family:華文黑體;
+	mso-font-alt:黑體;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 131167 0 1442015 0;}
+@font-face
+	{font-family:"\@細明體";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+@font-face
+	{font-family:"\@黑體";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-2147482945 953122042 22 0 262145 0;}
+@font-face
+	{font-family:"STHeiti light";
+	mso-font-alt:微軟雅黑;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 16 0 262145 0;}
+@font-face
+	{font-family:黑體-簡;
+	mso-font-alt:黑體;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 16 0 4063232 0;}
+@font-face
+	{font-family:"\@STHeiti light";
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 16 0 262145 0;}
+@font-face
+	{font-family:"\@華文黑體";
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 131167 0 1442015 0;}
+@font-face
+	{font-family:"\@黑體-簡";
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 16 0 4063232 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	mso-pagination:widow-orphan;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:細明體;
+	mso-bidi-font-family:細明體;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"標題 1 字元";
+	mso-style-next:正文;
+	margin-top:17.0pt;
+	margin-right:0cm;
+	margin-bottom:16.5pt;
+	margin-left:0cm;
+	line-height:240%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-out1ine-1evel:1;
+	font-size:22.0pt;
+	font-family:細明體;
+	mso-bidi-font-family:細明體;
+	mso-font-kerning:22.0pt;}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"標題 2 字元";
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-out1ine-1evel:2;
+	font-size:18.0pt;
+	font-family:細明體;
+	mso-bidi-font-family:細明體;}
+h4
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"標題 4 字元";
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-out1ine-1evel:4;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:細明體;
+	mso-bidi-font-family:細明體;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-noshow:yes;
+	mso-style-qformat:yes;
+	mso-style-link:"頁首 字元";
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:2.0pt;
+	margin-left:0cm;
+	text-align:center;
+	line-height:12.0pt;
+	mso-pagination:none;
+	tab-stops:center 207.65pt right 415.3pt;
+	layout-grid-mode:char;
+	border:none;
+	mso-border-bottom-alt:solid windowtext .75pt;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 1.0pt 0cm;
+	font-size:9.0pt;
+	font-family:"Cambria",serif;
+	mso-fareast-font-family:細明體;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"標題 字元";
+	mso-style-next:正文;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:2.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:none;
+	mso-out1ine-1evel:1;
+	font-size:16.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:細明體;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;
+	font-weight:bold;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{mso-style-priority:1;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	mso-pagination:widow-orphan;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:細明體;
+	mso-bidi-font-family:細明體;}
+span.1
+	{mso-style-name:"標題 1 字元";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"標題 1";
+	mso-ansi-font-size:22.0pt;
+	mso-bidi-font-size:22.0pt;
+	font-family:細明體;
+	mso-ascii-font-family:細明體;
+	mso-fareast-font-family:細明體;
+	mso-hansi-font-family:細明體;
+	mso-bidi-font-family:細明體;
+	mso-font-kerning:22.0pt;
+	font-weight:bold;}
+span.2
+	{mso-style-name:"標題 2 字元";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"標題 2";
+	mso-ansi-font-size:16.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"等線 Light";
+	mso-ascii-font-family:"等線 Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"等線 Light";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"等線 Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	font-weight:bold;}
+span.4
+	{mso-style-name:"標題 4 字元";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"標題 4";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"等線 Light";
+	mso-ascii-font-family:"等線 Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"等線 Light";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"等線 Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	font-weight:bold;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:細明體;
+	mso-bidi-font-family:細明體;}
+span.a
+	{mso-style-name:"頁首 字元";
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-locked:yes;
+	mso-style-link:頁首;
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;
+	font-family:"Cambria",serif;
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:細明體;
+	mso-hansi-font-family:Cambria;
+	mso-font-kerning:1.0pt;}
+span.a0
+	{mso-style-name:"標題 字元";
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-locked:yes;
+	mso-style-link:標題;
+	mso-ansi-font-size:16.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-fareast-font-family:細明體;
+	mso-hansi-font-family:Calibri;
+	mso-bidi-font-family:Calibri;
+	mso-font-kerning:1.0pt;
+	font-weight:bold;}
+span.a1
+	{mso-style-name:"怪物名 字元";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"標題 1 字元";
+	mso-style-link:怪物名;
+	mso-ansi-font-size:22.0pt;
+	mso-bidi-font-size:22.0pt;
+	font-family:細明體;
+	mso-ascii-font-family:細明體;
+	mso-fareast-font-family:黑體;
+	mso-hansi-font-family:細明體;
+	mso-bidi-font-family:細明體;
+	color:#C00000;
+	mso-font-kerning:22.0pt;
+	font-weight:bold;}
+p.a2, li.a2, div.a2
+	{mso-style-name:怪物名;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"標題 1";
+	mso-style-link:"怪物名 字元";
+	margin:0cm;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-out1ine-1evel:1;
+	font-size:22.0pt;
+	font-family:細明體;
+	mso-fareast-font-family:黑體;
+	mso-bidi-font-family:細明體;
+	color:#C00000;
+	mso-font-kerning:22.0pt;
+	font-weight:bold;}
+span.a3
+	{mso-style-name:"怪物下拉 字元";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"標題 2 字元";
+	mso-style-link:怪物下拉;
+	mso-ansi-font-size:15.0pt;
+	mso-bidi-font-size:18.0pt;
+	font-family:細明體;
+	mso-ascii-font-family:細明體;
+	mso-fareast-font-family:細明體;
+	mso-hansi-font-family:細明體;
+	mso-bidi-font-family:細明體;
+	font-weight:bold;}
+p.a4, li.a4, div.a4
+	{mso-style-name:怪物下拉;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"標題 2";
+	mso-style-link:"怪物下拉 字元";
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:21.0pt;
+	mso-margin-top-alt:auto;
+	mso-para-margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	mso-para-margin-left:2.0gd;
+	mso-pagination:widow-orphan;
+	mso-out1ine-1evel:2;
+	font-size:15.0pt;
+	mso-bidi-font-size:18.0pt;
+	font-family:細明體;
+	mso-bidi-font-family:細明體;
+	font-weight:bold;}
+p.40, li.40, div.40
+	{mso-style-name:正文4;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin:0cm;
+	mso-para-margin-top:.2gd;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:.2gd;
+	mso-para-margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-line-height-alt:0pt;
+	mso-pagination:none;
+	punctuation-trim:leading;
+	font-size:10.5pt;
+	font-family:"Cambria",serif;
+	mso-fareast-font-family:細明體;
+	mso-bidi-font-family:Arial;
+	mso-font-kerning:1.0pt;}
+p.a5, li.a5, div.a5
+	{mso-style-name:陣營;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin:0cm;
+	mso-para-margin-top:.2gd;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:.2gd;
+	mso-para-margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-line-height-alt:0pt;
+	mso-pagination:none;
+	punctuation-trim:leading;
+	font-size:8.0pt;
+	mso-bidi-font-size:10.5pt;
+	font-family:"Cambria",serif;
+	mso-fareast-font-family:細明體;
+	mso-bidi-font-family:Arial;
+	mso-font-kerning:1.0pt;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	mso-ascii-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";
+	mso-font-kerning:0pt;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN style="TEXT-JUSTIFY-TRIM:
+ punctuation; WORD-WRAP: break-word; tab-interval: 21.0pt">
+<H2 style="MARGIN: 0pt"><B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 細明體; FONT-WEIGHT: bold; COLOR: rgb(99,36,35); mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Segoe UI'; mso-hansi-font-family: 'Segoe UI'; mso-ascii-font-family: 'Segoe UI'"><FONT face=細明體>測深者</FONT><FONT face="Segoe UI">Fathomer</FONT></SPAN></B><B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Segoe UI'; FONT-WEIGHT: bold; COLOR: rgb(99,36,35); mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-fareast-font-family: 細明體"></SPAN></B></H2>
+<P class=MsoNormal style="MARGIN: 0pt"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=細明體>測深者是與邪惡的水元素公主奧莉德拉達成協議的信徒。除了他們的施法能力，測深者還能把他們的身體變成水</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri"><FONT face=細明體>體的</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=細明體>蛇一樣的</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri"><FONT face=細明體>形態</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=細明體>。在水蛇形態中，測深者可以獲得許多元素生物所擁有的</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri"><FONT face=細明體>抗性</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=細明體>，以及用它們的</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri"><FONT face=細明體>液態</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=細明體>身體抓住和粉碎敵人的能力。</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體; mso-ansi-font-weight: bold"><FONT face=細明體>測深者</FONT>Fathomer</SPAN></B><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri"><FONT face=細明體>中型類人（人類），中立邪惡</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0pt"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri"><FONT face=細明體>————————————————</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0pt"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri"><FONT face=細明體>護甲等級</FONT> <FONT face=Calibri>10</FONT><FONT face=細明體>（法師護甲時</FONT><FONT face=Calibri>13</FONT><FONT face=細明體>）</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0pt"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri"><FONT face=細明體>生命值</FONT> <FONT face=Calibri>52</FONT><FONT face=細明體>（</FONT><FONT face=Calibri>8d8+24</FONT><FONT face=細明體>） </FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0pt"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri"><FONT face=細明體>速度</FONT> <FONT face=Calibri>30</FONT><FONT face=細明體>尺</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0pt"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri"><FONT face=細明體>————————————————</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0pt"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri"><FONT face=細明體>力量</FONT><FONT face=Calibri>14</FONT><FONT face=細明體>（</FONT><FONT face=Calibri>+2</FONT><FONT face=細明體>） 敏捷</FONT><FONT face=Calibri>11</FONT><FONT face=細明體>（</FONT><FONT face=Calibri>+0</FONT><FONT face=細明體>） 體質</FONT><FONT face=Calibri>14</FONT><FONT face=細明體>（</FONT><FONT face=Calibri>+2</FONT><FONT face=細明體>） 智力</FONT><FONT face=Calibri>11</FONT><FONT face=細明體>（</FONT><FONT face=Calibri>+0</FONT><FONT face=細明體>） 感知</FONT><FONT face=Calibri>11</FONT><FONT face=細明體>（</FONT><FONT face=Calibri>+0</FONT><FONT face=細明體>） 魅力</FONT><FONT face=Calibri>15</FONT><FONT face=細明體>（</FONT><FONT face=Calibri>+2</FONT><FONT face=細明體>）</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0pt"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri"><FONT face=細明體>————————————————</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0pt"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri"><FONT face=細明體>技能：奧秘</FONT><FONT face=Calibri>+2</FONT><FONT face=細明體>、察覺</FONT><FONT face=Calibri>+4</FONT><FONT face=細明體>、隱匿</FONT><FONT face=Calibri>+4</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0pt"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri"><FONT face=細明體>感官：被動察覺</FONT> <FONT face=Calibri>14</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0pt"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri"><FONT face=細明體>語言：水族語、通用語</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0pt"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri"><FONT face=細明體>挑戰等級：</FONT><FONT face=Calibri>2</FONT><FONT face=細明體>（</FONT><FONT face=Calibri>450xp</FONT><FONT face=細明體>）</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=Calibri>————————————————</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體; mso-ansi-font-weight: bold"><FONT face=細明體>變形生物</FONT>Shapechanger<FONT face=細明體>（</FONT><FONT face=Calibri>2</FONT><FONT face=細明體>次</FONT><FONT face=Calibri>/</FONT><FONT face=細明體>天）</FONT></SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體; mso-ansi-font-weight: bold"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=細明體>測深者可以使用它的一個動作變形為一隻由水組成的中體型的蛇。或者變回到它的真實形態。</FONT> <FONT face=細明體>在改變過程中，任何時候穿著或攜帶的物品都被歸入蛇形狀，直到物質體返回其真實形態才能進入。</FONT> 4<FONT face=細明體>小時後，測深者恢復其真實形態，除非它再次使用這種特性。如果該測深者被打昏或者死了，它也會恢復到它的真實形態。</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=細明體>在蛇的形態中，測深者可以獲得</FONT>40<FONT face=細明體>英尺的游泳速度，水下呼吸能力，對毒素傷害的免疫力，以及對火傷害的抗性，以及對非魔法武器的鈍擊、穿刺和揮砍傷害的抗性。它對以下的狀態也有免疫力：力竭、擒抱、麻痹、中毒、束縛、倒地、昏迷。蛇形態可以進入敵對生物的空間並停留在那裡。此外，若是流水可以通過的空間，該蛇也可以這樣做而不受到擠壓。</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體; mso-ansi-font-weight: bold"><FONT face=細明體>奧莉德拉</FONT></SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri; mso-ansi-font-weight: bold"><FONT face=細明體>之胄</FONT></SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體; mso-ansi-font-weight: bold">Olhydra』s 
+Armor<FONT face=細明體>（僅類人形態）</FONT></SPAN></B><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=細明體>測深者可以隨意施放法師護甲</FONT>mage armor<FONT face=細明體>，不需要消耗材料。</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體; mso-ansi-font-weight: bold"><FONT face=細明體>施法</FONT>Spellcasting</SPAN></B><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 細明體; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri; mso-ansi-font-weight: bold"><FONT face=細明體>（僅類人形態）</FONT></SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體; mso-ansi-font-weight: bold"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=細明體>測深者是一名</FONT>5<FONT face=細明體>級施法者，其施法關鍵屬性為魅力（法術豁免 </FONT><FONT face=Calibri>DC 12</FONT><FONT face=細明體>，法術攻擊命中</FONT><FONT face=Calibri>+4</FONT><FONT face=細明體>），它有兩個</FONT><FONT face=Calibri>3</FONT><FONT face=細明體>環的法術位，並在一次短休或長休后恢復。他知道以下邪術師法術</FONT><FONT face=Calibri>:</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=細明體>戲法（任意）：顫慄之觸</FONT>Chill Touch<FONT face=細明體>、魔能爆</FONT><FONT face=Calibri>Eldritch Blast</FONT><FONT face=細明體>、法師之手</FONT><FONT face=Calibri>Mage Hand</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體">1<FONT face=細明體>環：黯冰獄鎧</FONT><FONT face=Calibri>Armor of Agathys</FONT><FONT face=細明體>、腳底摸油</FONT><FONT face=Calibri>Expeditious Retreat</FONT><FONT face=細明體>、脆弱詛咒</FONT><FONT face=Calibri>Hex</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體">2<FONT face=細明體>環：隱形術</FONT><FONT face=Calibri>Invisibility</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體">3<FONT face=細明體>環：吸血鬼之觸</FONT><FONT face=Calibri>Vampiric Touch</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN class=15 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: Calibri; COLOR: rgb(99,36,35); mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體; mso-ansi-font-weight: bold"><FONT face=細明體>動作</FONT> Action</SPAN></B><B style="mso-bidi-font-weight: normal"><SPAN 
+class=15 
+style="FONT-SIZE: 10.5pt; FONT-FAMILY: Calibri; COLOR: rgb(99,36,35); mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體; mso-ansi-font-weight: bold"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=Calibri>————————————————</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體; mso-ansi-font-weight: bold"><FONT face=細明體>絞纏</FONT>Constrict<FONT face=細明體>（僅蛇形態）</FONT></SPAN></B><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=細明體>近戰武器攻擊：</FONT>+4<FONT face=細明體>命中，觸及</FONT><FONT face=Calibri>5</FONT><FONT face=細明體>尺，一個目標。</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=細明體>傷害：</FONT>9<FONT face=細明體>（</FONT><FONT face=Calibri>2d6+2</FONT><FONT face=細明體>） 鈍擊傷害。</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=細明體>若目標為中體型或更小，則目標被擒抱（掙脫</FONT>DC12<FONT face=細明體>），直到擒抱結束為止，該生物陷入束縛狀態，且測深者不能絞纏另一個目標。</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體; mso-ansi-font-weight: bold"><FONT face=細明體>匕首</FONT>Dagger<FONT face=細明體>（僅類人形態）</FONT></SPAN></B><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體; mso-ansi-font-weight: bold"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=細明體>近戰或遠端武器攻擊：</FONT>+4<FONT face=細明體>命中，觸及</FONT><FONT face=Calibri>5</FONT><FONT face=細明體>尺，或射程</FONT><FONT face=Calibri>20/60</FONT><FONT face=細明體>，一個目標。</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><BR></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"><FONT face=細明體>傷害：</FONT>4<FONT face=細明體>（</FONT><FONT face=Calibri>1d4+2</FONT><FONT face=細明體>） 穿刺傷害。</FONT></SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Calibri; mso-font-kerning: 1.0000pt; mso-spacerun: 'yes'; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 細明體"></SPAN></P><!--EndFragment-->
+<P> </P></body>
+
+</html>
