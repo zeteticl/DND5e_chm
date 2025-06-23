@@ -7123,9 +7123,12 @@ setTimeout(function() {
     var links = document.querySelectorAll('.dtree a');
     for (var i = 0; i < links.length; i++) {
         links[i].addEventListener('click', function() {
-            // 通知父窗口有鏈接被點擊
-            if (window.parent && window.parent !== window) {
-                window.parent.postMessage('linkClicked', '*');
+            var href = this.getAttribute('href');
+            // 只在 href 不是 javascript: 開頭時才通知父窗口
+            if (href && !href.startsWith('javascript:')) {
+                if (window.parent && window.parent !== window) {
+                    window.parent.postMessage('linkClicked', '*');
+                }
             }
         });
     }
