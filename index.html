@@ -1,1 +1,147 @@
-<HTML><HEAD><TITLE>5E 不全書</TITLE></HEAD><FRAMESET border=4 cols="230, *"><FRAME name=left marginWidth=5 marginHeight=5 src="left.html" ><FRAME name=body marginWidth=5 marginHeight=5 src="寫在前面.html" ></FRAMESET></HTML>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5E 不全書</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 230px 1fr;
+            height: 100vh;
+        }
+        
+        .sidebar {
+            background-color: #f0f0f0;
+            border-right: 4px solid #ccc;
+            overflow: hidden;
+            padding: 5px;
+        }
+        
+        .main-content {
+            padding: 5px;
+            overflow: hidden;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            background: #007cba;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        /* 手機版樣式 */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                position: relative;
+            }
+            
+            .sidebar {
+                position: fixed;
+                left: -100%;
+                top: 0;
+                width: 280px;
+                height: 100vh;
+                z-index: 999;
+                background-color: white;
+                box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+                transition: left 0.3s ease;
+                overflow: hidden;
+            }
+            
+            .sidebar.open {
+                left: 0;
+            }
+            
+            .main-content {
+                grid-column: 1;
+                padding-top: 50px;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.5);
+                z-index: 998;
+            }
+            
+            .overlay.show {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="mobile-toggle" onclick="toggleSidebar()">☰ 選單</button>
+    <div class="overlay" onclick="closeSidebar()"></div>
+    
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <iframe src="left.html" name="left"></iframe>
+        </div>
+        <div class="main-content">
+            <iframe src="寫在前面.html" name="body" id="mainFrame"></iframe>
+        </div>
+    </div>
+    
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.overlay');
+            
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('show');
+        }
+        
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.overlay');
+            
+            sidebar.classList.remove('open');
+            overlay.classList.remove('show');
+        }
+        
+        // 監聽 left.html 中的連結點擊，在手機版自動關閉側邊欄
+        window.addEventListener('message', function(event) {
+            if (event.data === 'linkClicked') {
+                closeSidebar();
+            }
+        });
+        
+        // 確保頁面載入後正確顯示
+        window.addEventListener('load', function() {
+            if (window.innerWidth <= 768) {
+                closeSidebar();
+            }
+        });
+    </script>
+</body>
+</html>

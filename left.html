@@ -1,7 +1,30 @@
 ﻿<html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="5e" ><link rel="StyleSheet" href="dtree.css" type="text/css" />
 <script type="text/javascript" src="dtree.js"></script>
+<style>
+/* 手機版樣式優化 */
+@media (max-width: 768px) {
+    .dtree {
+        font-size: 14px;
+    }
+    .dtree p {
+        margin: 2px 0;
+    }
+    .dtree a {
+     
+        display: inline-block;
+        min-height: 24px;
+        line-height: 1.2;
+    }
+    .dtree img {
+        width: 16px;
+        height: 16px;
+    }
+}
+</style>
 </head>
 <body>
 <div class="dtree">
@@ -7094,6 +7117,20 @@ d.add(7082,0,"更新日誌&amp;糾錯指南","更新日誌.html");
 d.add(7083,0,"鳴謝列表","鳴謝列表.htm");
 
 document.write(d);
+
+// 為所有鏈接添加點擊事件監聽器
+setTimeout(function() {
+    var links = document.querySelectorAll('.dtree a');
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function() {
+            // 通知父窗口有鏈接被點擊
+            if (window.parent && window.parent !== window) {
+                window.parent.postMessage('linkClicked', '*');
+            }
+        });
+    }
+}, 100);
+
 //-->
 </script>
 </div>
