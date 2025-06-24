@@ -49,8 +49,59 @@
             cursor: pointer;
         }
         
+        /* Loading progress bar styles */
+        .loading-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #f0f0f0;
+            z-index: 9999;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .loading-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .progress-bar {
+            width: 80%;
+            max-width: 400px;
+            height: 20px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #007cba 0%, #00a8e6 100%);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 10px;
+        }
+        
+        .progress-percentage {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #007cba;
+            font-weight: bold;
+        }
+        
         /* 手機版樣式 */
         @media (max-width: 768px) {
+            .loading-container {
+                display: flex;
+            }
+            
             .container {
                 grid-template-columns: 1fr;
                 position: relative;
@@ -80,6 +131,14 @@
             
             .mobile-toggle {
                 display: block;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s ease;
+            }
+            
+            .mobile-toggle.loaded {
+                opacity: 1;
+                pointer-events: auto;
             }
             
             .overlay {
@@ -97,15 +156,31 @@
                 display: block;
             }
         }
+        
+        /* Desktop styles - hide loading on desktop */
+        @media (min-width: 769px) {
+            .loading-container {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 <body>
-    <button class="mobile-toggle" onclick="toggleSidebar()">☰ 選單</button>
+    <!-- Loading screen for mobile -->
+    <div class="loading-container" id="loadingContainer">
+        <div class="loading-text">載入中...</div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-percentage" id="progressPercentage">0%</div>
+    </div>
+    
+    <button class="mobile-toggle" id="mobileToggle" onclick="toggleSidebar()">☰ 選單</button>
     <div class="overlay" onclick="closeSidebar()"></div>
     
     <div class="container">
         <div class="sidebar" id="sidebar">
-            <iframe src="left.html" name="left"></iframe>
+            <iframe src="left.html" name="left" id="leftFrame"></iframe>
         </div>
         <div class="main-content">
             <iframe src="寫在前面.html" name="body" id="mainFrame"></iframe>
@@ -113,6 +188,58 @@
     </div>
     
     <script>
+        let loadingProgress = 0;
+        let loadingInterval;
+        let leftFrameLoaded = false;
+        let mainFrameLoaded = false;
+        
+        function updateProgress(percentage) {
+            const progressFill = document.getElementById('progressFill');
+            const progressPercentage = document.getElementById('progressPercentage');
+            
+            progressFill.style.width = percentage + '%';
+            progressPercentage.textContent = percentage + '%';
+        }
+        
+        function startLoading() {
+            // Only start loading progress on mobile
+            if (window.innerWidth <= 768) {
+                loadingProgress = 0;
+                updateProgress(0);
+                
+                // Simulate initial loading progress
+                loadingInterval = setInterval(() => {
+                    if (loadingProgress < 85) {
+                        loadingProgress += Math.random() * 15;
+                        if (loadingProgress > 85) loadingProgress = 85;
+                        updateProgress(Math.floor(loadingProgress));
+                    }
+                }, 200);
+            }
+        }
+        
+        function checkAllLoaded() {
+            if (leftFrameLoaded && mainFrameLoaded) {
+                finishLoading();
+            }
+        }
+        
+        function finishLoading() {
+            if (window.innerWidth <= 768) {
+                clearInterval(loadingInterval);
+                
+                // Complete the progress bar
+                loadingProgress = 100;
+                updateProgress(100);
+                
+                // Hide loading screen and show menu button after a short delay
+                setTimeout(() => {
+                    document.getElementById('loadingContainer').style.display = 'none';
+                    document.getElementById('mobileToggle').classList.add('loaded');
+                }, 500);
+            }
+        }
+        
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.querySelector('.overlay');
@@ -129,17 +256,61 @@
             overlay.classList.remove('show');
         }
         
-        // 監聽 left.html 中的連結點擊，在手機版自動關閉側邊欄
+        // 監聽 left.html 中的連結點擊和載入完成訊息
         window.addEventListener('message', function(event) {
             if (event.data === 'linkClicked') {
                 closeSidebar();
+            } else if (event.data === 'leftFrameLoaded') {
+                leftFrameLoaded = true;
+                if (window.innerWidth <= 768) {
+                    loadingProgress = Math.max(loadingProgress, 60);
+                    updateProgress(Math.floor(loadingProgress));
+                }
+                checkAllLoaded();
             }
+        });
+        
+        // Handle iframe loading
+        document.getElementById('leftFrame').addEventListener('load', function() {
+            leftFrameLoaded = true;
+            if (window.innerWidth <= 768) {
+                loadingProgress = Math.max(loadingProgress, 50);
+                updateProgress(Math.floor(loadingProgress));
+            }
+            checkAllLoaded();
+        });
+        
+        document.getElementById('mainFrame').addEventListener('load', function() {
+            mainFrameLoaded = true;
+            if (window.innerWidth <= 768) {
+                loadingProgress = Math.max(loadingProgress, 75);
+                updateProgress(Math.floor(loadingProgress));
+            }
+            checkAllLoaded();
         });
         
         // 確保頁面載入後正確顯示
         window.addEventListener('load', function() {
             if (window.innerWidth <= 768) {
                 closeSidebar();
+                startLoading();
+            } else {
+                // Desktop - hide loading immediately
+                document.getElementById('loadingContainer').style.display = 'none';
+            }
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                // Switch to desktop - hide loading and show menu
+                document.getElementById('loadingContainer').style.display = 'none';
+                document.getElementById('mobileToggle').classList.add('loaded');
+                closeSidebar();
+            } else if (window.innerWidth <= 768 && !leftFrameLoaded && !mainFrameLoaded) {
+                // Switch to mobile and not loaded yet - show loading
+                document.getElementById('loadingContainer').style.display = 'flex';
+                document.getElementById('mobileToggle').classList.remove('loaded');
             }
         });
     </script>

@@ -7132,6 +7132,11 @@ setTimeout(function() {
             }
         });
     }
+    
+    // 通知父窗口頁面已完全載入
+    if (window.parent && window.parent !== window) {
+        window.parent.postMessage('leftFrameLoaded', '*');
+    }
 }, 100);
 
 //-->
