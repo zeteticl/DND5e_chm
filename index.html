@@ -49,7 +49,7 @@
             cursor: pointer;
         }
         
-        /* Loading progress bar styles */
+        /* Loading progress bar styles - DND Pixel Style */
         .loading-container {
             display: none;
             position: fixed;
@@ -57,43 +57,169 @@
             left: 0;
             width: 100%;
             height: 100vh;
-            background-color: #f0f0f0;
+            background: #2c1810;
             z-index: 9999;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            image-rendering: pixelated;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .loading-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 25% 25%, #3d2817 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, #4a3220 1px, transparent 1px);
+            background-size: 40px 40px, 20px 20px;
+            opacity: 0.3;
+            z-index: -1;
         }
         
         .loading-text {
             font-size: 18px;
             font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
+            color: #d4af37;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 0px #1a0f08;
+            letter-spacing: 2px;
+            animation: textBlink 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes textBlink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.7; }
         }
         
         .progress-bar {
             width: 80%;
-            max-width: 400px;
+            max-width: 360px;
             height: 20px;
-            background-color: #ddd;
-            border-radius: 10px;
+            background-color: #1a0f08;
+            border: 3px solid #8b6914;
+            border-radius: 0;
             overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 
+                inset 0 0 0 1px #5d4a0d,
+                0 2px 4px rgba(0,0,0,0.5);
+            position: relative;
         }
         
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, #007cba 0%, #00a8e6 100%);
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    #d4af37 0px,
+                    #d4af37 4px,
+                    #b8941f 4px,
+                    #b8941f 8px
+                );
             width: 0%;
-            transition: width 0.3s ease;
-            border-radius: 10px;
+            transition: width 0.2s ease;
+            border-radius: 0;
+            position: relative;
+            animation: pixelMove 1s linear infinite;
+        }
+        
+        @keyframes pixelMove {
+            0% { background-position: 0px 0px; }
+            100% { background-position: 8px 0px; }
+        }
+        
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent 0px,
+                    transparent 1px,
+                    rgba(255,255,255,0.1) 1px,
+                    rgba(255,255,255,0.1) 2px
+                );
         }
         
         .progress-percentage {
-            margin-top: 10px;
+            margin-top: 15px;
             font-size: 16px;
-            color: #007cba;
+            color: #d4af37;
             font-weight: bold;
+            text-shadow: 1px 1px 0px #1a0f08;
+            letter-spacing: 1px;
+        }
+        
+        /* Loading dots animation - Pixel Style */
+        .loading-dots {
+            margin-top: 20px;
+            display: flex;
+            gap: 6px;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: #8b6914;
+            border-radius: 0;
+            border: 1px solid #d4af37;
+            animation: dotBlink 1.2s ease-in-out infinite both;
+        }
+        
+        .dot:nth-child(1) { animation-delay: 0s; }
+        .dot:nth-child(2) { animation-delay: 0.4s; }
+        .dot:nth-child(3) { animation-delay: 0.8s; }
+        
+        @keyframes dotBlink {
+            0%, 60% {
+                background: #8b6914;
+                border-color: #d4af37;
+            }
+            61%, 100% {
+                background: #d4af37;
+                border-color: #fff;
+                box-shadow: 0 0 4px #d4af37;
+            }
+        }
+        
+        /* Floating particles - DND Style */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #8b6914;
+            border-radius: 0;
+            animation: float 8s linear infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+            5%, 95% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
         }
         
         /* 手機版樣式 */
@@ -168,11 +294,17 @@
 <body>
     <!-- Loading screen for mobile -->
     <div class="loading-container" id="loadingContainer">
-        <div class="loading-text">載入中...</div>
+        <div class="particles" id="particles"></div>
+        <div class="loading-text" id="loadingText">載入中...</div>
         <div class="progress-bar">
             <div class="progress-fill" id="progressFill"></div>
         </div>
         <div class="progress-percentage" id="progressPercentage">0%</div>
+        <div class="loading-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
     </div>
     
     <button class="mobile-toggle" id="mobileToggle" onclick="toggleSidebar()">☰ 選單</button>
@@ -192,6 +324,8 @@
         let loadingInterval;
         let leftFrameLoaded = false;
         let mainFrameLoaded = false;
+        let loadingTexts = ['探索中...', '準備冒險...', '整理裝備...', '研讀法術...', '即將出發...'];
+        let currentTextIndex = 0;
         
         function updateProgress(percentage) {
             const progressFill = document.getElementById('progressFill');
@@ -199,22 +333,82 @@
             
             progressFill.style.width = percentage + '%';
             progressPercentage.textContent = percentage + '%';
+            
+            // Update loading text based on progress
+            updateLoadingText(percentage);
+        }
+        
+        function updateLoadingText(percentage) {
+            const loadingText = document.getElementById('loadingText');
+            let newIndex;
+            
+            if (percentage < 20) newIndex = 0;
+            else if (percentage < 40) newIndex = 1;
+            else if (percentage < 60) newIndex = 2;
+            else if (percentage < 85) newIndex = 3;
+            else newIndex = 4;
+            
+            if (newIndex !== currentTextIndex) {
+                currentTextIndex = newIndex;
+                // Add fade effect
+                loadingText.style.opacity = '0.5';
+                setTimeout(() => {
+                    loadingText.textContent = loadingTexts[currentTextIndex];
+                    loadingText.style.opacity = '1';
+                }, 200);
+            }
+        }
+        
+        function createParticles() {
+            const particles = document.getElementById('particles');
+            const particleCount = 20;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                particles.appendChild(particle);
+            }
         }
         
         function startLoading() {
             // Only start loading progress on mobile
             if (window.innerWidth <= 768) {
                 loadingProgress = 0;
+                currentTextIndex = 0;
                 updateProgress(0);
+                createParticles();
                 
-                // Simulate initial loading progress
+                // More realistic loading simulation
                 loadingInterval = setInterval(() => {
-                    if (loadingProgress < 85) {
-                        loadingProgress += Math.random() * 15;
-                        if (loadingProgress > 85) loadingProgress = 85;
-                        updateProgress(Math.floor(loadingProgress));
+                    let increment;
+                    
+                    // Different speeds for different stages
+                    if (loadingProgress < 30) {
+                        // Fast initial loading (0-30%)
+                        increment = Math.random() * 8 + 2; // 2-10%
+                    } else if (loadingProgress < 60) {
+                        // Medium speed (30-60%)
+                        increment = Math.random() * 4 + 1; // 1-5%
+                    } else if (loadingProgress < 85) {
+                        // Slower progress (60-85%)
+                        increment = Math.random() * 2 + 0.5; // 0.5-2.5%
+                    } else {
+                        // Very slow final stage, wait for actual loading
+                        increment = Math.random() * 0.5; // 0-0.5%
                     }
-                }, 200);
+                    
+                    loadingProgress += increment;
+                    
+                    // Cap at 95% until actually loaded
+                    if (loadingProgress > 95 && !(leftFrameLoaded && mainFrameLoaded)) {
+                        loadingProgress = 95;
+                    }
+                    
+                    updateProgress(Math.floor(loadingProgress));
+                }, 300); // Slightly slower interval for smoother animation
             }
         }
         
@@ -228,16 +422,84 @@
             if (window.innerWidth <= 768) {
                 clearInterval(loadingInterval);
                 
-                // Complete the progress bar
-                loadingProgress = 100;
-                updateProgress(100);
+                // Update to completion text
+                const loadingText = document.getElementById('loadingText');
+                loadingText.textContent = '任務完成！';
+                loadingText.style.color = '#ffd700';
                 
-                // Hide loading screen and show menu button after a short delay
-                setTimeout(() => {
-                    document.getElementById('loadingContainer').style.display = 'none';
-                    document.getElementById('mobileToggle').classList.add('loaded');
-                }, 500);
+                // Smooth completion animation
+                const completeInterval = setInterval(() => {
+                    if (loadingProgress < 100) {
+                        loadingProgress += 2;
+                        if (loadingProgress >= 100) {
+                            loadingProgress = 100;
+                            clearInterval(completeInterval);
+                            
+                            // Add completion celebration effect
+                            addCompletionEffect();
+                            
+                            // Hide loading screen and show menu button after completion
+                            setTimeout(() => {
+                                document.getElementById('loadingContainer').style.display = 'none';
+                                document.getElementById('mobileToggle').classList.add('loaded');
+                            }, 1200);
+                        }
+                        updateProgress(Math.floor(loadingProgress));
+                    }
+                }, 50); // Fast final animation
             }
+        }
+        
+        function addCompletionEffect() {
+            const loadingContainer = document.getElementById('loadingContainer');
+            
+            // Add success effect
+            loadingContainer.style.background = '#1a4a1a';
+            
+            // Create success particles
+            for (let i = 0; i < 6; i++) {
+                setTimeout(() => {
+                    createSuccessParticle();
+                }, i * 150);
+            }
+        }
+        
+        function createSuccessParticle() {
+            const particle = document.createElement('div');
+            particle.style.position = 'absolute';
+            particle.style.width = '6px';
+            particle.style.height = '6px';
+            particle.style.background = '#ffd700';
+            particle.style.borderRadius = '0';
+            particle.style.border = '1px solid #fff';
+            particle.style.left = '50%';
+            particle.style.top = '50%';
+            particle.style.pointerEvents = 'none';
+            particle.style.zIndex = '10001';
+            
+            document.getElementById('loadingContainer').appendChild(particle);
+            
+            const angle = Math.random() * 360;
+            const velocity = Math.random() * 150 + 80;
+            const life = 1200;
+            
+            particle.animate([
+                {
+                    transform: 'translate(-50%, -50%)',
+                    opacity: '1'
+                },
+                {
+                    transform: `translate(${Math.cos(angle) * velocity - 50}%, ${Math.sin(angle) * velocity - 50}%)`,
+                    opacity: '0'
+                }
+            ], {
+                duration: life,
+                easing: 'ease-out'
+            });
+            
+            setTimeout(() => {
+                particle.remove();
+            }, life);
         }
         
         function toggleSidebar() {
@@ -263,8 +525,11 @@
             } else if (event.data === 'leftFrameLoaded') {
                 leftFrameLoaded = true;
                 if (window.innerWidth <= 768) {
-                    loadingProgress = Math.max(loadingProgress, 60);
-                    updateProgress(Math.floor(loadingProgress));
+                    // Ensure at least 50% when left frame loads
+                    if (loadingProgress < 50) {
+                        loadingProgress = 50;
+                        updateProgress(Math.floor(loadingProgress));
+                    }
                 }
                 checkAllLoaded();
             }
@@ -274,8 +539,11 @@
         document.getElementById('leftFrame').addEventListener('load', function() {
             leftFrameLoaded = true;
             if (window.innerWidth <= 768) {
-                loadingProgress = Math.max(loadingProgress, 50);
-                updateProgress(Math.floor(loadingProgress));
+                // Ensure at least 40% when left frame loads
+                if (loadingProgress < 40) {
+                    loadingProgress = 40;
+                    updateProgress(Math.floor(loadingProgress));
+                }
             }
             checkAllLoaded();
         });
@@ -283,8 +551,11 @@
         document.getElementById('mainFrame').addEventListener('load', function() {
             mainFrameLoaded = true;
             if (window.innerWidth <= 768) {
-                loadingProgress = Math.max(loadingProgress, 75);
-                updateProgress(Math.floor(loadingProgress));
+                // Ensure at least 70% when main frame loads
+                if (loadingProgress < 70) {
+                    loadingProgress = 70;
+                    updateProgress(Math.floor(loadingProgress));
+                }
             }
             checkAllLoaded();
         });
