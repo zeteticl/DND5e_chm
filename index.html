@@ -351,10 +351,6 @@
             { progress: 92, text: '即將出發...' }
         ];
         
-        // Add loading time estimate
-        let loadingStartTime = 0;
-        let estimatedLoadingTime = 90000; // 90 seconds (1.5 minutes)
-        
         function updateProgress(percentage) {
             const progressFill = document.getElementById('progressFill');
             const progressPercentage = document.getElementById('progressPercentage');
@@ -408,44 +404,31 @@
             if (window.innerWidth <= 768) {
                 loadingProgress = 0;
                 currentTextIndex = 0;
-                loadingStartTime = Date.now();
                 updateProgress(0);
                 createParticles();
                 
                 // Add initial delay to ensure user sees the loading start
                 setTimeout(() => {
-                    // More realistic loading simulation with better timing
+                    // Simple and reliable loading simulation
                     loadingInterval = setInterval(() => {
                         let increment;
-                        const elapsedTime = Date.now() - loadingStartTime;
                         
-                        // Calculate progress based on time and actual loading state
-                        let timeBasedProgress = Math.min((elapsedTime / estimatedLoadingTime) * 85, 85);
-                        
-                        // Different speeds for different stages with better pacing
-                        if (loadingProgress < 25) {
-                            // Fast initial loading (0-25%)
+                        // Different speeds for different stages
+                        if (loadingProgress < 30) {
+                            // Fast initial loading (0-30%)
+                            increment = Math.random() * 3 + 1; // 1-4%
+                        } else if (loadingProgress < 60) {
+                            // Medium speed (30-60%)
                             increment = Math.random() * 2 + 0.5; // 0.5-2.5%
-                        } else if (loadingProgress < 50) {
-                            // Medium speed (25-50%)
-                            increment = Math.random() * 1.5 + 0.3; // 0.3-1.8%
-                        } else if (loadingProgress < 75) {
-                            // Slower progress (50-75%)
+                        } else if (loadingProgress < 85) {
+                            // Slower progress (60-85%)
                             increment = Math.random() * 1 + 0.2; // 0.2-1.2%
-                        } else if (loadingProgress < 90) {
-                            // Very slow progress (75-90%)
-                            increment = Math.random() * 0.5 + 0.1; // 0.1-0.6%
                         } else {
-                            // Extremely slow final stage, wait for actual loading
-                            increment = Math.random() * 0.2; // 0-0.2%
+                            // Very slow final stage, wait for actual loading
+                            increment = Math.random() * 0.5; // 0-0.5%
                         }
                         
-                        // Ensure progress doesn't get stuck
-                        if (timeBasedProgress > loadingProgress + 5) {
-                            loadingProgress = timeBasedProgress - 5;
-                        } else {
-                            loadingProgress += increment;
-                        }
+                        loadingProgress += increment;
                         
                         // Cap at 92% until actually loaded
                         if (loadingProgress > 92 && !(leftFrameLoaded && mainFrameLoaded)) {
@@ -453,7 +436,7 @@
                         }
                         
                         updateProgress(Math.floor(loadingProgress));
-                    }, 300); // Slightly slower interval for more stable animation
+                    }, 250); // Balanced interval for smooth animation
                     
                 }, 500); // Initial delay to show loading start
             }
