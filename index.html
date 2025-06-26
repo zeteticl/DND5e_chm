@@ -407,38 +407,90 @@
                 updateProgress(0);
                 createParticles();
                 
+                // iOS Safari specific handling
+                const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+                const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+                
                 // Add initial delay to ensure user sees the loading start
                 setTimeout(() => {
-                    // Simple and reliable loading simulation
-                    loadingInterval = setInterval(() => {
-                        let increment;
-                        
-                        // Different speeds for different stages
-                        if (loadingProgress < 30) {
-                            // Fast initial loading (0-30%)
-                            increment = Math.random() * 3 + 1; // 1-4%
-                        } else if (loadingProgress < 60) {
-                            // Medium speed (30-60%)
-                            increment = Math.random() * 2 + 0.5; // 0.5-2.5%
-                        } else if (loadingProgress < 85) {
-                            // Slower progress (60-85%)
-                            increment = Math.random() * 1 + 0.2; // 0.2-1.2%
-                        } else {
-                            // Very slow final stage, wait for actual loading
-                            increment = Math.random() * 0.5; // 0-0.5%
+                    // iOS Safari compatible loading simulation
+                    if (isIOS && isSafari) {
+                        // Use requestAnimationFrame for iOS Safari
+                        let lastTime = Date.now();
+                        function animateProgress() {
+                            const currentTime = Date.now();
+                            const deltaTime = currentTime - lastTime;
+                            
+                            if (deltaTime >= 500) { // Update every 500ms
+                                let increment;
+                                
+                                // Different speeds for different stages
+                                if (loadingProgress < 30) {
+                                    increment = Math.random() * 3 + 1;
+                                } else if (loadingProgress < 60) {
+                                    increment = Math.random() * 2 + 0.5;
+                                } else if (loadingProgress < 85) {
+                                    increment = Math.random() * 1 + 0.2;
+                                } else {
+                                    increment = Math.random() * 0.5;
+                                }
+                                
+                                loadingProgress += increment;
+                                
+                                // Cap at 92% until actually loaded
+                                if (loadingProgress > 92 && !(leftFrameLoaded && mainFrameLoaded)) {
+                                    loadingProgress = 92;
+                                }
+                                
+                                updateProgress(Math.floor(loadingProgress));
+                                lastTime = currentTime;
+                            }
+                            
+                            // Continue animation if not finished
+                            if (loadingProgress < 92 || !(leftFrameLoaded && mainFrameLoaded)) {
+                                requestAnimationFrame(animateProgress);
+                            }
                         }
                         
-                        loadingProgress += increment;
-                        
-                        // Cap at 92% until actually loaded
-                        if (loadingProgress > 92 && !(leftFrameLoaded && mainFrameLoaded)) {
-                            loadingProgress = 92;
-                        }
-                        
-                        updateProgress(Math.floor(loadingProgress));
-                    }, 250); // Balanced interval for smooth animation
+                        requestAnimationFrame(animateProgress);
+                    } else {
+                        // Standard setInterval for other browsers
+                        loadingInterval = setInterval(() => {
+                            let increment;
+                            
+                            // Different speeds for different stages
+                            if (loadingProgress < 30) {
+                                increment = Math.random() * 3 + 1;
+                            } else if (loadingProgress < 60) {
+                                increment = Math.random() * 2 + 0.5;
+                            } else if (loadingProgress < 85) {
+                                increment = Math.random() * 1 + 0.2;
+                            } else {
+                                increment = Math.random() * 0.5;
+                            }
+                            
+                            loadingProgress += increment;
+                            
+                            // Cap at 92% until actually loaded
+                            if (loadingProgress > 92 && !(leftFrameLoaded && mainFrameLoaded)) {
+                                loadingProgress = 92;
+                            }
+                            
+                            updateProgress(Math.floor(loadingProgress));
+                        }, 250);
+                    }
                     
-                }, 500); // Initial delay to show loading start
+                    // Force initial progress for iOS Safari
+                    if (isIOS && isSafari) {
+                        setTimeout(() => {
+                            if (loadingProgress < 5) {
+                                loadingProgress = 5;
+                                updateProgress(Math.floor(loadingProgress));
+                            }
+                        }, 1000);
+                    }
+                    
+                }, isIOS && isSafari ? 1000 : 500);
             }
         }
         
@@ -573,7 +625,28 @@
         window.addEventListener('load', function() {
             if (window.innerWidth <= 768) {
                 closeSidebar();
-                startLoading();
+                
+                // iOS Safari specific initialization
+                const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+                const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+                
+                if (isIOS && isSafari) {
+                    // Force display for iOS Safari
+                    document.getElementById('loadingContainer').style.display = 'flex';
+                    
+                    // Simple iOS Safari test - force progress update
+                    setTimeout(() => {
+                        loadingProgress = 1;
+                        updateProgress(1);
+                        
+                        // Start loading with a slight delay for iOS Safari
+                        setTimeout(() => {
+                            startLoading();
+                        }, 500);
+                    }, 200);
+                } else {
+                    startLoading();
+                }
             } else {
                 // Desktop - hide loading immediately
                 document.getElementById('loadingContainer').style.display = 'none';
