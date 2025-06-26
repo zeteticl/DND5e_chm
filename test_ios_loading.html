@@ -62,11 +62,6 @@
             100% { width: 92%; }
         }
         
-        @keyframes pixelMove {
-            0% { background-position: 0px 0px; }
-            100% { background-position: 8px 0px; }
-        }
-        
         .status {
             margin: 20px 0;
             padding: 10px;
@@ -121,36 +116,59 @@
             const loadingText = document.getElementById('loadingText');
             
             // Reset
-            progressFill.classList.remove('ios-fallback');
             progressFill.style.width = '0%';
-            progressFill.style.transition = 'none';
-            progressFill.offsetHeight;
+            progressFill.style.transition = 'width 0.3s ease-out';
+            progressPercentage.textContent = '0%';
+            loadingText.textContent = '準備中...';
             
             if (isIOS && isSafari) {
-                // Use CSS animation for iOS Safari
-                progressFill.classList.add('ios-fallback');
+                // iOS Safari: Fixed 60-90s loading
+                const baseTime = 60000; // 60 seconds
+                const randomTime = Math.random() * 30000 + 1000; // 1-30 seconds
+                const totalLoadingTime = baseTime + randomTime;
                 
-                // Update percentage based on time
+                console.log(`iOS Test Loading time: ${Math.round(totalLoadingTime/1000)}s`);
+                
                 const startTime = Date.now();
-                const updateInterval = setInterval(() => {
+                
+                // Text stages
+                const textStages = [
+                    { time: 5000, text: '探索中...' },
+                    { time: 15000, text: '準備冒險...' },
+                    { time: 25000, text: '整理裝備...' },
+                    { time: 35000, text: '研讀法術...' },
+                    { time: 45000, text: '檢查地圖...' },
+                    { time: 55000, text: '準備法術...' },
+                    { time: 65000, text: '即將出發...' }
+                ];
+                
+                // Schedule text updates
+                textStages.forEach(stage => {
+                    setTimeout(() => {
+                        loadingText.textContent = stage.text;
+                    }, stage.time);
+                });
+                
+                // Progress update
+                const progressInterval = setInterval(() => {
                     const elapsed = Date.now() - startTime;
-                    const progress = Math.min((elapsed / 15000) * 92, 92);
+                    const progress = Math.min((elapsed / totalLoadingTime) * 92, 92);
+                    
+                    progressFill.style.width = progress + '%';
                     progressPercentage.textContent = Math.floor(progress) + '%';
                     
                     if (progress >= 92) {
-                        clearInterval(updateInterval);
+                        clearInterval(progressInterval);
+                        
+                        // Quick finish to 100%
+                        setTimeout(() => {
+                            progressFill.style.width = '100%';
+                            progressPercentage.textContent = '100%';
+                            loadingText.textContent = '測試完成！';
+                            loadingText.style.color = '#ffd700';
+                        }, 500);
                     }
-                }, 200);
-                
-                // Update text
-                const texts = ['探索中...', '準備冒險...', '整理裝備...', '研讀法術...', '檢查地圖...', '準備法術...', '即將出發...'];
-                const textTimes = [1000, 2500, 4000, 6000, 8000, 10000, 12000];
-                
-                texts.forEach((text, index) => {
-                    setTimeout(() => {
-                        loadingText.textContent = text;
-                    }, textTimes[index]);
-                });
+                }, 100);
                 
             } else {
                 // Use JavaScript animation for other browsers
@@ -172,11 +190,11 @@
             const progressPercentage = document.getElementById('percentage');
             const loadingText = document.getElementById('loadingText');
             
-            progressFill.classList.remove('ios-fallback');
             progressFill.style.width = '0%';
-            progressFill.style.transition = 'none';
+            progressFill.style.transition = 'width 0.3s ease-out';
             progressPercentage.textContent = '0%';
             loadingText.textContent = '準備中...';
+            loadingText.style.color = '#d4af37';
         }
     </script>
 </body>
