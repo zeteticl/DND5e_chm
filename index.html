@@ -355,11 +355,26 @@
             const progressFill = document.getElementById('progressFill');
             const progressPercentage = document.getElementById('progressPercentage');
             
+            // Ensure percentage is within bounds
+            percentage = Math.max(0, Math.min(100, percentage));
+            
             progressFill.style.width = percentage + '%';
             progressPercentage.textContent = percentage + '%';
             
             // Update loading text based on progress
             updateLoadingText(percentage);
+            
+            // Add visual feedback for iOS Safari
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+            
+            if (isIOS && isSafari && percentage > 0) {
+                // Add subtle animation to progress bar for iOS Safari
+                progressFill.style.transition = 'width 0.3s ease-out';
+                
+                // Force reflow for iOS Safari
+                progressFill.offsetHeight;
+            }
         }
         
         function updateLoadingText(percentage) {
@@ -415,44 +430,88 @@
                 setTimeout(() => {
                     // iOS Safari compatible loading simulation
                     if (isIOS && isSafari) {
-                        // Use requestAnimationFrame for iOS Safari
-                        let lastTime = Date.now();
+                        // Use a more reliable approach for iOS Safari
+                        let startTime = Date.now();
+                        let lastUpdateTime = startTime;
+                        let fallbackInterval;
+                        let progressInterval;
+                        
                         function animateProgress() {
                             const currentTime = Date.now();
-                            const deltaTime = currentTime - lastTime;
+                            const elapsed = currentTime - startTime;
+                            const timeSinceLastUpdate = currentTime - lastUpdateTime;
                             
-                            if (deltaTime >= 500) { // Update every 500ms
+                            // Ensure minimum update interval (300ms for iOS Safari)
+                            if (timeSinceLastUpdate >= 300) {
                                 let increment;
                                 
-                                // Different speeds for different stages
+                                // Calculate progress based on elapsed time and current stage
                                 if (loadingProgress < 30) {
-                                    increment = Math.random() * 3 + 1;
+                                    increment = Math.random() * 4 + 2; // Faster initial progress
                                 } else if (loadingProgress < 60) {
-                                    increment = Math.random() * 2 + 0.5;
+                                    increment = Math.random() * 3 + 1.5;
                                 } else if (loadingProgress < 85) {
-                                    increment = Math.random() * 1 + 0.2;
+                                    increment = Math.random() * 2 + 0.8;
                                 } else {
-                                    increment = Math.random() * 0.5;
+                                    increment = Math.random() * 1 + 0.3;
                                 }
                                 
-                                loadingProgress += increment;
+                                // Add time-based progress to ensure movement
+                                const timeProgress = Math.min(elapsed / 30000, 0.3); // 30 seconds for 30% time-based progress
+                                const timeIncrement = timeProgress * 0.5;
+                                
+                                loadingProgress += increment + timeIncrement;
                                 
                                 // Cap at 92% until actually loaded
                                 if (loadingProgress > 92 && !(leftFrameLoaded && mainFrameLoaded)) {
                                     loadingProgress = 92;
                                 }
                                 
+                                // Ensure minimum progress movement
+                                if (loadingProgress < 5 && elapsed > 2000) {
+                                    loadingProgress = 5;
+                                }
+                                
                                 updateProgress(Math.floor(loadingProgress));
-                                lastTime = currentTime;
+                                lastUpdateTime = currentTime;
                             }
                             
                             // Continue animation if not finished
                             if (loadingProgress < 92 || !(leftFrameLoaded && mainFrameLoaded)) {
-                                requestAnimationFrame(animateProgress);
+                                // Use setTimeout for more reliable timing on iOS Safari
+                                setTimeout(animateProgress, 100);
                             }
                         }
                         
-                        requestAnimationFrame(animateProgress);
+                        // Start the animation
+                        animateProgress();
+                        
+                        // Primary fallback: Force progress updates every 1.5 seconds
+                        progressInterval = setInterval(() => {
+                            if (loadingProgress < 92 && !(leftFrameLoaded && mainFrameLoaded)) {
+                                loadingProgress += Math.random() * 4 + 2;
+                                updateProgress(Math.floor(loadingProgress));
+                            } else {
+                                clearInterval(progressInterval);
+                            }
+                        }, 1500);
+                        
+                        // Secondary fallback: Force progress updates every 3 seconds
+                        fallbackInterval = setInterval(() => {
+                            if (loadingProgress < 92 && !(leftFrameLoaded && mainFrameLoaded)) {
+                                loadingProgress += Math.random() * 6 + 3;
+                                updateProgress(Math.floor(loadingProgress));
+                            } else {
+                                clearInterval(fallbackInterval);
+                            }
+                        }, 3000);
+                        
+                        // Cleanup function for iOS Safari
+                        window.iOSLoadingCleanup = function() {
+                            if (progressInterval) clearInterval(progressInterval);
+                            if (fallbackInterval) clearInterval(fallbackInterval);
+                        };
+                        
                     } else {
                         // Standard setInterval for other browsers
                         loadingInterval = setInterval(() => {
@@ -488,6 +547,14 @@
                                 updateProgress(Math.floor(loadingProgress));
                             }
                         }, 1000);
+                        
+                        // Additional iOS Safari progress boost
+                        setTimeout(() => {
+                            if (loadingProgress < 15) {
+                                loadingProgress = 15;
+                                updateProgress(Math.floor(loadingProgress));
+                            }
+                        }, 3000);
                     }
                     
                 }, isIOS && isSafari ? 1000 : 500);
@@ -503,6 +570,14 @@
         function finishLoading() {
             if (window.innerWidth <= 768) {
                 clearInterval(loadingInterval);
+                
+                // Clean up iOS Safari specific intervals
+                const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+                const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+                
+                if (isIOS && isSafari && window.iOSLoadingCleanup) {
+                    window.iOSLoadingCleanup();
+                }
                 
                 // Update to completion text
                 const loadingText = document.getElementById('loadingText');
@@ -634,16 +709,45 @@
                     // Force display for iOS Safari
                     document.getElementById('loadingContainer').style.display = 'flex';
                     
-                    // Simple iOS Safari test - force progress update
+                    // Immediate progress start for iOS Safari
+                    loadingProgress = 1;
+                    updateProgress(1);
+                    
+                    // Start loading immediately for iOS Safari
+                    startLoading();
+                    
+                    // Multiple iOS Safari progress boosts at different intervals
                     setTimeout(() => {
-                        loadingProgress = 1;
-                        updateProgress(1);
-                        
-                        // Start loading with a slight delay for iOS Safari
-                        setTimeout(() => {
-                            startLoading();
-                        }, 500);
-                    }, 200);
+                        if (loadingProgress < 10) {
+                            loadingProgress = 10;
+                            updateProgress(Math.floor(loadingProgress));
+                        }
+                    }, 1500);
+                    
+                    setTimeout(() => {
+                        if (loadingProgress < 20) {
+                            loadingProgress = 20;
+                            updateProgress(Math.floor(loadingProgress));
+                        }
+                    }, 4000);
+                    
+                    setTimeout(() => {
+                        if (loadingProgress < 35) {
+                            loadingProgress = 35;
+                            updateProgress(Math.floor(loadingProgress));
+                        }
+                    }, 7000);
+                    
+                    // Force progress update every 5 seconds as ultimate fallback
+                    const ultimateFallback = setInterval(() => {
+                        if (loadingProgress < 92 && !(leftFrameLoaded && mainFrameLoaded)) {
+                            loadingProgress += Math.random() * 8 + 4;
+                            updateProgress(Math.floor(loadingProgress));
+                        } else {
+                            clearInterval(ultimateFallback);
+                        }
+                    }, 5000);
+                    
                 } else {
                     startLoading();
                 }
