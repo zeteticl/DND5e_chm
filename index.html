@@ -158,6 +158,18 @@
             letter-spacing: 1px;
         }
         
+        .loading-time-estimate {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #8b6914;
+            text-align: center;
+            text-shadow: 1px 1px 0px #1a0f08;
+            letter-spacing: 1px;
+            opacity: 0.8;
+            max-width: 280px;
+            line-height: 1.4;
+        }
+        
         /* Loading dots animation - Pixel Style */
         .loading-dots {
             margin-top: 20px;
@@ -305,6 +317,7 @@
             <div class="dot"></div>
             <div class="dot"></div>
         </div>
+        <div class="loading-time-estimate" id="loadingTimeEstimate">手機載入約需 1-2 分鐘，請耐心等待</div>
     </div>
     
     <button class="mobile-toggle" id="mobileToggle" onclick="toggleSidebar()">☰ 選單</button>
@@ -337,6 +350,10 @@
             { progress: 85, text: '準備法術...' },
             { progress: 92, text: '即將出發...' }
         ];
+        
+        // Add loading time estimate
+        let loadingStartTime = 0;
+        let estimatedLoadingTime = 90000; // 90 seconds (1.5 minutes)
         
         function updateProgress(percentage) {
             const progressFill = document.getElementById('progressFill');
@@ -391,6 +408,7 @@
             if (window.innerWidth <= 768) {
                 loadingProgress = 0;
                 currentTextIndex = 0;
+                loadingStartTime = Date.now();
                 updateProgress(0);
                 createParticles();
                 
@@ -399,26 +417,35 @@
                     // More realistic loading simulation with better timing
                     loadingInterval = setInterval(() => {
                         let increment;
+                        const elapsedTime = Date.now() - loadingStartTime;
+                        
+                        // Calculate progress based on time and actual loading state
+                        let timeBasedProgress = Math.min((elapsedTime / estimatedLoadingTime) * 85, 85);
                         
                         // Different speeds for different stages with better pacing
                         if (loadingProgress < 25) {
                             // Fast initial loading (0-25%)
-                            increment = Math.random() * 3 + 1; // 1-4%
+                            increment = Math.random() * 2 + 0.5; // 0.5-2.5%
                         } else if (loadingProgress < 50) {
                             // Medium speed (25-50%)
-                            increment = Math.random() * 2 + 0.5; // 0.5-2.5%
+                            increment = Math.random() * 1.5 + 0.3; // 0.3-1.8%
                         } else if (loadingProgress < 75) {
                             // Slower progress (50-75%)
-                            increment = Math.random() * 1.5 + 0.3; // 0.3-1.8%
+                            increment = Math.random() * 1 + 0.2; // 0.2-1.2%
                         } else if (loadingProgress < 90) {
                             // Very slow progress (75-90%)
-                            increment = Math.random() * 0.8 + 0.2; // 0.2-1%
+                            increment = Math.random() * 0.5 + 0.1; // 0.1-0.6%
                         } else {
                             // Extremely slow final stage, wait for actual loading
-                            increment = Math.random() * 0.3; // 0-0.3%
+                            increment = Math.random() * 0.2; // 0-0.2%
                         }
                         
-                        loadingProgress += increment;
+                        // Ensure progress doesn't get stuck
+                        if (timeBasedProgress > loadingProgress + 5) {
+                            loadingProgress = timeBasedProgress - 5;
+                        } else {
+                            loadingProgress += increment;
+                        }
                         
                         // Cap at 92% until actually loaded
                         if (loadingProgress > 92 && !(leftFrameLoaded && mainFrameLoaded)) {
@@ -426,14 +453,7 @@
                         }
                         
                         updateProgress(Math.floor(loadingProgress));
-                    }, 200); // Faster interval for smoother animation
-                    
-                    // Add minimum loading time trigger
-                    setTimeout(() => {
-                        if (loadingProgress < 20) {
-                            triggerProgressBoost(20);
-                        }
-                    }, 2000); // Ensure at least 20% after 2 seconds
+                    }, 300); // Slightly slower interval for more stable animation
                     
                 }, 500); // Initial delay to show loading start
             }
@@ -551,10 +571,6 @@
                 closeSidebar();
             } else if (event.data === 'leftFrameLoaded') {
                 leftFrameLoaded = true;
-                if (window.innerWidth <= 768) {
-                    // Trigger progress boost when left frame loads
-                    triggerProgressBoost(60);
-                }
                 checkAllLoaded();
             }
         });
@@ -562,35 +578,13 @@
         // Handle iframe loading
         document.getElementById('leftFrame').addEventListener('load', function() {
             leftFrameLoaded = true;
-            if (window.innerWidth <= 768) {
-                // Trigger progress boost when left frame loads
-                triggerProgressBoost(50);
-            }
             checkAllLoaded();
         });
         
         document.getElementById('mainFrame').addEventListener('load', function() {
             mainFrameLoaded = true;
-            if (window.innerWidth <= 768) {
-                // Trigger progress boost when main frame loads
-                triggerProgressBoost(80);
-            }
             checkAllLoaded();
         });
-        
-        // New function to trigger progress boost with smooth animation
-        function triggerProgressBoost(targetProgress) {
-            if (loadingProgress < targetProgress) {
-                const boostInterval = setInterval(() => {
-                    if (loadingProgress < targetProgress) {
-                        loadingProgress += 1;
-                        updateProgress(Math.floor(loadingProgress));
-                    } else {
-                        clearInterval(boostInterval);
-                    }
-                }, 50); // Fast boost animation
-            }
-        }
         
         // 確保頁面載入後正確顯示
         window.addEventListener('load', function() {
