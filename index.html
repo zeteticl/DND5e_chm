@@ -127,6 +127,11 @@
             animation: pixelMove 1s linear infinite;
         }
         
+        @keyframes pixelMove {
+            0% { background-position: 0px 0px; }
+            100% { background-position: 8px 0px; }
+        }
+        
         /* iOS Safari fallback animation */
         .progress-fill.ios-fallback {
             animation: iosProgress 15s linear infinite;
@@ -143,28 +148,6 @@
             70% { width: 85%; }
             80% { width: 92%; }
             100% { width: 92%; }
-        }
-        
-        @keyframes pixelMove {
-            0% { background-position: 0px 0px; }
-            100% { background-position: 8px 0px; }
-        }
-        
-        .progress-fill::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                repeating-linear-gradient(
-                    0deg,
-                    transparent 0px,
-                    transparent 1px,
-                    rgba(255,255,255,0.1) 1px,
-                    rgba(255,255,255,0.1) 2px
-                );
         }
         
         .progress-percentage {
@@ -432,51 +415,80 @@
             
             if (!isIOS || !isSafari) return false;
             
-            console.log('Starting iOS Safari loading system');
+            console.log('Starting iOS Safari loading system - Fixed 60-90s loading');
             
-            // Use pure CSS animation for iOS Safari
+            // Calculate total loading time: 60 seconds + random 1-30 seconds
+            const baseTime = 60000; // 60 seconds
+            const randomTime = Math.random() * 30000 + 1000; // 1-30 seconds
+            const totalLoadingTime = baseTime + randomTime;
+            
+            console.log(`iOS Loading time: ${Math.round(totalLoadingTime/1000)}s`);
+            
+            // Initialize
             const progressFill = document.getElementById('progressFill');
             const progressPercentage = document.getElementById('progressPercentage');
+            const loadingText = document.getElementById('loadingText');
             
-            // Remove any existing classes and set initial state
-            progressFill.classList.remove('ios-fallback');
+            // Reset progress
             progressFill.style.width = '0%';
-            progressFill.style.transition = 'none';
+            progressFill.style.transition = 'width 0.3s ease-out';
+            progressPercentage.textContent = '0%';
             
-            // Force reflow
-            progressFill.offsetHeight;
+            // Start time
+            const startTime = Date.now();
             
-            // Add CSS animation class
-            progressFill.classList.add('ios-fallback');
+            // Text stages for iOS
+            const textStages = [
+                { time: 5000, text: '探索中...' },
+                { time: 15000, text: '準備冒險...' },
+                { time: 25000, text: '整理裝備...' },
+                { time: 35000, text: '研讀法術...' },
+                { time: 45000, text: '檢查地圖...' },
+                { time: 55000, text: '準備法術...' },
+                { time: 65000, text: '即將出發...' }
+            ];
             
-            // Simple text update system
-            const texts = ['探索中...', '準備冒險...', '整理裝備...', '研讀法術...', '檢查地圖...', '準備法術...', '即將出發...'];
-            const textTimes = [1000, 2500, 4000, 6000, 8000, 10000, 12000];
-            
-            texts.forEach((text, index) => {
+            // Schedule text updates
+            textStages.forEach(stage => {
                 setTimeout(() => {
                     if (!leftFrameLoaded || !mainFrameLoaded) {
-                        const loadingText = document.getElementById('loadingText');
-                        loadingText.textContent = text;
+                        loadingText.textContent = stage.text;
                     }
-                }, textTimes[index]);
+                }, stage.time);
             });
             
-            // Simple percentage update based on time
-            const startTime = Date.now();
-            const updateInterval = setInterval(() => {
+            // Main progress update interval
+            const progressInterval = setInterval(() => {
                 const elapsed = Date.now() - startTime;
-                const progress = Math.min((elapsed / 15000) * 92, 92);
+                const progress = Math.min((elapsed / totalLoadingTime) * 92, 92);
                 
+                // Update progress bar and percentage
+                progressFill.style.width = progress + '%';
                 progressPercentage.textContent = Math.floor(progress) + '%';
                 
+                // Check if actual loading is complete
                 if (leftFrameLoaded && mainFrameLoaded) {
-                    clearInterval(updateInterval);
+                    clearInterval(progressInterval);
+                    console.log('iOS Loading: Actual content loaded, finishing...');
+                    
+                    // Quick finish to 100%
+                    setTimeout(() => {
+                        progressFill.style.width = '100%';
+                        progressPercentage.textContent = '100%';
+                        loadingText.textContent = '任務完成！';
+                        loadingText.style.color = '#ffd700';
+                        
+                        // Hide loading screen
+                        setTimeout(() => {
+                            document.getElementById('loadingContainer').style.display = 'none';
+                            document.getElementById('mobileToggle').classList.add('loaded');
+                        }, 1000);
+                    }, 500);
                 }
-            }, 200);
+            }, 100); // Update every 100ms for smooth progress
             
-            // Store for cleanup
-            window.iOSProgressInterval = updateInterval;
+            // Store interval for cleanup
+            window.iOSProgressInterval = progressInterval;
             
             return true;
         }
@@ -548,17 +560,14 @@
                 const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
                 
                 if (isIOS && isSafari) {
+                    // iOS Safari handles its own completion in startIOSLoading
                     if (window.iOSProgressInterval) {
                         clearInterval(window.iOSProgressInterval);
                     }
-                    
-                    // Remove CSS animation and set to 100%
-                    const progressFill = document.getElementById('progressFill');
-                    progressFill.classList.remove('ios-fallback');
-                    progressFill.style.width = '100%';
-                    progressFill.style.transition = 'width 0.5s ease-out';
+                    return; // Exit early for iOS Safari
                 }
                 
+                // Standard completion for other browsers
                 // Update to completion text
                 const loadingText = document.getElementById('loadingText');
                 loadingText.textContent = '任務完成！';
