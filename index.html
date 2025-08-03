@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,31 +11,31 @@
             padding: 0;
             font-family: Arial, sans-serif;
         }
-        
+
         .container {
             display: grid;
             grid-template-columns: 230px 1fr;
             height: 100vh;
         }
-        
+
         .sidebar {
             background-color: #f0f0f0;
             border-right: 4px solid #ccc;
             overflow: hidden;
             padding: 5px;
         }
-        
+
         .main-content {
             padding: 5px;
             overflow: hidden;
         }
-        
+
         iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
-        
+
         .mobile-toggle {
             display: none;
             position: fixed;
@@ -48,7 +49,7 @@
             border-radius: 4px;
             cursor: pointer;
         }
-        
+
         /* Loading progress bar styles - DND Pixel Style */
         .loading-container {
             display: none;
@@ -65,7 +66,7 @@
             image-rendering: pixelated;
             font-family: 'Courier New', monospace;
         }
-        
+
         .loading-container::before {
             content: '';
             position: absolute;
@@ -73,14 +74,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 25% 25%, #3d2817 2px, transparent 2px),
                 radial-gradient(circle at 75% 75%, #4a3220 1px, transparent 1px);
             background-size: 40px 40px, 20px 20px;
             opacity: 0.3;
             z-index: -1;
         }
-        
+
         .loading-text {
             font-size: 18px;
             font-weight: bold;
@@ -90,12 +91,20 @@
             letter-spacing: 2px;
             animation: textBlink 1.5s ease-in-out infinite;
         }
-        
+
         @keyframes textBlink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0.7; }
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0.7;
+            }
         }
-        
+
         .progress-bar {
             width: 80%;
             max-width: 360px;
@@ -104,52 +113,84 @@
             border: 3px solid #8b6914;
             border-radius: 0;
             overflow: hidden;
-            box-shadow: 
+            box-shadow:
                 inset 0 0 0 1px #5d4a0d,
-                0 2px 4px rgba(0,0,0,0.5);
+                0 2px 4px rgba(0, 0, 0, 0.5);
             position: relative;
         }
-        
+
         .progress-fill {
             height: 100%;
-            background: 
-                repeating-linear-gradient(
-                    90deg,
+            background:
+                repeating-linear-gradient(90deg,
                     #d4af37 0px,
                     #d4af37 4px,
                     #b8941f 4px,
-                    #b8941f 8px
-                );
+                    #b8941f 8px);
             width: 0%;
             transition: width 0.2s ease;
             border-radius: 0;
             position: relative;
             animation: pixelMove 1s linear infinite;
         }
-        
+
         /* iOS Safari fallback animation */
         .progress-fill.ios-fallback {
             animation: iosProgress 15s linear infinite;
         }
-        
+
         @keyframes iosProgress {
-            0% { width: 0%; }
-            10% { width: 10%; }
-            20% { width: 20%; }
-            30% { width: 35%; }
-            40% { width: 50%; }
-            50% { width: 65%; }
-            60% { width: 75%; }
-            70% { width: 85%; }
-            80% { width: 92%; }
-            100% { width: 92%; }
+            0% {
+                width: 0%;
+            }
+
+            10% {
+                width: 10%;
+            }
+
+            20% {
+                width: 20%;
+            }
+
+            30% {
+                width: 35%;
+            }
+
+            40% {
+                width: 50%;
+            }
+
+            50% {
+                width: 65%;
+            }
+
+            60% {
+                width: 75%;
+            }
+
+            70% {
+                width: 85%;
+            }
+
+            80% {
+                width: 92%;
+            }
+
+            100% {
+                width: 92%;
+            }
         }
-        
+
         @keyframes pixelMove {
-            0% { background-position: 0px 0px; }
-            100% { background-position: 8px 0px; }
+            0% {
+                background-position: 0px 0px;
+            }
+
+            100% {
+                background-position: 8px 0px;
+            }
         }
-        
+
         .progress-fill::after {
             content: '';
             position: absolute;
@@ -157,16 +198,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
-                repeating-linear-gradient(
-                    0deg,
+            background:
+                repeating-linear-gradient(0deg,
                     transparent 0px,
                     transparent 1px,
-                    rgba(255,255,255,0.1) 1px,
-                    rgba(255,255,255,0.1) 2px
-                );
+                    rgba(255, 255, 255, 0.1) 1px,
+                    rgba(255, 255, 255, 0.1) 2px);
         }
-        
+
         .progress-percentage {
             margin-top: 15px;
             font-size: 16px;
@@ -175,7 +214,7 @@
             text-shadow: 1px 1px 0px #1a0f08;
             letter-spacing: 1px;
         }
-        
+
         .loading-time-estimate {
             margin-top: 25px;
             font-size: 14px;
@@ -187,14 +226,14 @@
             max-width: 280px;
             line-height: 1.4;
         }
-        
+
         /* Loading dots animation - Pixel Style */
         .loading-dots {
             margin-top: 20px;
             display: flex;
             gap: 6px;
         }
-        
+
         .dot {
             width: 8px;
             height: 8px;
@@ -203,23 +242,35 @@
             border: 1px solid #d4af37;
             animation: dotBlink 1.2s ease-in-out infinite both;
         }
-        
-        .dot:nth-child(1) { animation-delay: 0s; }
-        .dot:nth-child(2) { animation-delay: 0.4s; }
-        .dot:nth-child(3) { animation-delay: 0.8s; }
-        
+
+        .dot:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.8s;
+        }
+
         @keyframes dotBlink {
-            0%, 60% {
+
+            0%,
+            60% {
                 background: #8b6914;
                 border-color: #d4af37;
             }
-            61%, 100% {
+
+            61%,
+            100% {
                 background: #d4af37;
                 border-color: #fff;
                 box-shadow: 0 0 4px #d4af37;
             }
         }
-        
+
         /* Floating particles - DND Style */
         .particles {
             position: absolute;
@@ -228,7 +279,7 @@
             overflow: hidden;
             z-index: -1;
         }
-        
+
         .particle {
             position: absolute;
             width: 3px;
@@ -237,32 +288,35 @@
             border-radius: 0;
             animation: float 8s linear infinite;
         }
-        
+
         @keyframes float {
             0% {
                 transform: translateY(100vh);
                 opacity: 0;
             }
-            5%, 95% {
+
+            5%,
+            95% {
                 opacity: 0.6;
             }
+
             100% {
                 transform: translateY(-50px);
                 opacity: 0;
             }
         }
-        
+
         /* 手機版樣式 */
         @media (max-width: 768px) {
             .loading-container {
                 display: flex;
             }
-            
+
             .container {
                 grid-template-columns: 1fr;
                 position: relative;
             }
-            
+
             .sidebar {
                 position: fixed;
                 left: -100%;
@@ -271,32 +325,32 @@
                 height: 100vh;
                 z-index: 999;
                 background-color: white;
-                box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+                box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
                 transition: left 0.3s ease;
                 overflow: hidden;
             }
-            
+
             .sidebar.open {
                 left: 0;
             }
-            
+
             .main-content {
                 grid-column: 1;
                 padding-top: 50px;
             }
-            
+
             .mobile-toggle {
                 display: block;
                 opacity: 0;
                 pointer-events: none;
                 transition: opacity 0.3s ease;
             }
-            
+
             .mobile-toggle.loaded {
                 opacity: 1;
                 pointer-events: auto;
             }
-            
+
             .overlay {
                 display: none;
                 position: fixed;
@@ -304,15 +358,15 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0,0,0,0.5);
+                background-color: rgba(0, 0, 0, 0.5);
                 z-index: 998;
             }
-            
+
             .overlay.show {
                 display: block;
             }
         }
-        
+
         /* Desktop styles - hide loading on desktop */
         @media (min-width: 769px) {
             .loading-container {
@@ -321,6 +375,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Loading screen for mobile -->
     <div class="loading-container" id="loadingContainer">
@@ -337,10 +392,10 @@
         </div>
         <div class="loading-time-estimate" id="loadingTimeEstimate">手機載入約需 1-2 分鐘，請耐心等待</div>
     </div>
-    
+
     <button class="mobile-toggle" id="mobileToggle" onclick="toggleSidebar()">☰ 選單</button>
     <div class="overlay" onclick="closeSidebar()"></div>
-    
+
     <div class="container">
         <div class="sidebar" id="sidebar">
             <iframe src="left.html" name="left" id="leftFrame"></iframe>
@@ -349,7 +404,7 @@
             <iframe src="寫在前面.html" name="body" id="mainFrame"></iframe>
         </div>
     </div>
-    
+
     <script>
         let loadingProgress = 0;
         let loadingInterval;
@@ -357,7 +412,7 @@
         let mainFrameLoaded = false;
         let loadingTexts = ['探索中...', '準備冒險...', '整理裝備...', '研讀法術...', '即將出發...', '檢查地圖...', '準備法術...', '整理背包...'];
         let currentTextIndex = 0;
-        
+
         // Add loading stage triggers
         let loadingStages = [
             { progress: 15, text: '探索中...' },
@@ -368,29 +423,29 @@
             { progress: 85, text: '準備法術...' },
             { progress: 92, text: '即將出發...' }
         ];
-        
+
         // iOS Safari specific variables
         let iOSLoadingStartTime = 0;
         let iOSLoadingStages = [];
         let iOSCurrentStage = 0;
-        
+
         function updateProgress(percentage) {
             const progressFill = document.getElementById('progressFill');
             const progressPercentage = document.getElementById('progressPercentage');
-            
+
             // Ensure percentage is within bounds
             percentage = Math.max(0, Math.min(100, percentage));
-            
+
             progressFill.style.width = percentage + '%';
             progressPercentage.textContent = percentage + '%';
-            
+
             // Update loading text based on progress
             updateLoadingText(percentage);
         }
-        
+
         function updateLoadingText(percentage) {
             const loadingText = document.getElementById('loadingText');
-            
+
             // Find the appropriate stage based on progress
             let newText = loadingTexts[0]; // Default text
             for (let i = loadingStages.length - 1; i >= 0; i--) {
@@ -399,7 +454,7 @@
                     break;
                 }
             }
-            
+
             // Only update if text changed
             if (newText !== loadingText.textContent) {
                 // Add fade effect
@@ -410,11 +465,11 @@
                 }, 150);
             }
         }
-        
+
         function createParticles() {
             const particles = document.getElementById('particles');
             const particleCount = 20;
-            
+
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
@@ -424,35 +479,35 @@
                 particles.appendChild(particle);
             }
         }
-        
+
         // New iOS Safari loading system
         function startIOSLoading() {
             const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
             const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
-            
+
             if (!isIOS || !isSafari) return false;
-            
+
             console.log('Starting iOS Safari loading system');
-            
+
             // Use pure CSS animation for iOS Safari
             const progressFill = document.getElementById('progressFill');
             const progressPercentage = document.getElementById('progressPercentage');
-            
+
             // Remove any existing classes and set initial state
             progressFill.classList.remove('ios-fallback');
             progressFill.style.width = '0%';
             progressFill.style.transition = 'none';
-            
+
             // Force reflow
             progressFill.offsetHeight;
-            
+
             // Add CSS animation class
             progressFill.classList.add('ios-fallback');
-            
+
             // Simple text update system
             const texts = ['探索中...', '準備冒險...', '整理裝備...', '研讀法術...', '檢查地圖...', '準備法術...', '即將出發...'];
             const textTimes = [1000, 2500, 4000, 6000, 8000, 10000, 12000];
-            
+
             texts.forEach((text, index) => {
                 setTimeout(() => {
                     if (!leftFrameLoaded || !mainFrameLoaded) {
@@ -461,26 +516,26 @@
                     }
                 }, textTimes[index]);
             });
-            
+
             // Simple percentage update based on time
             const startTime = Date.now();
             const updateInterval = setInterval(() => {
                 const elapsed = Date.now() - startTime;
                 const progress = Math.min((elapsed / 15000) * 92, 92);
-                
+
                 progressPercentage.textContent = Math.floor(progress) + '%';
-                
+
                 if (leftFrameLoaded && mainFrameLoaded) {
                     clearInterval(updateInterval);
                 }
             }, 200);
-            
+
             // Store for cleanup
             window.iOSProgressInterval = updateInterval;
-            
+
             return true;
         }
-        
+
         function startLoading() {
             // Only start loading progress on mobile
             if (window.innerWidth <= 768) {
@@ -488,11 +543,11 @@
                 currentTextIndex = 0;
                 updateProgress(0);
                 createParticles();
-                
+
                 // Try iOS Safari specific loading first
                 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
                 const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
-                
+
                 if (isIOS && isSafari) {
                     // Use new iOS Safari loading system
                     if (!startIOSLoading()) {
@@ -505,12 +560,12 @@
                 }
             }
         }
-        
+
         function startStandardLoading() {
             // Standard setInterval for other browsers
             loadingInterval = setInterval(() => {
                 let increment;
-                
+
                 // Different speeds for different stages
                 if (loadingProgress < 30) {
                     increment = Math.random() * 3 + 1;
@@ -521,52 +576,52 @@
                 } else {
                     increment = Math.random() * 0.5;
                 }
-                
+
                 loadingProgress += increment;
-                
+
                 // Cap at 92% until actually loaded
                 if (loadingProgress > 92 && !(leftFrameLoaded && mainFrameLoaded)) {
                     loadingProgress = 92;
                 }
-                
+
                 updateProgress(Math.floor(loadingProgress));
             }, 250);
         }
-        
+
         function checkAllLoaded() {
             if (leftFrameLoaded && mainFrameLoaded) {
                 finishLoading();
             }
         }
-        
+
         function finishLoading() {
             if (window.innerWidth <= 768) {
                 clearInterval(loadingInterval);
-                
+
                 // Clean up iOS Safari specific intervals
                 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
                 const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
-                
+
                 if (isIOS && isSafari) {
                     if (window.iOSProgressInterval) {
                         clearInterval(window.iOSProgressInterval);
                     }
-                    
+
                     // Remove CSS animation and set to 100%
                     const progressFill = document.getElementById('progressFill');
                     progressFill.classList.remove('ios-fallback');
                     progressFill.style.width = '100%';
                     progressFill.style.transition = 'width 0.5s ease-out';
                 }
-                
+
                 // Update to completion text
                 const loadingText = document.getElementById('loadingText');
                 loadingText.textContent = '任務完成！';
                 loadingText.style.color = '#ffd700';
-                
+
                 // Update percentage to 100%
                 document.getElementById('progressPercentage').textContent = '100%';
-                
+
                 // Smooth completion animation
                 const completeInterval = setInterval(() => {
                     if (loadingProgress < 100) {
@@ -574,10 +629,10 @@
                         if (loadingProgress >= 100) {
                             loadingProgress = 100;
                             clearInterval(completeInterval);
-                            
+
                             // Add completion celebration effect
                             addCompletionEffect();
-                            
+
                             // Hide loading screen and show menu button after completion
                             setTimeout(() => {
                                 document.getElementById('loadingContainer').style.display = 'none';
@@ -589,13 +644,13 @@
                 }, 50); // Fast final animation
             }
         }
-        
+
         function addCompletionEffect() {
             const loadingContainer = document.getElementById('loadingContainer');
-            
+
             // Add success effect
             loadingContainer.style.background = '#1a4a1a';
-            
+
             // Create success particles
             for (let i = 0; i < 6; i++) {
                 setTimeout(() => {
@@ -603,7 +658,7 @@
                 }, i * 150);
             }
         }
-        
+
         function createSuccessParticle() {
             const particle = document.createElement('div');
             particle.style.position = 'absolute';
@@ -616,13 +671,13 @@
             particle.style.top = '50%';
             particle.style.pointerEvents = 'none';
             particle.style.zIndex = '10001';
-            
+
             document.getElementById('loadingContainer').appendChild(particle);
-            
+
             const angle = Math.random() * 360;
             const velocity = Math.random() * 150 + 80;
             const life = 1200;
-            
+
             particle.animate([
                 {
                     transform: 'translate(-50%, -50%)',
@@ -636,30 +691,30 @@
                 duration: life,
                 easing: 'ease-out'
             });
-            
+
             setTimeout(() => {
                 particle.remove();
             }, life);
         }
-        
+
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.querySelector('.overlay');
-            
+
             sidebar.classList.toggle('open');
             overlay.classList.toggle('show');
         }
-        
+
         function closeSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.querySelector('.overlay');
-            
+
             sidebar.classList.remove('open');
             overlay.classList.remove('show');
         }
-        
+
         // 監聽 left.html 中的連結點擊和載入完成訊息
-        window.addEventListener('message', function(event) {
+        window.addEventListener('message', function (event) {
             if (event.data === 'linkClicked') {
                 closeSidebar();
             } else if (event.data === 'leftFrameLoaded') {
@@ -667,36 +722,36 @@
                 checkAllLoaded();
             }
         });
-        
+
         // Handle iframe loading
-        document.getElementById('leftFrame').addEventListener('load', function() {
+        document.getElementById('leftFrame').addEventListener('load', function () {
             leftFrameLoaded = true;
             checkAllLoaded();
         });
-        
-        document.getElementById('mainFrame').addEventListener('load', function() {
+
+        document.getElementById('mainFrame').addEventListener('load', function () {
             mainFrameLoaded = true;
             checkAllLoaded();
         });
-        
+
         // 確保頁面載入後正確顯示
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             if (window.innerWidth <= 768) {
                 closeSidebar();
-                
+
                 // iOS Safari specific initialization
                 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
                 const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
-                
+
                 if (isIOS && isSafari) {
                     console.log('iOS Safari detected, using CSS animation loading');
-                    
+
                     // Force display for iOS Safari
                     document.getElementById('loadingContainer').style.display = 'flex';
-                    
+
                     // Start iOS Safari loading system immediately
                     startLoading();
-                    
+
                 } else {
                     startLoading();
                 }
@@ -705,9 +760,9 @@
                 document.getElementById('loadingContainer').style.display = 'none';
             }
         });
-        
+
         // Handle window resize
-        window.addEventListener('resize', function() {
+        window.addEventListener('resize', function () {
             if (window.innerWidth > 768) {
                 // Switch to desktop - hide loading and show menu
                 document.getElementById('loadingContainer').style.display = 'none';
@@ -721,4 +776,5 @@
         });
     </script>
 </body>
+
 </html>
